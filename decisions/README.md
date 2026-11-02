@@ -9,7 +9,12 @@ decision in one sentence under its title, then its status, context, decision and
 |---|---|
 | [0001 A repository of its own](0001-a-repository-of-its-own.md) | The setting of a person, a model and a machine on one project is one problem, so it is one repository, set up before any work on it |
 | [0002 Keep the name, and take the maintainer's practice as baseline](0002-keep-the-name-and-take-the-practice-as-baseline.md) | The name stays after the frame step, and the review's baseline is the maintainer's practice, written down as B1 |
+| [0003 The model decides nothing unchecked](0003-the-model-decides-nothing-unchecked.md) | A program decides what it can check, the person the rest, and the model drafts without deciding |
+| [0004 A short start file and a memory index](0004-a-short-start-file-and-an-index.md) | A session is handed a start file and a memory index, each at most 200 lines, and nothing else |
+| [0005 Memory is plain files, each with a source](0005-memory-is-plain-files-with-a-source.md) | One fact per file, written in a fixed format, audited by a program, the code taking precedence |
+| [0006 The task is the unit, and three arms the control](0006-the-task-is-the-unit-and-three-arms-the-control.md) | Five counts per task, and a case compares the person alone, the model alone and both |
+| [0007 The extension reads files and hands over two](0007-the-extension-reads-files-and-hands-over-two.md) | The editor extension keeps no state and hands the model the start file and the index |
 
 ## See also
 
-[The front page](../README.md).
+[The front page](../README.md); [the design document](../design/one-project.md), which records 0003 to 0007 follow.
