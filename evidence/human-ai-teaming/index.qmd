@@ -1,0 +1,5 @@
+---
+title: "Human-AI teaming: how one person, one model and one machine are set up on a project"
+---
+
+{{< include README.md >}}
