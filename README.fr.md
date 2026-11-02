@@ -10,9 +10,9 @@ ce dépôt ajoute les deux parties qui ne sont pas la personne, et la mise en pl
 
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
-> **État (2026-11-02) :** mis en place ; rien n'est encore écrit au-delà du périmètre. Le premier travail est une revue
-> de littérature, non commencée. Le nom est provisoire jusqu'à ce que la première étape de cette revue dise comment le
-> domaine nomme la chose. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat nouveau.
+> **État (2026-11-02) :** le premier travail, une revue de littérature en première passe de 39 sources, est écrit et
+> finit sur une référence nommée. Le document de conception n'est pas commencé. Le nom est gardé ; le mot du domaine
+> est human-AI teaming. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat nouveau.
 >
 > **Comment il est fait :** avec Claude, un assistant IA d'Anthropic, sous la direction du mainteneur, comme
 > reader-ergonomics. Les corrections sont bienvenues sous forme d'issues.
@@ -71,22 +71,47 @@ digraph where_it_sits {
 
 ## Le premier travail : une revue de littérature
 
-Non commencée. Elle suit l'ordre d'une revue de thèse, et elle est finie quand elle peut nommer la référence.
+Une première passe de 39 sources, 30 formelles et 9 grises, en cinq étapes comme une revue de thèse :
+[cadre](evidence/human-ai-teaming/frame.md), [revue](evidence/human-ai-teaming/review.md),
+[état de l'art](evidence/human-ai-teaming/state-of-the-art.md), [positionnement](evidence/human-ai-teaming/position.md)
+et [référence](evidence/human-ai-teaming/baseline.md). Le dossier [evidence](evidence/) contient tout (en anglais).
 
-1. **Cadrer :** le problème en une phrase, et comment chaque domaine le nomme. Pistes à vérifier : human-AI teaming,
-   génie logiciel assisté par l'IA, agentic coding, le harnais d'un agent de code. Le dépôt peut être renommé alors.
-2. **Revue :** chaque nom, cherché par son nom académique, son acronyme et son auteur ; les synthèses d'abord.
-   - la performance complémentaire : quand une personne avec un modèle bat chacun seul, et quand non ;
-   - les conventions par lesquelles un projet instruit un agent de code, comme littérature grise : ce qu'elles tiennent, ce qui a été mesuré ;
-   - la mémoire d'un modèle entre sessions, et son audit ;
-   - les vérifications comme oracle : tests, hooks et CI comme premier lecteur de la sortie d'un modèle ;
-   - ce que la revue du blueprint tient déjà sur un modèle qui interprète le verdict d'un vérificateur.
-3. **État de l'art, et le dossier contre.**
-4. **Positionnement :** ce que ce dépôt demande et que le domaine ne répond pas déjà.
-5. **Référence :** le dispositif du mainteneur lui-même, écrit sans ses secrets, comparé à la meilleure pratique
-   trouvée par la revue.
+## Ce que la revue a trouvé
 
-## Questions auxquelles la revue doit répondre
+- **Le nom du domaine est human-AI teaming.** Le but est l'intelligence hybride ; le test est la performance
+  complémentaire. « AI-augmented » rappelle l'augmentation : le nom est proche et il est gardé.
+- **Une personne avec un modèle ne bat pas en moyenne le meilleur des deux** : g = -0,23 sur 106 expériences.
+  Les tâches qui décident perdent ; celles qui créent gagnent (Vaccaro 2024). Mesuré.
+- **Un fichier de contexte n'améliore pas le succès et coûte environ 20 % de plus** ; il aide à énoncer une pratique
+  hors norme (Gloaguen 2026). Un fichier périmé est suivi plutôt que le code dans 90,1 % des choix (Xu 2026,
+  secondaire). Mesuré.
+- **Les résultats sur la vitesse divergent.** Des développeurs expérimentés étaient 19 % plus lents.
+  Ils se croyaient plus rapides (Becker 2025). Deux autres essais trouvent environ 21 % et 55,8 % plus rapides
+  (secondaire). L'auto-évaluation n'est pas une mesure.
+- **Aucune étude contrôlée n'a été trouvée** d'une mémoire de projet écrite par un modèle, de son audit, ni des
+  allers-retours comme mesure. C'est un énoncé sur ces recherches.
+
+## La référence
+
+**B1** est la pratique du mainteneur, écrite pour cette revue ([référence](evidence/human-ai-teaming/baseline.md)).
+
+- consignes permanentes chargées à chaque session ;
+- une mémoire partagée, avec un fait par fichier ;
+- les vérifications comme oracle ;
+- la délégation selon le coût ;
+- des questions à la personne, avec des options.
+
+Il lui manque une mesure, un test de péremption et un témoin.
+Le document de conception devrait trancher quatre points :
+
+- l'unité de mesure et le témoin ;
+- où sont consignées les décisions de la personne ;
+- quelles vérifications sont des programmes ;
+- comment un programme trouve les consignes périmées ([positionnement](evidence/human-ai-teaming/position.md)).
+
+## Questions auxquelles la revue a répondu
+
+Les réponses sont dans [positionnement](evidence/human-ai-teaming/position.md).
 
 - **Décisions.** Quelles décisions reviennent à la personne, lesquelles à la machine, et que reste-t-il qu'un modèle
   puisse prendre ? La réponse du blueprint pour le raisonnement est : aucune ; vaut-elle pour tout un projet ?
@@ -112,6 +137,7 @@ master construit aussi le site, [tewf.github.io/ai-augmented-project](https://te
 
 | Partie | Résumé |
 |---|---|
+| [evidence](evidence/) | la revue de première passe : 39 sources, cinq étapes, finissant sur la référence B1 |
 | [decisions](decisions/) | une fiche par choix qui façonne ce dépôt, chacune ouvrant sur la décision en une phrase |
 
 ## Licence

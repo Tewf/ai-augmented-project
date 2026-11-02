@@ -11,3 +11,59 @@ path = "decisions"
 question = "2 entries: fold into the parent folder, unless this folder is one record of a collection (a job, a chapter, a topic)."
 file = ""
 answer = "It stays: `decisions` is the folder the decision-record shape names for its records; it holds the README and record 0001 today, and grows one file per choice."
+
+[[answer]]
+check = "figures-present"
+path = "evidence/human-ai-teaming/review.md"
+question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
+file = "04e72421d86c"
+answer = "No relation is described only in words: the five strands are parallel lists, and the comparison between sources sits in the tables of `state-of-the-art.md` and `against.md`. A figure of `Strand 1: teaming and complementarity` would repeat its list."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/human-ai-teaming/baseline.md"
+question = "reads about equally as how-to and reference: one mode per document?"
+file = "2254dee6cf53"
+answer = "One mode: lookup. The file states B1 and compares it, in a table under `Compared with what the review found`, with the findings; the measures are a short list."
+
+[[answer]]
+check = "name-content"
+path = "evidence/human-ai-teaming/baseline.md"
+question = "the name 'baseline' and the opening are far apart in meaning (0.19): does the name predict the content?"
+file = "2254dee6cf53"
+answer = "Yes: the file names the baseline the repository is compared against, `B1: five practices`, which is what the standard's step 5 calls the baseline."
+
+[[answer]]
+check = "name-content"
+path = "evidence/human-ai-teaming/frame.md"
+question = "the name 'frame' and the opening are far apart in meaning (0.09): does the name predict the content?"
+file = "8ae96e8f0f99"
+answer = "Yes: step 1 is the frame of the topic, and the file opens on `The problem in one sentence` and the names the field uses."
+
+[[answer]]
+check = "name-content"
+path = "evidence/human-ai-teaming/position.md"
+question = "the name 'position' and the opening are far apart in meaning (0.09): does the name predict the content?"
+file = "950fa62837e8"
+answer = "Yes: the file says where the evidence leaves the repository, under `Not found in these searches` and `What this repository would ask`, which is its position."
+
+[[answer]]
+check = "name-content"
+path = "evidence/human-ai-teaming/protocol.md"
+question = "the name 'protocol' and the opening are far apart in meaning (0.13): does the name predict the content?"
+file = "fe31790cf881"
+answer = "Yes: the file is the protocol of the search, with every string as run, under `Formal search`, and the stopping rule."
+
+[[answer]]
+check = "name-content"
+path = "evidence/human-ai-teaming/state-of-the-art.md"
+question = "the name 'state' and the opening are far apart in meaning (0.01): does the name predict the content?"
+file = "5baf81c0bd7a"
+answer = "Yes: the file gives the state of the art per question, with the best evidence beside the practice most adopted, under `Q2 Start of a session`."
+
+[[answer]]
+check = "logical-lines"
+path = "README.fr.md"
+question = "81 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "2eb16b451c43"
+answer = "It stays: its one role is the French front page, kept in step with README.md, with the same sections from `Périmètre` to `Licence`."

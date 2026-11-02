@@ -11,8 +11,8 @@ repository adds the two parties that are not the person, and the setting of each
 
 This page in French: [README.fr.md](README.fr.md).
 
-> **Status (2026-11-02):** set up; nothing is written yet beyond the scope. The first job is a literature review, not
-> started. The name is provisional until that review's first step says what the field calls this. It is not an
+> **Status (2026-11-02):** the first job, a first-pass literature review of 39 sources, is written and ends on a named
+> baseline. The design document is not started. The name is kept; the field's word is human-AI teaming. It is not an
 > official standard, not a peer-reviewed study and not a new result.
 >
 > **How it is made:** with Claude, an AI assistant by Anthropic, under the maintainer's direction, the way
@@ -71,22 +71,45 @@ digraph where_it_sits {
 
 ## The first job: a literature review
 
-Not started. It follows the order of a thesis review, and it is finished when it can name the baseline.
+A first pass of 39 sources, 30 formal and 9 grey, in the five steps of a thesis review:
+[frame](evidence/human-ai-teaming/frame.md), [review](evidence/human-ai-teaming/review.md),
+[state of the art](evidence/human-ai-teaming/state-of-the-art.md), [position](evidence/human-ai-teaming/position.md)
+and [baseline](evidence/human-ai-teaming/baseline.md). The [evidence](evidence/) folder holds all of it.
 
-1. **Frame:** the problem in one sentence, and what each field calls it. Leads to verify: human-AI teaming,
-   AI-assisted software engineering, agentic coding, the harness of a coding agent. The repository may be renamed then.
-2. **Review:** each name, searched by its academic name, its acronym and its author; surveys first.
-   - complementary performance: when a person with a model beats either alone, and when it does not;
-   - the conventions by which a project instructs a coding agent, as grey literature: what they hold, what was measured;
-   - memory across sessions of a model, and its audit;
-   - checks as the oracle: tests, hooks and CI as the first reader of a model's output;
-   - what the blueprint's review already holds on a model that interprets a checker's verdict.
-3. **State of the art, and the case against.**
-4. **Position:** what this repository asks that the field does not already answer.
-5. **Baseline:** the maintainer's own setup, written down without its secrets, compared with the best practice the
-   review found.
+## What the review found
 
-## Questions the review must answer
+- **The field's name is human-AI teaming.** The aim is hybrid intelligence; the test is complementary performance.
+  "AI-augmented" echoes augmentation, so the name is close and is kept.
+- **A person with a model does not beat the better of the two on average**: g = -0.23 over 106 experiments.
+  Tasks that decide lost; tasks that create gained (Vaccaro 2024). Measured.
+- **A context file does not raise success and costs about 20% more**; it helps to state non-standard practice
+  (Gloaguen 2026). A stale file is obeyed over the code in 90.1% of choices (Xu 2026, secondary). Measured.
+- **Speed results disagree.** Experienced developers were 19% slower while believing they were faster
+  (Becker 2025); two other trials found about 21% and 55.8% faster (secondary). Self-report is not a measure.
+- **No controlled study was found** of a model-written project memory, of its audit, or of round trips as a measure.
+  That is a statement about these searches.
+
+## The baseline
+
+**B1** is the maintainer's practice, written down for this review ([baseline](evidence/human-ai-teaming/baseline.md)).
+
+- standing instructions loaded each session;
+- one shared memory, with one fact per file;
+- checks as the oracle;
+- delegation by cost;
+- questions to the person, with options.
+
+It lacks a measure, a staleness test and a control.
+The design document would have to decide four points:
+
+- the unit of measure and the control;
+- where the person's decisions are logged;
+- which checks are programs;
+- how stale instructions are found by a program ([position](evidence/human-ai-teaming/position.md)).
+
+## Questions the review answered
+
+The answers are in [position](evidence/human-ai-teaming/position.md).
 
 - **Decisions.** Which decisions are the person's, which the machine's, and what is left that a model may take? The
   blueprint's answer for reasoning is none; does it hold for a whole project?
@@ -112,6 +135,7 @@ master also renders the site, [tewf.github.io/ai-augmented-project](https://tewf
 
 | Part | Summary |
 |---|---|
+| [evidence](evidence/) | the first-pass review: 39 sources, five steps, ending on the baseline B1 |
 | [decisions](decisions/) | one record per choice that shapes this repository, each opening with the decision in one sentence |
 
 ## Licence

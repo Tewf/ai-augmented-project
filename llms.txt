@@ -1,12 +1,14 @@
 # AI-augmented project
 
-> How a person, a language model and a machine are set up and run one project together: what the machine checks, what the model is given and may do, what stays the person's, and the loop between the three. Scope only; the review is not started.
+> How a person, a language model and a machine are set up and run one project together: what the machine checks, what the model is given and may do, what stays the person's, and the loop between the three. A first-pass review of 39 sources ends on the baseline B1; the design document is not started.
 
 Each page's markdown source is served at the same path with a .md extension. This index is written by hand; AGENTS.md says to keep it in step.
 
 ## The repository
 
 - [AI-augmented project](https://tewf.github.io/ai-augmented-project/README.md): the scope, the first job and the questions its review must answer
+- [Evidence](https://tewf.github.io/ai-augmented-project/evidence/README.md): the first-pass review, its five steps and its bibliography
+- [Human-AI teaming](https://tewf.github.io/ai-augmented-project/evidence/human-ai-teaming/README.md): 39 sources, the four questions answered, the baseline B1
 - [Decisions](https://tewf.github.io/ai-augmented-project/decisions/README.md): one record per choice that shapes the repository
 
 ## Contributing

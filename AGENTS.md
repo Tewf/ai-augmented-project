@@ -7,8 +7,8 @@ read its [standard.md](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814
 
 1. Read the standard at the release this repository checks against (v1.19.2), and the front page's scope: what is in,
    what is out, and which neighbour holds what is out.
-2. The first job is the review on the front page, in its five steps, staged outside this repository until it names its
-   baseline; it is finished when it can. The repository may be renamed at the frame step.
+2. The first job, the review in [evidence/](evidence/), names its baseline B1. The next job is the design document;
+   [position](evidence/human-ai-teaming/position.md) lists what it must decide. The name was kept at the frame step.
 3. A fact that belongs to a neighbour is linked, never copied. A choice that shapes the repository gets a record in
    [decisions/](decisions/).
 
@@ -16,7 +16,7 @@ read its [standard.md](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814
 
 - Every claim carries a grade: **measured**, **supported with caveat**, **convention** or **not supported**. A grade
   moves only with a cited source.
-- Cite as `Author Year`; the entry goes once into `evidence/bibliography.md` when the review starts, with a DOI, an
+- Cite as `Author Year`; the entry goes once into `evidence/bibliography.md`, with a DOI, an
   arXiv id or a stable URL. A key names one work across the family (reader-ergonomics decision 0003): the family is
   listed under `[bibliography_keys]` in checks/config.toml.
 - Evidence against a rule goes into the review's `against.md`, never deleted to make a rule look stronger.
