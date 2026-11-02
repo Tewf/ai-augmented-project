@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: >-
+  If this repository helps you, you may cite it as below. It is an informal,
+  work-in-progress synthesis of published research, written with Claude, an AI
+  assistant by Anthropic. It is not an official standard, not peer-reviewed,
+  and not a new result.
+title: "ai-augmented-project (work in progress)"
+abstract: >-
+  How a person, a language model and a machine are set up and run one project together: what the machine checks, what the model is given and may do, what stays the person's, and the loop between the three. Scope only; the review is not started.
+type: software
+authors:
+  - name: "Tewf"
+repository-code: "https://github.com/Tewf/ai-augmented-project"
+license:
+  - Apache-2.0
+  - CC-BY-4.0
+keywords:
+  - AI-augmented work
+  - human-AI teaming
+  - coding agent
+  - agent harness
+  - documentation
+  - literature review

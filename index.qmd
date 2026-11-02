@@ -1,0 +1,5 @@
+---
+title: "AI-augmented project"
+---
+
+{{< include README.md >}}
