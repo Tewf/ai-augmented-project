@@ -82,7 +82,7 @@ and [baseline](evidence/human-ai-teaming/baseline.md). The [evidence](evidence/)
   "AI-augmented" echoes augmentation, so the name is close and is kept.
 - **A person with a model does not beat the better of the two on average**: g = -0.23 over 106 experiments.
   Tasks that decide lost; tasks that create gained (Vaccaro 2024). Measured.
-- **A context file does not raise success and costs about 20% more**; it helps to state non-standard practice
+- **A context file does not raise success and costs over 20% more on average**; it helps to state non-standard practice
   (Gloaguen 2026). A stale file is obeyed over the code in 90.1% of choices (Xu 2026, secondary). Measured.
 - **Speed results disagree.** Experienced developers were 19% slower while believing they were faster
   (Becker 2025); two other trials found about 21% and 55.8% faster (secondary). Self-report is not a measure.

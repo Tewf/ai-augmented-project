@@ -26,7 +26,7 @@ A first-pass multivocal review, read on 2026-11-02. It asks what research and pr
 |---|---|---|
 | A person with a model scored below the better of the two alone on average, g = -0.23; tasks that decide lost, tasks that create gained | measured | review.md Q1 |
 | Complementary performance appears when person and model are about equally accurate; explanations raised acceptance whatever the model's correctness | measured | review.md Q1 |
-| A context file does not raise success and costs about 20% more; developer-written files +2.4%, not significant | measured | review.md Q2 |
+| A context file does not raise success and costs over 20% more on average; developer-written files +2.4%, not significant | measured | review.md Q2 |
 | A stale instruction file is obeyed over the code in 90.1% of choices | measured (secondary) | review.md Q2 |
 | Experienced developers were 19% slower with AI tools in a trial of 16 people, while believing they were faster | measured | review.md Q4 |
 | Other trials found 55.8% and about 21% faster | measured (secondary) | review.md Q4; against.md |

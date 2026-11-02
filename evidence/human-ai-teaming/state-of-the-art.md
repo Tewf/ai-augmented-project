@@ -17,7 +17,7 @@ Step 3 of the review. For each question, the best evidence, kept apart from the 
 | Record | Holder | What it says | Grade |
 |---|---|---|---|
 | Most adopted | Agentic AI Foundation 2026 | a file of instructions in the repository, read by many tools | convention; the count is the owners' claim |
-| Best evidence | Gloaguen 2026 | a context file does not raise success and raises cost by about 20%; it helps to state non-standard practice | measured |
+| Best evidence | Gloaguen 2026 | a context file does not raise success and raises cost by over 20% on average; it helps to state non-standard practice | measured |
 | Upper bound | Gloaguen 2026 | developer-written files +2.4% on average, not significant | measured |
 | Limit | Xu 2026 | a stale file overrides the code in 90.1% of choices (secondary) | measured |
 | Size | vendors | under 200 lines, or a 32 KiB cap | convention, untested |

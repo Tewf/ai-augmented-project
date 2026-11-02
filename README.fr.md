@@ -82,7 +82,7 @@ et [référence](evidence/human-ai-teaming/baseline.md). Le dossier [evidence](e
   complémentaire. « AI-augmented » rappelle l'augmentation : le nom est proche et il est gardé.
 - **Une personne avec un modèle ne bat pas en moyenne le meilleur des deux** : g = -0,23 sur 106 expériences.
   Les tâches qui décident perdent ; celles qui créent gagnent (Vaccaro 2024). Mesuré.
-- **Un fichier de contexte n'améliore pas le succès et coûte environ 20 % de plus** ; il aide à énoncer une pratique
+- **Un fichier de contexte n'améliore pas le succès et coûte plus de 20 % de plus en moyenne** ; il aide à énoncer une pratique
   hors norme (Gloaguen 2026). Un fichier périmé est suivi plutôt que le code dans 90,1 % des choix (Xu 2026,
   secondaire). Mesuré.
 - **Les résultats sur la vitesse divergent.** Des développeurs expérimentés étaient 19 % plus lents.

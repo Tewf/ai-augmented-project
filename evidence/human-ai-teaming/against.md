@@ -10,7 +10,7 @@ The evidence against what the front page assumes, and the disagreements. Sources
 
 ## Against "write a context file"
 
-- Generated files did not raise success and cost about 20% more (Gloaguen 2026).
+- Generated files did not raise success and cost over 20% more on average (Gloaguen 2026).
 - Repository overviews, the most recommended content, did not help (Gloaguen 2026).
 - A second ablation found no effect over 288 runs (Khatri 2026, secondary).
 - A stale file is obeyed over the code, even when the agent notices the conflict (Xu 2026, secondary).
