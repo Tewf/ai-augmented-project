@@ -1,0 +1,16 @@
+// Who decides what. Colours: person green, machine blue, model orange, one colour per party, named in its box.
+digraph one_project {
+  graph [rankdir=LR, nodesep=0.5, ranksep=0.7, bgcolor="white", pad=0.2, fontname="Inter"];
+  node  [shape=box, style="rounded,filled", fontname="Inter", fontsize=13, margin="0.2,0.1", penwidth=1.5, fontcolor="#1F2328"];
+  edge  [fontname="Inter", fontsize=11, color="#3D434B", fontcolor="#55575F", penwidth=1.3, arrowsize=0.8];
+  M [label=<<b>model</b><br/><font point-size="11" color="#55575F">drafts, proposes, explains</font><br/><font point-size="11" color="#55575F">decides nothing unchecked</font>>, fillcolor="#FBEDE4", color="#B4541A"];
+  C [label=<<b>machine</b><br/><font point-size="11" color="#55575F">checks as oracle:</font><br/><font point-size="11" color="#55575F">pass or fail</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
+  P [label=<<b>person</b><br/><font point-size="11" color="#55575F">what is built, which checks count,</font><br/><font point-size="11" color="#55575F">every judgment a program cannot make</font>>, fillcolor="#E6F2EA", color="#2E7D4F"];
+  R [label=<<b>project</b><br/><font point-size="11" color="#55575F">code, notes, memory</font>>, fillcolor="#FFFFFF", color="#3D434B"];
+  M -> C [label=" output"];
+  C -> R [label=" pass"];
+  C -> M [label=" fail, with the reason", style=dashed];
+  M -> P [label=" a question with options"];
+  P -> R [label=" decision"];
+  P -> C [label=" chooses the checks"];
+}
