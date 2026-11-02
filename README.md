@@ -11,8 +11,8 @@ repository adds the two parties that are not the person, and the setting of each
 
 This page in French: [README.fr.md](README.fr.md).
 
-> **Status (2026-11-02):** the first job, a first-pass literature review of 39 sources, is written and ends on a named
-> baseline. The design document is not started. The name is kept; the field's word is human-AI teaming. It is not an
+> **Status (2026-11-03):** the first job, a first-pass literature review of 39 sources, is written and ends on a named
+> baseline. The design document is written and proposed; it awaits the maintainer's approval. The name is kept; the field's word is human-AI teaming. It is not an
 > official standard, not a peer-reviewed study and not a new result.
 >
 > **How it is made:** with Claude, an AI assistant by Anthropic, under the maintainer's direction, the way
@@ -100,12 +100,24 @@ and [baseline](evidence/human-ai-teaming/baseline.md). The [evidence](evidence/)
 - questions to the person, with options.
 
 It lacks a measure, a staleness test and a control.
-The design document would have to decide four points:
+The [position](evidence/human-ai-teaming/position.md) listed four points for the design document to decide: the unit
+of measure and the control, where the person's decisions are logged, which checks are programs, and how a program
+finds stale instructions. The design document decides them.
 
-- the unit of measure and the control;
-- where the person's decisions are logged;
-- which checks are programs;
-- how stale instructions are found by a program ([position](evidence/human-ai-teaming/position.md)).
+## The design document
+
+[design/one-project.md](design/one-project.md) is proposed on 2026-11-03, with a record per choice.
+
+- **Decisions** ([0003](decisions/0003-the-model-decides-nothing-unchecked.md)): the person decides what is built and
+  which checks count, the machine decides pass or fail, and the model decides nothing unchecked.
+- **The start of a session** ([0004](decisions/0004-a-short-start-file-and-an-index.md)): a start file and a memory
+  index, each at most 200 lines (provisional), and nothing else.
+- **Memory** ([0005](decisions/0005-memory-is-plain-files-with-a-source.md)): one fact per file, each with a source a
+  program follows; one sentence gives the code precedence over a stale file.
+- **The measure** ([0006](decisions/0006-the-task-is-the-unit-and-three-arms-the-control.md)): five counts per task,
+  and a case compares the person alone, the model alone and both.
+- **The editor extension** ([0007](decisions/0007-the-extension-reads-files-and-hands-over-two.md)): it keeps no
+  state, shows the files, and hands the model the start file and the index.
 
 ## Questions the review answered
 
@@ -136,6 +148,7 @@ master also renders the site, [tewf.github.io/ai-augmented-project](https://tewf
 | Part | Summary |
 |---|---|
 | [evidence](evidence/) | the first-pass review: 39 sources, five steps, ending on the baseline B1 |
+| [design](design/one-project.md) | the design document: five decisions, their alternatives, the measure and the extension's interface |
 | [decisions](decisions/) | one record per choice that shapes this repository, each opening with the decision in one sentence |
 
 ## Licence

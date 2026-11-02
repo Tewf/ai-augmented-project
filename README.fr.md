@@ -10,8 +10,8 @@ ce dépôt ajoute les deux parties qui ne sont pas la personne, et la mise en pl
 
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
-> **État (2026-11-02) :** le premier travail, une revue de littérature en première passe de 39 sources, est écrit et
-> finit sur une référence nommée. Le document de conception n'est pas commencé. Le nom est gardé ; le mot du domaine
+> **État (2026-11-03) :** le premier travail, une revue de littérature en première passe de 39 sources, est écrit et
+> finit sur une référence nommée. Le document de conception est écrit et proposé ; il attend l'approbation du mainteneur. Le nom est gardé ; le mot du domaine
 > est human-AI teaming. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat nouveau.
 >
 > **Comment il est fait :** avec Claude, un assistant IA d'Anthropic, sous la direction du mainteneur, comme
@@ -102,12 +102,25 @@ et [référence](evidence/human-ai-teaming/baseline.md). Le dossier [evidence](e
 - des questions à la personne, avec des options.
 
 Il lui manque une mesure, un test de péremption et un témoin.
-Le document de conception devrait trancher quatre points :
+Le [positionnement](evidence/human-ai-teaming/position.md) a laissé quatre points au document :
+l'unité de mesure et le témoin, où sont consignées les décisions de la personne, quelles vérifications sont des
+programmes, comment un programme trouve les consignes périmées. Le document les tranche.
 
-- l'unité de mesure et le témoin ;
-- où sont consignées les décisions de la personne ;
-- quelles vérifications sont des programmes ;
-- comment un programme trouve les consignes périmées ([positionnement](evidence/human-ai-teaming/position.md)).
+## Le document de conception
+
+[design/one-project.md](design/one-project.md) est proposé le 2026-11-03, avec une fiche par choix.
+
+- **Les décisions** ([0003](decisions/0003-the-model-decides-nothing-unchecked.md)) : la personne décide de ce qui
+  est construit et des vérifications qui comptent, la machine tranche réussite ou échec, le modèle ne décide rien sans
+  vérification.
+- **Le début d'une session** ([0004](decisions/0004-a-short-start-file-and-an-index.md)) : un fichier de départ et un
+  index de la mémoire, de 200 lignes au plus chacun (provisoire), et rien d'autre.
+- **La mémoire** ([0005](decisions/0005-memory-is-plain-files-with-a-source.md)) : un fait par fichier, chacun avec
+  une source qu'un programme suit ; une phrase donne la priorité au code sur un fichier périmé.
+- **La mesure** ([0006](decisions/0006-the-task-is-the-unit-and-three-arms-the-control.md)) : cinq comptes par
+  tâche, et un cas compare la personne seule, le modèle seul et les deux.
+- **L'extension d'éditeur** ([0007](decisions/0007-the-extension-reads-files-and-hands-over-two.md)) : elle ne garde
+  aucun état, montre les fichiers et remet au modèle le fichier de départ et l'index.
 
 ## Questions auxquelles la revue a répondu
 
@@ -138,6 +151,7 @@ master construit aussi le site, [tewf.github.io/ai-augmented-project](https://te
 | Partie | Résumé |
 |---|---|
 | [evidence](evidence/) | la revue de première passe : 39 sources, cinq étapes, finissant sur la référence B1 |
+| [design](design/one-project.md) | le document de conception : cinq décisions, leurs solutions écartées, la mesure et l'interface de l'extension |
 | [decisions](decisions/) | une fiche par choix qui façonne ce dépôt, chacune ouvrant sur la décision en une phrase |
 
 ## Licence

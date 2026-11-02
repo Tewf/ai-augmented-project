@@ -7,8 +7,8 @@ read its [standard.md](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814
 
 1. Read the standard at the release this repository checks against (v1.19.2), and the front page's scope: what is in,
    what is out, and which neighbour holds what is out.
-2. The first job, the review in [evidence/](evidence/), names its baseline B1. The next job is the design document;
-   [position](evidence/human-ai-teaming/position.md) lists what it must decide. The name was kept at the frame step.
+2. The first job, the review in [evidence/](evidence/), names its baseline B1. The second, the design document, is [design/one-project.md](design/one-project.md); it was proposed on 2026-11-03
+   and awaits approval. The name was kept at the frame step.
 3. A fact that belongs to a neighbour is linked, never copied. A choice that shapes the repository gets a record in
    [decisions/](decisions/).
 

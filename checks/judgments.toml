@@ -64,6 +64,27 @@ answer = "Yes: the file gives the state of the art per question, with the best e
 [[answer]]
 check = "logical-lines"
 path = "README.fr.md"
-question = "81 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "2eb16b451c43"
-answer = "It stays: its one role is the French front page, kept in step with README.md, with the same sections from `Périmètre` to `Licence`."
+question = "90 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "b6cfd50eead2"
+answer = "It stays: its one role is the French front page, in step with README.md, with the same sections from `Périmètre` to `Licence` and the new `Le document de conception`."
+
+[[answer]]
+check = "logical-lines"
+path = "README.md"
+question = "86 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "78532d95fb97"
+answer = "It stays: its one role is the front page, whose new section `The design document` points to the design and the five records."
+
+[[answer]]
+check = "logical-lines"
+path = "design/one-project.md"
+question = "174 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "1e96c0089c84"
+answer = "It stays: its one role is the design document of one setup, in the shape's fixed sections from `Motivation` to `Open questions`; each of the five decisions is a subsection of `Design` and splitting them would separate a choice from its alternatives."
+
+[[answer]]
+check = "document-mode"
+path = "AGENTS.md"
+question = "reads about equally as how-to and explanation: one mode per document?"
+file = "b1ff98d7423e"
+answer = "One mode: how to change this repository. The `Rules for claims` and `House conventions` sections are instructions, not explanation of why."
