@@ -17,6 +17,7 @@ decision in one sentence under its title, then its status, context, decision and
 | [0008 A task is handed over as a brief that names its checks](0008-a-task-is-handed-over-as-a-brief-that-names-its-checks.md) | Four parts: task, decided, to find, checks; written before the task starts |
 | [0009 Which findings became principles](0009-which-findings-became-principles.md) | Seven findings became principles with a check each; the rest stay findings until a program reads them |
 | [0010 The memory shapes meet the practice](0010-the-memory-shapes-meet-the-practice.md) | The memory checks accept the maintainer's older form beside the shape's own |
+| [0011 The method is compared with the model alone by a program](0011-the-method-is-compared-with-the-model-alone-by-a-program.md) | The two arms without a person are run on hidden tests; the person arms wait for the maintainer |
 
 ## See also
 
