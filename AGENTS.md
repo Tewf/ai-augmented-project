@@ -16,6 +16,8 @@ read its [standard.md](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814
 4. A fact that belongs to a neighbour is linked, never copied. A choice that shapes the repository gets a record in
    [decisions/](decisions/).
 
+4. The briefs and start files written here are read by an agent: write them to its [reader style](https://github.com/Tewf/ai-augmented/blob/master/reader-styles/agent.md).
+
 ## Rules for claims
 
 - Every claim carries a grade: **measured**, **supported with caveat**, **convention** or **not supported**. A grade
