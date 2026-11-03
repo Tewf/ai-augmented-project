@@ -158,3 +158,10 @@ path = "CHANGELOG.md"
 question = "changed together with decisions/README.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "52cee7348fc8"
 answer = "They stay apart and link: `CHANGELOG.md` already links the record it names, and each change adds a record to the `decisions/README.md` table by construction."
+
+[[answer]]
+check = "co-change"
+path = "checks/local/memory_index.py"
+question = "changed together with checks/test_session.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "0605969ffc28"
+answer = "They stay apart: `checks/test_session.py` tests every check of `checks/local/`, and its docstring names the folder it reads, so a test changes with each check by construction."
