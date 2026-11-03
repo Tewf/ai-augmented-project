@@ -143,7 +143,8 @@ finds stale instructions. The design document decides them.
 - **The start of a session** ([0004](decisions/0004-a-short-start-file-and-an-index.md)): a start file and a memory
   index, each at most 200 lines (provisional), and the brief of the task, and nothing else.
 - **The brief** ([0008](decisions/0008-a-task-is-handed-over-as-a-brief-that-names-its-checks.md)): four parts, task,
-  what is decided, what is to be found and the checks it is judged by.
+  what is decided, what is to be found and the checks it is judged by; a closing Cost block is filled when the task
+  ends ([0012](decisions/0012-the-quantities-of-a-task-are-recorded-in-its-brief.md)).
 - **Memory** ([0005](decisions/0005-memory-is-plain-files-with-a-source.md)): one fact per file, each with a source a
   program follows; one sentence gives the code precedence over a stale file.
 - **The measure** ([0006](decisions/0006-the-task-is-the-unit-and-three-arms-the-control.md)): five counts per task,

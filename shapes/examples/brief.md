@@ -22,3 +22,10 @@ It runs on every commit.
 
 - `python3 -m unittest discover -s checks`: every test passes and none is skipped.
 - `python3 checks/out/standard/checks/run.py . --tiers program,meaning --judge flag`: reports 0 errors.
+
+## Cost
+
+- Tokens: 182000 tokens
+- Dollars: 1.40 dollars
+- Minutes: 25 minutes
+- Produced: one module of 60 lines and 6 tests

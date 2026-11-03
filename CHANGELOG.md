@@ -5,6 +5,12 @@ A pin move is recorded here, not in decisions/.
 
 ## [Unreleased]
 
+### Added
+
+- A closing Cost block in the brief shape (tokens, dollars, the person's minutes, what was produced), read by `brief-checks`,
+  and an optional Estimate line in the memory shapes, read by `memory-source`; both filled in the examples and tested
+  ([record 0012](decisions/0012-the-quantities-of-a-task-are-recorded-in-its-brief.md)).
+
 ### Changed
 
 - The principle "a task names its checks", the brief shape and the design: `Checks` stays as the judge's definition; the claim

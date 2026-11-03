@@ -8,11 +8,18 @@ part is refused, since the task would have no check.
 What a run with no error guarantees: every brief named has the four parts once each, in order, none empty, and each
 line of Checks is a command with a stated pass condition. What it does not: that the checks are good ones, that the
 commands run, or that the task is well stated (the person's reading).
+
+A brief may close with a fifth part, Cost, which the owner fills when the task ends: four labelled lines, Tokens,
+Dollars, Minutes (the person's) and Produced, in that order. A value is a number with its unit, or `pending` before
+the task ends, or `not measured`; it is never guessed. Produced is any text. `[brief] cost = "required"` makes the
+part mandatory; the default leaves it optional, since a brief is written before the task and an open one has no cost yet.
+The check does not know that a number is true.
 Time O(size of the briefs).
 """
 from __future__ import annotations
 
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -24,6 +31,30 @@ NAME = "brief-checks"
 EXACT = True
 REQUIRED = ["Task", "Decided", "To find", "Checks"]
 DEFAULT_FILES = ["brief.md", "*/brief.md"]
+COST_LABELS = ["Tokens", "Dollars", "Minutes", "Produced"]
+COST_LINE = re.compile(r"^\s*[-*]\s*\**([A-Za-z]+):\**\s*(.*?)\s*$")
+COST_VALUE = re.compile(r"^(pending|not measured|\d[\d.,]*\s*\S+.*)$", re.IGNORECASE)
+
+
+def cost_findings(path: str, lines: list[tuple[int, str]]) -> list[Finding]:
+    """Findings for a Cost part: the four labels once each, in order, each with a value of the allowed form."""
+    findings: list[Finding] = []
+    found = []
+    for number, line in content(lines):
+        match = COST_LINE.match(line)
+        if not match:
+            findings.append(Finding(NAME, path, number, "a Cost line is '- Label: value'"))
+            continue
+        label, value = match.group(1), match.group(2)
+        found.append(label)
+        if label in COST_LABELS[:3] and not COST_VALUE.match(value):
+            findings.append(Finding(NAME, path, number, f"{label} is a number with its unit, 'pending' or 'not measured'"))
+        if label == "Produced" and not value:
+            findings.append(Finding(NAME, path, number, "Produced says what the task made, or 'pending'"))
+    if found != COST_LABELS:
+        findings.append(Finding(NAME, path, lines[0][0] - 1 if lines else 0,
+                                f"the Cost lines are {', '.join(COST_LABELS)}, once each, in that order"))
+    return findings
 
 
 def check(root: Path, config: dict) -> list[Finding]:
@@ -33,8 +64,14 @@ def check(root: Path, config: dict) -> list[Finding]:
     findings: list[Finding] = []
     for path in selected(root, config, "brief", DEFAULT_FILES):
         text = read(root, path)
-        findings += order_findings(NAME, path, text, required)
+        has_cost = any(title == "Cost" for title, _, _ in parts(text))
+        if not has_cost and settings.get("cost") == "required":
+            findings.append(Finding(NAME, path, 0, "missing part 'Cost': the owner fills it when the task ends"))
+        findings += order_findings(NAME, path, text, required + (["Cost"] if has_cost else []))
         for title, number, lines in parts(text):
+            if title == "Cost":
+                findings += cost_findings(path, lines) if content(lines) else [
+                    Finding(NAME, path, number, "the part 'Cost' is empty")]
             if title in required and not content(lines):
                 findings.append(Finding(NAME, path, number, f"the part '{title}' is empty"
                                         + ("; a task with no check is refused" if title == "Checks" else "")))

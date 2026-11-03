@@ -33,6 +33,10 @@ The index, then one memory file:
 
 A file of type rule also has `**Status:** proposal` or `**Status:** accepted`.
 
+A file may add one `**Estimate:**` line: a number, its uncertainty in parentheses (`±x` or `a to b`), a comma and the
+date, as in `12 minutes (8 to 20), 2026-11-03`. An estimate is not a fact: the doubt and the date travel with it, so
+a later reader can see how old the guess is and how wide.
+
 The practice this shape was written for is older than it, and the checks accept its form too:
 
 ```markdown
@@ -66,6 +70,7 @@ still a proposal.
 | One line per file | a program counts the files and finds a broken link | convention, untested |
 | Date | a program lists the files not checked for a set number of days | convention, untested |
 | Type | a rule changes behaviour, so it waits for the person | convention, untested |
+| Estimate (optional) | a number kept for later use carries its uncertainty and its date, so it is not read as a measurement | convention, untested |
 | Source | the audit follows it; a note without one cannot be audited | convention, untested |
 | 200 lines | one vendor caps its index; no study sets a length | convention, PROVISIONAL |
 
@@ -88,5 +93,6 @@ The principles are [a memory file has a source](../principles/memory/memory-file
 ## Checked by
 
 - `memory-index`: the form of each line (either separator), each link, the bound, no file left out.
-- `memory-source`: the three fields or the YAML header, the status of a rule, a source that is a path exists.
+- `memory-source`: the three fields or the YAML header, the status of a rule, a source that is a path exists, and an
+  Estimate line, when present, with its uncertainty and date.
 - The age of a file and the weekly list of files not checked are not built.

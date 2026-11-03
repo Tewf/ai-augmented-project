@@ -147,6 +147,49 @@ class BriefTests(Base):
         self.assertEqual(self.run_check(), [])
 
 
+COST = """
+## Cost
+
+- Tokens: 182000 tokens
+- Dollars: 1.40 dollars
+- Minutes: 25 minutes
+- Produced: one module and its tests
+"""
+
+
+class CostTests(Base):
+    module = brief_checks
+
+    def test_a_filled_cost_part_passes(self):
+        self.write("brief.md", BRIEF + COST)
+        self.assertEqual(self.run_check(), [])
+
+    def test_pending_and_not_measured_pass(self):
+        self.write("brief.md", BRIEF + COST.replace("182000 tokens", "pending").replace("25 minutes", "not measured"))
+        self.assertEqual(self.run_check(), [])
+
+    def test_a_brief_without_cost_passes_unless_required(self):
+        self.write("brief.md", BRIEF)
+        self.assertEqual(self.run_check(), [])
+        self.assertTrue(any("missing part 'Cost'" in m for m in self.run_check({"brief": {"cost": "required"}})))
+
+    def test_a_value_without_a_unit_is_found(self):
+        self.write("brief.md", BRIEF + COST.replace("25 minutes", "a while"))
+        self.assertTrue(any("Minutes is a number" in m for m in self.run_check()))
+
+    def test_a_missing_or_misordered_label_is_found(self):
+        self.write("brief.md", BRIEF + COST.replace("- Dollars: 1.40 dollars\n", ""))
+        self.assertTrue(any("once each, in that order" in m for m in self.run_check()))
+
+    def test_cost_must_close_the_brief(self):
+        self.write("brief.md", BRIEF.replace("## Checks", COST.strip() + "\n\n## Checks"))
+        self.assertTrue(any("in the order" in m for m in self.run_check()))
+
+    def test_an_empty_cost_part_is_found(self):
+        self.write("brief.md", BRIEF + "\n## Cost\n")
+        self.assertTrue(any("'Cost' is empty" in m for m in self.run_check()))
+
+
 class StartFileTests(Base):
     module = start_file
 
@@ -367,6 +410,20 @@ class MemorySourceTests(Base):
         self.assertTrue(any("Status" in m for m in self.run_check()))
         self.write("memory/one.md", MEMORY.replace("The fact.", "**Status:** proposal").replace("fact", "rule"))
         self.assertEqual(self.run_check(), [])
+
+    def test_an_estimate_with_uncertainty_and_date_passes(self):
+        for value in ("12 minutes (8 to 20), 2026-11-03", "0.4 (±0.1), 2026-11-03"):
+            self.write("memory/one.md", MEMORY + f"**Estimate:** {value}\n")
+            self.assertEqual(self.run_check(), [])
+
+    def test_an_estimate_missing_its_doubt_or_date_is_found(self):
+        for value in ("12 minutes, 2026-11-03", "12 minutes (8 to 20)", "about twelve (8 to 20), 2026-11-03"):
+            self.write("memory/one.md", MEMORY + f"**Estimate:** {value}\n")
+            self.assertTrue(any("Estimate" in m for m in self.run_check()), value)
+
+    def test_an_estimate_is_read_in_the_yaml_form_too(self):
+        self.write("memory/one.md", YAML + "\n**Estimate:** 3\n")
+        self.assertTrue(any("Estimate" in m for m in self.run_check()))
 
     def test_a_file_the_index_does_not_list_is_not_read(self):
         self.write("memory/one.md", MEMORY)
