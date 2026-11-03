@@ -5,8 +5,8 @@ The numbers are in [results.md](results.md).
 
 ## Question
 
-On three small tasks with a program as judge, does handing a coding agent the method of this repository change how
-often its code passes hidden tests, and what does it cost in tokens, turns and questions?
+Take three small tasks with a program as judge. Does handing a coding agent the method of this repository change how
+often its code passes hidden tests? What does it cost in tokens, turns and questions?
 
 The method is a [start file](../../shapes/start-file.md), a [memory index](../../shapes/memory-index.md) and a
 [brief](../../shapes/brief.md), handed over by a note. Design decision 6 of [the design](../../design/one-project.md)
@@ -46,7 +46,7 @@ The agent runs in a scratch folder under `/tmp`. The hidden tests never enter it
 ## Runs
 
 - The agent is Kilo Code 7.8.18, through its command-line tool, the baseline of [the IDE spike](https://github.com/Tewf/ai-augmented-ide). Its own prompt, tools and permissions are left at their defaults.
-- The model is `claude-haiku-5-5`, called with the maintainer's key. The key is passed to the run as an environment variable and is never written, printed or put in a result file.
+- The model is `claude-haiku-5-5`, called with a key of the maintainer. The key is passed to the run as an environment variable and is never written, printed or put in a result file.
 - Five sessions per task per arm: 3 tasks, 2 arms, 5 runs, **30 sessions**.
 - The order is shuffled once with `random.Random(20261103)`, so drift in the service falls on all cells alike.
 - Every session starts from a fresh folder and a fresh data directory. Sampling settings are the agent's defaults.
