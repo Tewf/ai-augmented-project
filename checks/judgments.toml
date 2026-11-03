@@ -144,3 +144,10 @@ path = "README.fr.md"
 question = "says nearly what README.md (line 35) says, similarity 0.94: one fact in two places?"
 file = "22fb38cf949c"
 answer = "Not duplication: the French page is the same page in French, kept in step on purpose (`Cette page en anglais`)."
+
+[[answer]]
+check = "document-mode"
+path = "CHANGELOG.md"
+question = "reads about equally as reference and how-to: one mode per document?"
+file = "2896b493672a"
+answer = "One mode: reference. `Unreleased` and `Added` list what changed, in the Keep a Changelog form; the how-to words are in the entries' verbs, not a procedure."

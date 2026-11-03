@@ -1,7 +1,11 @@
 """Memory source: each memory file records a date, a type and a source, and a rule has a status.
 
-A memory file is a markdown file listed on a line of a memory index (`[memory] indexes`). It holds the lines `**Date:**`
-(YYYY-MM-DD), `**Type:**` (one of `[memory] types`, default fact, rule, reference) and `**Source:**`. A source in
+A memory file is a markdown file listed on a line of a memory index (`[memory] indexes`). It takes one of two forms.
+The shape's form holds the lines `**Date:**` (YYYY-MM-DD), `**Type:**` (one of `[memory] types`, default fact, rule,
+reference) and `**Source:**`. The practice's form, older than the shape, opens with a YAML header whose
+`metadata: type:` is one of `[memory] yaml_types` (default user, feedback, project, reference); its source is
+the body: at least one date YYYY-MM-DD or one link, `[text](target)` or `[[name]]`. A file with the header is read as the
+practice's form, and the shape's lines are not asked of it. A source in
 backticks is a command, an identifier is any other text; neither is run or looked up. A source that is a single
 path-like word must exist, looked up from the project root, with a ":line" or "#anchor" ignored. A file of type
 rule also has `**Status:**`, which is proposal or accepted (design/one-project.md, decision 3).
@@ -23,6 +27,10 @@ NAME = "memory-source"
 EXACT = True
 LISTED = re.compile(r"^- \[[^\]]+\]\(([^)\s]+\.md)\)", re.MULTILINE)
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+HEADER = re.compile(r"\A---[ \t]*\n(.*?)\n---[ \t]*(?:\n|\Z)(.*)", re.DOTALL)
+BODY_DATE = re.compile(r"(?<!\d)\d{4}-\d{2}-\d{2}(?!\d)")
+BODY_LINK = re.compile(r"\[[^\]\n]+\]\([^)\s]+\)|\[\[[^\]\n]+\]\]")
+YAML_TYPES = ["user", "feedback", "project", "reference"]
 SUFFIXES = (".md", ".py", ".toml", ".yml", ".yaml", ".json", ".sh", ".qmd", ".txt", ".cff")
 
 
@@ -43,11 +51,42 @@ def memory_files(root: Path, config: dict) -> list[str]:
     return listed
 
 
+def header_type(header: str) -> str | None:
+    """The `type:` under `metadata:` in a YAML header, read line by line (no YAML library); quotes are dropped."""
+    inside = False
+    for line in header.splitlines():
+        if re.match(r"^metadata:\s*$", line):
+            inside = True
+        elif inside and line.strip() and not line[0].isspace():
+            inside = False
+        elif inside:
+            found = re.match(r"^\s+type:\s*(.*?)\s*$", line)
+            if found:
+                return found.group(1).strip("\"'")
+    return None
+
+
+def check_header(path: str, header: str, body: str, allowed: list[str]) -> list[Finding]:
+    """Findings for a file in the practice's form: a type among the allowed, and a date or a link in the body."""
+    findings = []
+    kind = header_type(header)
+    if kind is None or kind not in allowed:
+        findings.append(Finding(NAME, path, 0, f"the header's metadata type is one of {', '.join(allowed)}"))
+    if not (BODY_DATE.search(body) or BODY_LINK.search(body)):
+        findings.append(Finding(NAME, path, 0, "the body records its source: a date YYYY-MM-DD or a link"))
+    return findings
+
+
 def check(root: Path, config: dict) -> list[Finding]:
     types = config.get("memory", {}).get("types", ["fact", "rule", "reference"])
+    yaml_types = config.get("memory", {}).get("yaml_types", YAML_TYPES)
     findings: list[Finding] = []
     for path in memory_files(root, config):
         text = (root / path).read_text(encoding="utf-8", errors="replace")
+        header = HEADER.match(text)
+        if header:
+            findings += check_header(path, header.group(1), header.group(2), yaml_types)
+            continue
         date, kind, source = field(text, "Date"), field(text, "Type"), field(text, "Source")
         if date is None or not DATE.match(date):
             findings.append(Finding(NAME, path, 0, "a memory file records its **Date:** as YYYY-MM-DD"))

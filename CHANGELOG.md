@@ -3,6 +3,20 @@
 Every release of this repository, and the releases it pins, newest first, in the form of [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 A pin move is recorded here, not in decisions/.
 
+## [Unreleased]
+
+### Changed
+
+- `memory-index` accepts headings, blank lines and **Shape:** lines between entries, and a dash as well as a colon
+  between title and hook.
+- `memory-source` accepts a YAML header (`metadata.type` one of user, feedback, project, reference) with a date or a
+  link in the body, beside the shape's three labelled lines.
+- The memory-index shape and the source principle say both forms; [record 0010](decisions/0010-the-memory-shapes-meet-the-practice.md).
+
+### Added
+
+- Unit tests for both accepted forms.
+
 ## [0.1.0] - 2026-11-03
 
 ### Added

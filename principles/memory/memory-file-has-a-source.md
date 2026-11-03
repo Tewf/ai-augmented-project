@@ -11,6 +11,7 @@
 
 - One fact per file, in the memory folder only.
 - Three labelled lines: `**Date:**`, `**Type:**` and `**Source:**`. The source is a path, a command in backticks, or an identifier.
+- Or a YAML header with `metadata.type` (user, feedback, project or reference), and a body with a date YYYY-MM-DD or a link as its source ([record 0010](../../decisions/0010-the-memory-shapes-meet-the-practice.md)).
 - A file of type rule also has `**Status:**`, which is `proposal` or `accepted`. The person accepts it.
 
 ## Why

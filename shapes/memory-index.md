@@ -33,6 +33,26 @@ The index, then one memory file:
 
 A file of type rule also has `**Status:** proposal` or `**Status:** accepted`.
 
+The practice this shape was written for is older than it, and the checks accept its form too:
+
+```markdown
+# <Project>: memory
+
+## <A heading that groups lines>
+- [<title>](<file>.md) - <the hook, in one sentence>
+```
+
+```markdown
+---
+name: <file name>
+description: "<the hook>"
+metadata:
+  type: <user | feedback | project | reference>
+---
+
+<The fact, with at least one date YYYY-MM-DD or one link in the body.>
+```
+
 ## Worked example
 
 [An index of two files](examples/memory/INDEX.md) is drawn from this repository's own review. It carries a **Shape:**
@@ -56,12 +76,15 @@ The principles are [a memory file has a source](../principles/memory/memory-file
 
 - One fact per file. The model writes in this folder and in this form only.
 - A rule is a proposal until the person accepts it.
-- The index may open with a title and a **Shape:** line. They are not counted.
+- The index may hold a title, headings that group the lines, blank lines and **Shape:** lines. They are not counted.
+- A line separates title from hook with a colon, or with a dash between spaces.
+- A file has the three labelled lines, or a YAML header with `metadata.type` and a body that carries a date or a link.
+  The header is not asked for the labelled lines, and the type is then one of user, feedback, project, reference.
 - No memory file is left out of the index, and none is listed twice.
 - A stale file is not deleted by the program. The person decides, or the model fixes it and the check passes.
 
 ## Checked by
 
-- `memory-index`: the form of each line, each link, the bound, no file left out.
-- `memory-source`: the three fields, the status of a rule, a source that is a path exists.
+- `memory-index`: the form of each line (either separator), each link, the bound, no file left out.
+- `memory-source`: the three fields or the YAML header, the status of a rule, a source that is a path exists.
 - The age of a file and the weekly list of files not checked are not built.

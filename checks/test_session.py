@@ -80,6 +80,15 @@ MEMORY = """# One
 
 The fact.
 """
+YAML = """---
+name: one
+description: "the first fact"
+metadata:
+  type: feedback
+---
+
+On 2026-11-03 it was the case.
+"""
 
 
 class Base(unittest.TestCase):
@@ -242,6 +251,15 @@ class MemoryIndexTests(Base):
         self.write("memory/INDEX.md", INDEX)
         self.assertEqual(self.run_check(), [])
 
+    def test_headings_and_a_dash_separator_pass(self):
+        grouped = "# Memory\n\n**Shape:** [x](x.md)\n\n## Rules\n- [One](one.md) \u2014 the first fact.\n\n## Facts\n- [Two](two.md) - the second fact.\n"
+        self.write("memory/INDEX.md", grouped)
+        self.assertEqual(self.run_check(), [])
+
+    def test_a_dash_without_spaces_is_not_a_separator(self):
+        self.write("memory/INDEX.md", INDEX.replace("(one.md):", "(one.md)-"))
+        self.assertTrue(any("a line is" in m for m in self.run_check()))
+
     def test_a_shape_line_is_allowed_and_not_counted(self):
         self.write("memory/INDEX.md", INDEX.replace("# Memory\n", "# Memory\n\n**Shape:** [x](x.md)\n"))
         self.assertEqual(self.run_check({"memory": {"max_lines": 7}}), [])
@@ -284,6 +302,30 @@ class MemorySourceTests(Base):
     def test_a_complete_file_passes(self):
         self.write("memory/one.md", MEMORY)
         self.assertEqual(self.run_check(), [])
+
+    def test_a_yaml_header_with_a_date_in_the_body_passes(self):
+        self.write("memory/one.md", YAML)
+        self.assertEqual(self.run_check(), [])
+
+    def test_a_yaml_header_with_a_link_in_the_body_passes(self):
+        self.write("memory/one.md", YAML.replace("On 2026-11-03 it", "See [[other]]: it"))
+        self.assertEqual(self.run_check(), [])
+        self.write("memory/one.md", YAML.replace("On 2026-11-03 it", "See [a](b.md): it"))
+        self.assertEqual(self.run_check(), [])
+
+    def test_a_yaml_header_with_no_date_or_link_is_found(self):
+        self.write("memory/one.md", YAML.replace("On 2026-11-03 it", "It"))
+        self.assertTrue(any("date YYYY-MM-DD or a link" in m for m in self.run_check()))
+
+    def test_a_yaml_header_with_a_type_outside_the_four_is_found(self):
+        self.write("memory/one.md", YAML.replace("type: feedback", "type: fact"))
+        self.assertTrue(any("metadata type" in m for m in self.run_check()))
+        self.write("memory/one.md", YAML.replace("  type: feedback\n", ""))
+        self.assertTrue(any("metadata type" in m for m in self.run_check()))
+
+    def test_a_yaml_header_is_not_asked_for_the_shapes_lines(self):
+        self.write("memory/one.md", YAML)
+        self.assertFalse(any("**Date:**" in m or "**Source:**" in m for m in self.run_check()))
 
     def test_a_missing_source_is_found(self):
         self.write("memory/one.md", MEMORY.replace("**Source:** README.md\n", ""))
