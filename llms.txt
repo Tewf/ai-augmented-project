@@ -9,7 +9,7 @@ Each page's markdown source is served at the same path with a .md extension. Thi
 - [AI-augmented project](https://tewf.github.io/ai-augmented-project/README.md): the scope, the first job and the questions its review must answer
 - [Evidence](https://tewf.github.io/ai-augmented-project/evidence/README.md): the first-pass review, its five steps and its bibliography
 - [Human-AI teaming](https://tewf.github.io/ai-augmented-project/evidence/human-ai-teaming/README.md): 39 sources, the four questions answered, the baseline B1
-- [Design document](https://tewf.github.io/ai-augmented-project/design/one-project.md): five decisions on who decides, the start of a session, memory, the measure and the extension's interface
+- [Design document](https://tewf.github.io/ai-augmented-project/design/one-project.md): five decisions on who decides, the start of a session and the brief, memory, the measure and the extension's interface
 - [Decisions](https://tewf.github.io/ai-augmented-project/decisions/README.md): one record per choice that shapes the repository
 
 ## Contributing

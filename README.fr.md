@@ -114,7 +114,9 @@ programmes, comment un programme trouve les consignes périmées. Le document le
   est construit et des vérifications qui comptent, la machine tranche réussite ou échec, le modèle ne décide rien sans
   vérification.
 - **Le début d'une session** ([0004](decisions/0004-a-short-start-file-and-an-index.md)) : un fichier de départ et un
-  index de la mémoire, de 200 lignes au plus chacun (provisoire), et rien d'autre.
+  index de la mémoire, de 200 lignes au plus chacun (provisoire), et le brief de la tâche, et rien d'autre.
+- **Le brief** ([0008](decisions/0008-a-task-is-handed-over-as-a-brief-that-names-its-checks.md)) : quatre parties, la
+  tâche, ce qui est décidé, ce qu'il faut trouver et les vérifications qui le jugeront.
 - **La mémoire** ([0005](decisions/0005-memory-is-plain-files-with-a-source.md)) : un fait par fichier, chacun avec
   une source qu'un programme suit ; une phrase donne la priorité au code sur un fichier périmé.
 - **La mesure** ([0006](decisions/0006-the-task-is-the-unit-and-three-arms-the-control.md)) : cinq comptes par

@@ -58,28 +58,28 @@ answer = "Yes: the file is the protocol of the search, with every string as run,
 check = "name-content"
 path = "evidence/human-ai-teaming/state-of-the-art.md"
 question = "the name 'state' and the opening are far apart in meaning (0.01): does the name predict the content?"
-file = "5baf81c0bd7a"
+file = "3d0142a48af2"
 answer = "Yes: the file gives the state of the art per question, with the best evidence beside the practice most adopted, under `Q2 Start of a session`."
 
 [[answer]]
 check = "logical-lines"
 path = "README.fr.md"
-question = "90 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "b6cfd50eead2"
-answer = "It stays: its one role is the French front page, in step with README.md, with the same sections from `Périmètre` to `Licence` and the new `Le document de conception`."
+question = "92 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "750eeae7c8ef"
+answer = "It stays: its one role is the French front page, in step with README.md, with the same sections from `Périmètre` to `Licence` and `Le document de conception`."
 
 [[answer]]
 check = "logical-lines"
 path = "README.md"
-question = "86 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "78532d95fb97"
-answer = "It stays: its one role is the front page, whose new section `The design document` points to the design and the five records."
+question = "88 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "bcb9cbdffbe9"
+answer = "It stays: its one role is the front page, whose new section `The design document` points to the design and the six records."
 
 [[answer]]
 check = "logical-lines"
 path = "design/one-project.md"
-question = "174 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "1e96c0089c84"
+question = "228 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "3548905494b8"
 answer = "It stays: its one role is the design document of one setup, in the shape's fixed sections from `Motivation` to `Open questions`; each of the five decisions is a subsection of `Design` and splitting them would separate a choice from its alternatives."
 
 [[answer]]

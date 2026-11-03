@@ -13,8 +13,9 @@ decision in one sentence under its title, then its status, context, decision and
 | [0004 A short start file and a memory index](0004-a-short-start-file-and-an-index.md) | A session is handed a start file and a memory index, each at most 200 lines, and nothing else |
 | [0005 Memory is plain files, each with a source](0005-memory-is-plain-files-with-a-source.md) | One fact per file, written in a fixed format, audited by a program, the code taking precedence |
 | [0006 The task is the unit, and three arms the control](0006-the-task-is-the-unit-and-three-arms-the-control.md) | Five counts per task, and a case compares the person alone, the model alone and both |
-| [0007 The extension reads files and hands over two](0007-the-extension-reads-files-and-hands-over-two.md) | The editor extension keeps no state and hands the model the start file and the index |
+| [0007 The extension reads files and hands over two](0007-the-extension-reads-files-and-hands-over-two.md) | The editor extension keeps no state and hands the model the start file and the index; amended to ten kinds of file |
+| [0008 A task is handed over as a brief that names its checks](0008-a-task-is-handed-over-as-a-brief-that-names-its-checks.md) | Four parts: task, decided, to find, checks; written before the task starts |
 
 ## See also
 
-[The front page](../README.md); [the design document](../design/one-project.md), which records 0003 to 0007 follow.
+[The front page](../README.md); [the design document](../design/one-project.md), which records 0003 to 0008 follow.
