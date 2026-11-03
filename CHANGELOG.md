@@ -9,6 +9,7 @@ A pin move is recorded here, not in decisions/.
 
 - The principle "a task names its checks", the brief shape and the design: `Checks` stays as the judge's definition; the claim
   that listing the checks raises the pass rate is lowered to not supported (brief test, round two, 180 calls, hidden tests).
+- Pinned reader-ergonomics v1.20.0 (`4f99372`), from v1.19.2 (`b9732b9`): the runner's verdicts file (`--out`), and hand-written llms.txt lines kept through a rebuild
 
 ### Changed
 

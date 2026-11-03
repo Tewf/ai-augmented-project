@@ -34,7 +34,7 @@ The shapes are meant to be copied and kept as your own. Copy them from a tagged 
 
    ```sh
    git clone https://github.com/Tewf/reader-ergonomics ../reader-ergonomics
-   git -C ../reader-ergonomics checkout b9732b9814c71768f722691f3c5049ec2b8ed378   # v1.19.2
+   git -C ../reader-ergonomics checkout 4f99372093729dacf982e9174e94f6b8793c513d   # v1.20.0
    python3 ../reader-ergonomics/checks/run.py .
    ```
 
@@ -44,7 +44,7 @@ A disagreement has three places to go:
 - an extension, when it is about a genre;
 - an issue on [this repository](https://github.com/Tewf/ai-augmented-project/issues), when its evidence or its shape is wrong.
 
-The standard's section, [Take your own version](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/README.md#take-your-own-version), gives the rest.
+The standard's section, [Take your own version](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/README.md#take-your-own-version), gives the rest.
 
 ## Where it sits
 
@@ -80,7 +80,7 @@ digraph where_it_sits {
 - **It uses [reader-ergonomics-project](https://github.com/Tewf/reader-ergonomics-project)** for the steps of a project,
   and **[reader-ergonomics-blueprint](https://github.com/Tewf/reader-ergonomics-blueprint/blob/f9b2408e7f1ddf4a82d2d480c62d6b5855e14e0b/README.md)** for the loop in which a model
   interprets a checker's verdict and decides nothing. The blueprint is pinned by commit, since it has no release yet.
-- **It obeys [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/standard.md)** (v1.19.2) and runs its checks in CI.
+- **It obeys [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/standard.md)** (v1.20.0) and runs its checks in CI.
 - **It links down only.** The family's map is [ai-augmented](https://github.com/Tewf/ai-augmented).
 
 ## Scope

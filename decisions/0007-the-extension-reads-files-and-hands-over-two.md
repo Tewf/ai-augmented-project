@@ -2,7 +2,7 @@
 
 **Decision:** The editor extension keeps no state of its own: it shows the files of the design and hands the model the start file, the memory index and the brief of the task.
 
-**Status:** accepted, 2026-11-03. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/shapes/decision-record.md).
+**Status:** accepted, 2026-11-03. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/shapes/decision-record.md).
 
 **Amendment, 3 November:** the interface is ten kinds of file, not six: the topic files, the brief, the judgment answers file and the audit report are added. The title keeps its two, the start file and the index; the brief is the task, not context ([0008](0008-a-task-is-handed-over-as-a-brief-that-names-its-checks.md)).
 

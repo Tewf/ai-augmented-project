@@ -43,7 +43,7 @@ files = ["shapes/*.md"]
 exempt = ["shapes/README.md", "shapes/examples/*"]
 example_headings = ["Worked example", "Example"]
 
-# The headings the standard's decision-record shape requires (reader-ergonomics v1.19.2, shapes/decision-record.md).
+# The headings the standard's decision-record shape requires (reader-ergonomics v1.20.0, shapes/decision-record.md).
 [shape_conformance]
 shapes = [{ name = "decision record", files = ["decisions/0*.md"], required = ["Context", "Decision", "Consequences", "See also"] }]
 
