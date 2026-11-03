@@ -34,7 +34,7 @@ votre copie.
 
    ```sh
    git clone https://github.com/Tewf/reader-ergonomics ../reader-ergonomics
-   git -C ../reader-ergonomics checkout 4f99372093729dacf982e9174e94f6b8793c513d   # version 1.20.0
+   git -C ../reader-ergonomics checkout 2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a   # version 1.21.0
    python3 ../reader-ergonomics/checks/run.py chemin/vers/votre/dépôt
    ```
 
@@ -44,7 +44,7 @@ Un désaccord a trois destinations :
 - une extension, s'il porte sur un genre ;
 - une issue sur [ce dépôt](https://github.com/Tewf/ai-augmented-project/issues), quand ses preuves ou sa forme sont fausses.
 
-La section de la norme, [Take your own version](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/README.md#take-your-own-version), donne le reste.
+La section de la norme, [Take your own version](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/README.md#take-your-own-version), donne le reste.
 
 ## Où il se place
 
@@ -81,7 +81,7 @@ digraph where_it_sits {
   projet, et **[reader-ergonomics-blueprint](https://github.com/Tewf/reader-ergonomics-blueprint/blob/f9b2408e7f1ddf4a82d2d480c62d6b5855e14e0b/README.md)** pour la boucle où un
   modèle interprète le verdict d'un vérificateur et ne décide rien. Le blueprint est épinglé par commit, faute de version
   publiée.
-- **Il obéit à [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/standard.md)** (v1.20.0) et exécute ses vérifications en CI.
+- **Il obéit à [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/standard.md)** (v1.21.0) et exécute ses vérifications en CI.
 - **Il ne pointe que vers le bas.** La carte de la famille est [ai-augmented](https://github.com/Tewf/ai-augmented).
 
 ## Périmètre
