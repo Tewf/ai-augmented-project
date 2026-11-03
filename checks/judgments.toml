@@ -149,7 +149,7 @@ answer = "Not duplication: the French page is the same page in French, kept in s
 check = "document-mode"
 path = "CHANGELOG.md"
 question = "reads about equally as reference and how-to: one mode per document?"
-file = "2896b493672a"
+file = "52cee7348fc8"
 answer = "One mode: reference. `Unreleased` and `Added` list what changed, in the Keep a Changelog form; the how-to words are in the entries' verbs, not a procedure."
 
 [[answer]]
