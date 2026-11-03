@@ -13,6 +13,36 @@ stylesheets = []
 [sufficient_contrast]
 stylesheets = []
 
+# The principle groups, in the order the card shows them (reader-ergonomics extending.md, the interface).
+[standard_card]
+facets = ["session", "memory"]
+
+# The local checks, checks/local/. Their tests run in CI: python3 -m unittest discover -s checks.
+# Where a session starts: START.md at a project's root, and this repository's example of one.
+[start_file]
+files = ["START.md", "shapes/examples/start-file.md"]
+max_lines = 200                 # PROVISIONAL: no study sets a length; one vendor's target is under 200
+precedence = "follow the code"  # the phrase the precedence sentence must hold, said once
+exempt = ["checks/out/"]        # paths made at run time, which a fresh checkout does not have
+
+# One brief per task: brief.md in the task's folder, and this repository's example of one.
+[brief]
+files = ["brief.md", "*/brief.md"]
+exempt = ["shapes/brief.md"]   # the shape of a brief is not a brief
+pass_words = 2                  # PROVISIONAL: the fewest words beside a command that can say what passing means
+
+# The memory index and the files it lists.
+[memory]
+indexes = ["memory/INDEX.md", "shapes/examples/memory/INDEX.md"]
+max_lines = 200                 # PROVISIONAL: no study sets a length; one vendor caps its index
+types = ["fact", "rule", "reference"]
+
+# The shapes, shapes/*.md; their filled examples sit in shapes/examples/ and are not shapes themselves.
+[shape_example]
+files = ["shapes/*.md"]
+exempt = ["shapes/README.md", "shapes/examples/*"]
+example_headings = ["Worked example", "Example"]
+
 # The headings the standard's decision-record shape requires (reader-ergonomics v1.19.2, shapes/decision-record.md).
 [shape_conformance]
 shapes = [{ name = "decision record", files = ["decisions/0*.md"], required = ["Context", "Decision", "Consequences", "See also"] }]

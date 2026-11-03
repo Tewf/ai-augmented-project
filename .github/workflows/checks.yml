@@ -54,6 +54,10 @@ jobs:
           done
       - name: Check the repository, tiers program and meaning
         run: python3 standard/checks/run.py repository --tiers program,meaning --judge flag
+      - name: Test the local checks
+        env:
+          READER_ERGONOMICS_CHECKS: ${{ github.workspace }}/standard/checks
+        run: python3 -m unittest discover -s repository/checks
       - name: List the questions left for judgment
         if: always()
         run: cat repository/checks/out/needs-judgment.md 2>/dev/null || echo "No questions for judgment."
