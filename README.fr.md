@@ -11,7 +11,7 @@ ce dépôt ajoute les deux parties qui ne sont pas la personne, et la mise en pl
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
 > **État (2026-11-03) :** le premier travail, une revue de littérature en première passe de 39 sources, est écrit et
-> finit sur une référence nommée. Le document de conception est écrit et proposé ; il attend l'approbation du mainteneur. Le nom est gardé ; le mot du domaine
+> finit sur une référence nommée. Le document de conception est écrit, et ses fiches 0003 à 0008 sont acceptées (la page des décisions dit comment). La carte, trois formes et six vérifications locales en découlent. Le nom est gardé ; le mot du domaine
 > est human-AI teaming. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat nouveau.
 >
 > **Comment il est fait :** avec Claude, un assistant IA d'Anthropic, sous la direction du mainteneur, comme
@@ -124,6 +124,15 @@ programmes, comment un programme trouve les consignes périmées. Le document le
 - **L'extension d'éditeur** ([0007](decisions/0007-the-extension-reads-files-and-hands-over-two.md)) : elle ne garde
   aucun état, montre les fichiers et remet au modèle le fichier de départ et l'index.
 
+## La carte et les formes
+
+[standard.md](standard.md) est la carte : sept principes en deux groupes, chacun avec son niveau, jamais au-dessus de celui de la revue.
+La [fiche 0009](decisions/0009-which-findings-became-principles.md) dit quels résultats sont devenus des principes et lesquels sont restés des résultats.
+
+- Principes ([session](principles/session/README.md) et [mémoire](principles/memory/README.md)) : qui décide, le brief, le fichier de départ, la phrase de priorité, la recherche du texte périmé, et les fichiers de mémoire.
+- Formes ([shapes](shapes/README.md)) : le [brief](shapes/brief.md), le [fichier de départ](shapes/start-file.md) et l'[index de mémoire](shapes/memory-index.md), chacun avec un exemple rempli.
+- Vérifications (`checks/local/`) : six, avec des tests unitaires que la CI exécute.
+
 ## Questions auxquelles la revue a répondu
 
 Les réponses sont dans [positionnement](evidence/human-ai-teaming/position.md).
@@ -143,6 +152,7 @@ git clone https://github.com/Tewf/reader-ergonomics
 python3 reader-ergonomics/checks/run.py chemin/vers/ce/depot
 ```
 
+Les tests unitaires des vérifications locales se lancent avec `python3 -m unittest discover -s checks`.
 La CI exécute les mêmes vérifications à chaque push, et une exécution échoue à la première erreur
 ([checks.yml](https://github.com/Tewf/ai-augmented-project/blob/master/.github/workflows/checks.yml)). Chaque push sur
 master construit aussi le site, [tewf.github.io/ai-augmented-project](https://tewf.github.io/ai-augmented-project/)
@@ -153,6 +163,9 @@ master construit aussi le site, [tewf.github.io/ai-augmented-project](https://te
 | Partie | Résumé |
 |---|---|
 | [evidence](evidence/) | la revue de première passe : 39 sources, cinq étapes, finissant sur la référence B1 |
+| [standard.md](standard.md) | la carte : sept principes avec leurs niveaux, et les vérifications qui les lisent |
+| [principles](principles/) | un fichier par principe, dans les groupes session et mémoire |
+| [shapes](shapes/) | le brief, le fichier de départ et l'index de mémoire, chacun avec un exemple |
 | [design](design/one-project.md) | le document de conception : cinq décisions, leurs solutions écartées, la mesure et l'interface de l'extension |
 | [decisions](decisions/) | une fiche par choix qui façonne ce dépôt, chacune ouvrant sur la décision en une phrase |
 

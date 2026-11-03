@@ -88,3 +88,31 @@ path = "AGENTS.md"
 question = "reads about equally as how-to and explanation: one mode per document?"
 file = "b1ff98d7423e"
 answer = "One mode: how to change this repository. The `Rules for claims` and `House conventions` sections are instructions, not explanation of why."
+
+[[answer]]
+check = "logical-lines"
+path = "README.fr.md"
+question = "102 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "49e4c40d9d15"
+answer = "It stays: the role is the French front page, one state of the English one. Each part it holds is a short route to a file that carries the detail, from `Périmètre` to `Contenu`."
+
+[[answer]]
+check = "logical-lines"
+path = "README.md"
+question = "98 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "f040f3a2e70c"
+answer = "It stays: the role is the front page, the contract a later session starts from. Each section routes to a file that holds the detail, from `Scope` to `Contents`, and the extension layout asks for one front page."
+
+[[answer]]
+check = "document-mode"
+path = "decisions/0009-which-findings-became-principles.md"
+question = "reads about equally as reference and how-to: one mode per document?"
+file = "85b602736921"
+answer = "One mode: understanding why. The tables under `Decision` give the reasons for each finding, and none is a procedure to follow."
+
+[[answer]]
+check = "name-content"
+path = "standard.md"
+question = "the name 'standard' and the opening are far apart in meaning (0.20): does the name predict the content?"
+file = "badde3ee2bfd"
+answer = "Yes: the extension contract names this file `standard.md` for the card of every repository of the family, and its opening line, `The AI-augmented project standard`, says what the card is."

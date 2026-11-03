@@ -15,6 +15,7 @@ decision in one sentence under its title, then its status, context, decision and
 | [0006 The task is the unit, and three arms the control](0006-the-task-is-the-unit-and-three-arms-the-control.md) | Five counts per task, and a case compares the person alone, the model alone and both |
 | [0007 The extension reads files and hands over two](0007-the-extension-reads-files-and-hands-over-two.md) | The editor extension keeps no state and hands the model the start file and the index; amended to ten kinds of file |
 | [0008 A task is handed over as a brief that names its checks](0008-a-task-is-handed-over-as-a-brief-that-names-its-checks.md) | Four parts: task, decided, to find, checks; written before the task starts |
+| [0009 Which findings became principles](0009-which-findings-became-principles.md) | Seven findings became principles with a check each; the rest stay findings until a program reads them |
 
 ## See also
 

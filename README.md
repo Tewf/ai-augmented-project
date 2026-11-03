@@ -12,7 +12,7 @@ repository adds the two parties that are not the person, and the setting of each
 This page in French: [README.fr.md](README.fr.md).
 
 > **Status (2026-11-03):** the first job, a first-pass literature review of 39 sources, is written and ends on a named
-> baseline. The design document is written and proposed; it awaits the maintainer's approval. The name is kept; the field's word is human-AI teaming. It is not an
+> baseline. The design document is written, and its records 0003 to 0008 are accepted (the decisions page says how). The card, three shapes and six local checks follow from it. The name is kept; the field's word is human-AI teaming. It is not an
 > official standard, not a peer-reviewed study and not a new result.
 >
 > **How it is made:** with Claude, an AI assistant by Anthropic, under the maintainer's direction, the way
@@ -121,6 +121,15 @@ finds stale instructions. The design document decides them.
 - **The editor extension** ([0007](decisions/0007-the-extension-reads-files-and-hands-over-two.md)): it keeps no
   state, shows the files, and hands the model the start file and the index.
 
+## The card and the shapes
+
+[standard.md](standard.md) is the card: seven principles in two groups, each with its grade, never above the review's.
+[Record 0009](decisions/0009-which-findings-became-principles.md) says which findings became principles and which stayed findings.
+
+- Principles ([session](principles/session/README.md) and [memory](principles/memory/README.md)): who decides, the brief, the start file, the precedence sentence, the staleness lookup, and the memory files.
+- Shapes ([shapes](shapes/README.md)): the [brief](shapes/brief.md), the [start file](shapes/start-file.md) and the [memory index](shapes/memory-index.md), each with a filled example.
+- Checks (`checks/local/`): six, with unit tests that CI runs.
+
 ## Questions the review answered
 
 The answers are in [position](evidence/human-ai-teaming/position.md).
@@ -140,6 +149,7 @@ git clone https://github.com/Tewf/reader-ergonomics
 python3 reader-ergonomics/checks/run.py path/to/this/repository
 ```
 
+The unit tests of the local checks run with `python3 -m unittest discover -s checks`.
 CI runs the same checks on every push, and a run fails on any error
 ([checks.yml](https://github.com/Tewf/ai-augmented-project/blob/master/.github/workflows/checks.yml)). Every push to
 master also renders the site, [tewf.github.io/ai-augmented-project](https://tewf.github.io/ai-augmented-project/)
@@ -150,6 +160,9 @@ master also renders the site, [tewf.github.io/ai-augmented-project](https://tewf
 | Part | Summary |
 |---|---|
 | [evidence](evidence/) | the first-pass review: 39 sources, five steps, ending on the baseline B1 |
+| [standard.md](standard.md) | the card: seven principles with their grades, and the checks that read them |
+| [principles](principles/) | one file per principle, in the groups session and memory |
+| [shapes](shapes/) | the brief, the start file and the memory index, each with a worked example |
 | [design](design/one-project.md) | the design document: five decisions, their alternatives, the measure and the extension's interface |
 | [decisions](decisions/) | one record per choice that shapes this repository, each opening with the decision in one sentence |
 

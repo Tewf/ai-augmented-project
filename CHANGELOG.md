@@ -3,6 +3,13 @@
 The releases this repository pins, newest first, in the form of [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 A pin move is recorded here, not in decisions/.
 
+## 2026-11-03
+
+### Added
+
+- The card `standard.md`, seven principles, three shapes with a filled example each, and six local checks with unit
+  tests that CI runs. The pin is unchanged (v1.19.2, `b9732b9`).
+
 ## 2026-11-02
 
 ### Added

@@ -7,9 +7,13 @@ read its [standard.md](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814
 
 1. Read the standard at the release this repository checks against (v1.19.2), and the front page's scope: what is in,
    what is out, and which neighbour holds what is out.
-2. The first job, the review in [evidence/](evidence/), names its baseline B1. The second, the design document, is [design/one-project.md](design/one-project.md); it was proposed on 2026-11-03
-   and awaits approval. The name was kept at the frame step.
-3. A fact that belongs to a neighbour is linked, never copied. A choice that shapes the repository gets a record in
+2. The first job, the review in [evidence/](evidence/), names its baseline B1. The second, the design document, is [design/one-project.md](design/one-project.md); it was proposed on 2026-11-03,
+   and its records 0003 to 0008 were accepted on the maintainer's word ([decisions](decisions/README.md)). The name was kept at the frame step.
+3. The card is [standard.md](standard.md): its table is built from the principle files, never written by hand
+   (`python3 checks/out/standard/checks/program/standard_card.py . --write`, which also rebuilds llms.txt). A new
+   principle is a file in [principles/](principles/README.md) whose Check line names a registered check; the shapes
+   are in [shapes/](shapes/README.md).
+4. A fact that belongs to a neighbour is linked, never copied. A choice that shapes the repository gets a record in
    [decisions/](decisions/).
 
 ## Rules for claims
@@ -41,12 +45,13 @@ the checks both skip:
 rm -rf checks/out/standard && mkdir -p checks/out/standard
 git -C ../reader-ergonomics archive b9732b9 | tar -x -C checks/out/standard   # the commit checks.yml pins
 python3 checks/out/standard/checks/run.py . --tiers program,meaning --judge flag   # the repository, as CI runs it
+READER_ERGONOMICS_CHECKS=checks/out/standard/checks python3 -m unittest discover -s checks   # the local checks' tests
 ```
 
 - Fix every error. Read every warning.
 - Answer the questions in `checks/out/needs-judgment.md` in `checks/judgments.toml`, each answer quoting in backticks
   a word or heading of its own file.
-- Keep [llms.txt](llms.txt), [README.md](README.md) and [README.fr.md](README.fr.md) in step.
+- Keep [llms.txt](llms.txt) (built from the principle files by the command above), [README.md](README.md) and [README.fr.md](README.fr.md) in step.
 - A pin raise goes in [CHANGELOG.md](CHANGELOG.md), not in decisions/.
 
 ## House conventions
