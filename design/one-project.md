@@ -10,6 +10,7 @@
 
 - The model decides nothing that a program or the person could decide.
 - A session starts from a short file of what the model cannot infer and a program can check.
+- A task reaches the model as a brief that names the checks it will be judged by.
 - Memory is plain files, written by the model, audited by a program, with the code taking precedence.
 - The setup is measured by five counts and a three-arm comparison.
 - The editor extension shows these files and hands the model the start file.
@@ -20,7 +21,8 @@ Terms, defined here before use:
 - A **session** is one run of the model on the project.
 - A **task** is one stated piece of work with a check that decides pass or fail.
 - An **oracle** is a program that decides pass or fail.
-- The **start file** is what a session is handed first.
+- The **start file** is the file a session is handed first; the **memory index** is the second.
+- A **brief** is the file that hands the model one task.
 - **B1** is the [baseline](../evidence/human-ai-teaming/baseline.md).
 
 ## Motivation
@@ -76,9 +78,11 @@ digraph one_project {
 
 ## Design
 
-Five decisions. Each names the alternatives that lost in its own table. The records, from
+Five decisions, and a requirement on the checks that the standard does not yet meet. Each decision names the alternatives that lost in its own table. The records, from
 [0003](../decisions/0003-the-model-decides-nothing-unchecked.md) to
-[0007](../decisions/0007-the-extension-reads-files-and-hands-over-two.md), keep the outcome once it is approved.
+[0007](../decisions/0007-the-extension-reads-files-and-hands-over-two.md), and
+[0008](../decisions/0008-a-task-is-handed-over-as-a-brief-that-names-its-checks.md) for the brief, keep the outcome
+once it is approved.
 
 ### 1. What each party decides
 
@@ -110,21 +114,51 @@ raised acceptance of wrong answers (Bansal 2021, measured).
 
 ### 2. What a session is handed
 
-A session is handed two things and nothing else: the **start file** and the **memory index**. All else is read on
-demand.
+A session is handed three files and nothing else: the **start file** and the **memory index**, which stay the same
+from task to task, and the **brief** of the task. All else is read on demand.
 
-- The start file holds four kinds of line:
-  the commands that build, test and check;
-  the non-standard conventions;
-  the precedence sentence of decision 3;
-  one pointer per task type, saying what to read.
+**The start file.**
+
+- Its name is `START.md`, at the project root. The path is a setting, so an agent that loads another name can be
+  pointed at it.
+- It is markdown with four headings, in this order: `Commands`, `Conventions`, `Precedence`, `Pointers`.
+  - `Commands` holds the commands that build, test and check, one per line, each in backticks.
+  - `Conventions` holds the non-standard conventions, one per line.
+  - `Precedence` holds the precedence sentence of decision 3, once.
+  - `Pointers` holds one line per task type, saying what to read.
 - It never holds an overview of the repository, which did not help (Gloaguen 2026, measured), nor anything the code
   states.
-- **Size bound.** The start file has at most 200 lines. The memory index has at most 200 lines. Both values are
-  PROVISIONAL, set in a configuration file, because no study sets a length (Anthropic 2026b gives 200 as practice).
+
+**The memory index.**
+
+- Its name is `memory/INDEX.md`. The folder is the memory folder of decision 3.
+- It has one line per memory file: `- [title](file.md): the hook, in one sentence`.
+- It holds nothing else, so that a line is one fact's address and the audit can count them.
+
+**Size bound.** The start file has at most 200 lines. The memory index has at most 200 lines. Both values are
+PROVISIONAL, set in a configuration file, because no study sets a length (Anthropic 2026b gives 200 as practice).
+
 - A program checks the bound on every commit. Past it, a line must go before another is added.
 - A second program runs each command in the start file and looks up each path and name it mentions. A line that
   fails is stale (decision 3).
+
+**The brief.**
+
+- It is one file per task, written before the task starts, named `brief.md` in the task's own folder.
+- It has four parts, as headings: `Task`, `Decided`, `To find`, `Checks`.
+  - `Task` is the work asked, in a few sentences.
+  - `Decided` is what is settled and the model must not reopen: choices, formats, limits, the files it may touch.
+  - `To find` is what the model must return, in the form it must have.
+  - `Checks` is the commands that judge the result, each in backticks, with what passing means.
+- `Checks` is the part that matters most.
+  In the one small run that varied the brief, a cheap model passed 0 of 10 with no brief.
+  It passed 0 of 10 with the usual fields, and 5 of 10 when the checks were added
+  ([brief test](https://github.com/Tewf/ai-augmented-agents/blob/master/experiments/brief-test/results.md)).
+  It is one task and one model: a first data point, and that arm was shown the cases it is judged by.
+- The checks in the brief are the task's check of decision 4: one list, so that the model is judged by what it was told.
+- The person writes or accepts the brief. The model may draft it; a draft is not a brief until a check or the person has
+  passed it. A brief with an empty `Checks` part is refused by a program, since the task would have no check.
+- When `To find` cannot be stated, or `Checks` cannot be written, the model asks the person (decision 1) and does not start.
 
 | Option | Consequences | Why it lost |
 |---|---|---|
@@ -132,6 +166,8 @@ demand.
 | A generated overview | complete at once | no gain and about 20% more cost (Gloaguen 2026) |
 | The whole memory loaded | nothing missed | past the bound the file is skimmed, not read |
 | Retrieval by similarity | scales | a model chooses what it is shown, which is a decision it cannot check (MemGPT, Packer 2023, is the nearest) |
+| A brief of objective, format, tools and limits only | the usual convention | 0 of 10 in the one run; the failures were cases it never stated |
+| The task typed in chat, no file | no file to write | the task and its checks are not on disk, so no count or audit can see them |
 
 ### 3. How memory across sessions is kept
 
@@ -197,11 +233,15 @@ that no state lives in the extension and any other editor can read it.
 
 | File | Written by | Read by |
 |---|---|---|
-| start file | person (model proposes) | the extension, handed to the model |
-| memory folder and index | model, in format; person | the extension, shown; the audit |
+| start file `START.md` | person (model proposes) | the extension, handed to the model |
+| memory folder and index `memory/INDEX.md` | model, in format; person | the extension, shown; the audit |
+| brief `brief.md`, one per task | person (model drafts) | the extension, handed to the model |
+| topic files, the markdown files of the project | person (model drafts) | the extension, shown as a tree |
 | decision log | the extension or a hook, from the person's answer | the person; the counts |
 | question queue | the model, with options and a default | the extension, shown |
-| verdicts | each check | the extension, shown beside the part checked |
+| judgment answers file | person, in the file the checks name | the checks; the extension opens the entry |
+| verdicts | the checks, as the next section requires | the extension, shown beside the part checked |
+| audit report | the audit program (decision 3) | the extension, shown |
 | counts | a program, from the logs | the extension, shown |
 
 It must **show**:
@@ -213,7 +253,7 @@ It must **show**:
 
 It must **hand over**:
 
-- to the model at the start of a session: the start file and the memory index, and nothing else;
+- to the model at the start of a session: the start file and the memory index, and the brief of the task, and nothing else;
 - to the model after a failed check: the reason the check gave, not an opinion;
 - to the model after an answer: the log line;
 - to the person: any change to a file of the memory folder, as a diff.
@@ -226,6 +266,28 @@ outside its folder; keep a second copy of any file above.
 | The extension holds its own state | simple for one editor | two places per fact; lock-in to one editor |
 | The extension routes tasks between models | one place for delegation | routing by cost is a decision of the person's setup, not the viewer's |
 | The extension calls a model itself | integrated | it would decide what the model is shown, which decision 2 gives to the start file |
+
+### The checks' output: an interface the standard does not yet provide
+
+The extension shows a verdict beside the part checked, and the counts read the checks' failed runs. Both need the
+checks' output as a file. The standard's runner prints its findings to standard output and writes a file only for
+judgments. This design states what it needs and changes nothing there; the change belongs to the standard's owner.
+
+- **One file per run.** The runner writes every finding of a run to one text file, at a path set in its configuration,
+  replacing the file of the last run.
+- **One line per finding,** in the form of the printed line: `kind check path:line message`.
+  The four fields are these.
+  `kind` is `error`, `warning` or `judgment`.
+  `path:line` is a path from the project root, and a line number when the check knows one.
+  `message` is the reason the check gives, on the same line.
+- **A summary line** at the end gives the number of each kind and the run's time, so that a reader can tell a complete
+  file from a cut one.
+- **The exit status** is non-zero when an error was found, so that the model can be handed the reason after a failed run.
+- **The counts** need a second thing: each failed run kept, with its time, so that "caught" can be read. A log that
+  appends one summary line per run is enough.
+
+Until the runner writes this file, the project redirects the runner's standard output to it, which gives the same
+lines except the summary's timing.
 
 ## Consequences
 
@@ -250,5 +312,7 @@ outside its folder; keep a second copy of any file above.
 
 - What number of tasks lets one person's comparison say anything? To be fixed before the first task.
 - Which size bounds hold? The values 200 and 200 are PROVISIONAL.
+- Will the standard's owner add the verdicts file and the run log? Until then, redirected output stands in, and the
+  counts "caught" and "escaped" depend on it.
 - Can a fact about the person, rather than the code, have a source the audit can follow?
 - How is "the same question" decided when the wording differs?

@@ -1,8 +1,10 @@
 # 0004: A short start file and a memory index
 
-**Decision:** A session is handed a start file of at most 200 lines and a memory index of at most 200 lines, and nothing else; both bounds are provisional and set in configuration.
+**Decision:** A session is handed a start file, a memory index and the brief of its task, and nothing else. The file and the index have at most 200 lines each, a provisional bound set in configuration.
 
 **Status:** proposed, 2026-11-03. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/shapes/decision-record.md).
+
+**Amendment, 3 November:** the start file is `START.md` with four headings and the index is `memory/INDEX.md` with one line per file; the brief of the task is the third thing handed over ([0008](0008-a-task-is-handed-over-as-a-brief-that-names-its-checks.md)).
 
 ## Context
 

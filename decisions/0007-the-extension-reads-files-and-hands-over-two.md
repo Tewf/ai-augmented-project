@@ -1,8 +1,10 @@
 # 0007: The extension reads files and hands over two
 
-**Decision:** The editor extension keeps no state of its own: it shows the files of the design and hands the model the start file and the memory index.
+**Decision:** The editor extension keeps no state of its own: it shows the files of the design and hands the model the start file, the memory index and the brief of the task.
 
 **Status:** proposed, 2026-11-03. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/shapes/decision-record.md).
+
+**Amendment, 3 November:** the interface is ten kinds of file, not six: the topic files, the brief, the judgment answers file and the audit report are added. The title keeps its two, the start file and the index; the brief is the task, not context ([0008](0008-a-task-is-handed-over-as-a-brief-that-names-its-checks.md)).
 
 ## Context
 
@@ -11,8 +13,8 @@
 
 ## Decision
 
-- The interface is six kinds of file, with a writer and a reader each ([design](../design/one-project.md)).
-- It shows owners, verdicts, bounds, the audit and the counts; it hands over the start file, a failed check's reason and the log line.
+- The interface is ten kinds of file, with a writer and a reader each ([design](../design/one-project.md)).
+- It shows owners, verdicts, bounds, the audit and the counts; it hands over the start file, the index, the brief, a failed check's reason and the log line.
 - Rejected: its own store; routing between models; calling a model itself.
 
 ## Consequences
