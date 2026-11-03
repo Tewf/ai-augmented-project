@@ -2,6 +2,8 @@
 
 Step 2 of the review, read on 2026-11-02 and extended on 2026-11-03 by forward citations of Vaccaro 2024 (marked forward). Surveys first in each strand.
 
+**Shape:** [review](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/review.md)
+
 - Terms are in [frame](frame.md); each key is in the [bibliography](../bibliography.md).
 - Grades are the standard's four.
 - A number read in an abstract is marked (secondary).

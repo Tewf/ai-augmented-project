@@ -2,6 +2,8 @@
 
 Every work this repository cites, once: Key, citation, and a stable link.
 
+**Shape:** [references](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/references.md)
+
 | Key | Citation | Link |
 | Agentic AI Foundation 2026 | Agentic AI Foundation (read 2026-11-02). AGENTS.md: a simple, open format for guiding coding agents. Linux Foundation; the adopter count is its owners' claim | https://agents.md |
 | Akata 2020 | Akata, Balliet, de Rijke, Dignum and others (2020). A research agenda for hybrid intelligence. Computer 53(8). Abstract read | https://doi.org/10.1109/MC.2020.2996587 |

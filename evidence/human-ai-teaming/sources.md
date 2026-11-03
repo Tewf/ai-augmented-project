@@ -2,6 +2,8 @@
 
 44 sources: 35 formal and 9 grey. 39 were read on 2026-11-02; 5 formal were added on 2026-11-03 as forward citations of Vaccaro 2024, marked forward below. A grey source below 10 of 20 is an example of practice only, never support for a claim. Searches are in [protocol](protocol.md) and terms in [frame](frame.md); the grey re-rating and its reasons are in [protocol](protocol.md), section 12.
 
+**Shape:** [sources](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/sources.md)
+
 ## Flow
 
 | Stage | Count |

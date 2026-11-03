@@ -2,6 +2,8 @@
 
 Step 3 of the review. For each question, the best evidence, kept apart from the practice most adopted. Upper bounds (what was achieved) are kept apart from limits (what was shown not to work). Sources are in [review](review.md).
 
+**Shape:** [state of the art](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/state-of-the-art.md)
+
 ## Q1 Decisions
 
 | Record | Holder | What it says | Grade |
