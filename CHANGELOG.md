@@ -3,7 +3,7 @@
 Every release of this repository, and the releases it pins, newest first, in the form of [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 A pin move is recorded here, not in decisions/.
 
-## [Unreleased]
+## [0.2.1] - 2026-11-04
 
 ### Added
 
@@ -60,3 +60,5 @@ A pin move is recorded here, not in decisions/.
 
 - Pinned reader-ergonomics v1.19.2 (`b9732b9`), at the repository's start: the standard's pin, link, changelog and
   decision-record checks, which this skeleton is written to pass.
+
+(0.2.0 was tagged one commit earlier, before this changelog entry; 0.2.1 is the same content with the entry and the citation in step.)
