@@ -2,7 +2,7 @@
 
 **Decision:** Each task is handed to the model as a file of four parts, written before the task starts. The parts are the task, what is decided, what is to be found, and the checks it is judged by.
 
-**Status:** proposed, 2026-11-03. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/shapes/decision-record.md).
+**Status:** accepted, 2026-11-03, on the maintainer's word to finish, not read line by line. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/shapes/decision-record.md).
 
 ## Context
 

@@ -2,7 +2,7 @@
 
 **Decision:** Memory is one fact per file in one folder, written by the model in a fixed format, audited by a program that follows each file's source, with one sentence giving the code precedence.
 
-**Status:** proposed, 2026-11-03. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/shapes/decision-record.md).
+**Status:** accepted, 2026-11-03, on the maintainer's word to finish, not read line by line. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/shapes/decision-record.md).
 
 ## Context
 
