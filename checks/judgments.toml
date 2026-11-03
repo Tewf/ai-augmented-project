@@ -116,3 +116,10 @@ path = "standard.md"
 question = "the name 'standard' and the opening are far apart in meaning (0.20): does the name predict the content?"
 file = "badde3ee2bfd"
 answer = "Yes: the extension contract names this file `standard.md` for the card of every repository of the family, and its opening line, `The AI-augmented project standard`, says what the card is."
+
+[[answer]]
+check = "co-change"
+path = "AGENTS.md"
+question = "changed together with decisions/README.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "acdb1f7136d2"
+answer = "One links to the other already: `AGENTS.md` links `decisions/`, and both were edited when a record was added; they have different readers, so they stay apart."
