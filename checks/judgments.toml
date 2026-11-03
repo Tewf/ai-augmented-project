@@ -57,8 +57,8 @@ answer = "Yes: the file is the protocol of the search, with every string as run,
 [[answer]]
 check = "name-content"
 path = "evidence/human-ai-teaming/state-of-the-art.md"
-question = "the name 'state' and the opening are far apart in meaning (0.01): does the name predict the content?"
-file = "3d0142a48af2"
+question = "the name 'state' and the opening are far apart in meaning (0.07): does the name predict the content?"
+file = "1f14070a2527"
 answer = "Yes: the file gives the state of the art per question, with the best evidence beside the practice most adopted, under `Q2 Start of a session`."
 
 [[answer]]
@@ -79,7 +79,7 @@ answer = "One mode: how to change this repository. The `Rules for claims` and `H
 check = "document-mode"
 path = "decisions/0009-which-findings-became-principles.md"
 question = "reads about equally as reference and how-to: one mode per document?"
-file = "85b602736921"
+file = "0b3580081e22"
 answer = "One mode: understanding why. The tables under `Decision` give the reasons for each finding, and none is a procedure to follow."
 
 [[answer]]
@@ -120,15 +120,15 @@ answer = "A collection: `experiments` holds one folder per experiment, as the si
 [[answer]]
 check = "logical-lines"
 path = "README.fr.md"
-question = "125 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "6a25c4ac6ea1"
+question = "129 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "594544db2c9c"
 answer = "The role is the front page in French: what the repository is, how to take it and what it found. It stays whole; `L'adopter` and `Contenu` are its parts."
 
 [[answer]]
 check = "logical-lines"
 path = "README.md"
-question = "121 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "6b41ecbd77ce"
+question = "125 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "ba76d97649fb"
 answer = "The role is the front page: what the repository is, how to take it, what the review and the first comparison found. It stays whole; `Take it` and `Contents` are its parts."
 
 [[answer]]
@@ -163,35 +163,35 @@ answer = "The protocol says what is run before the run, and its opening part is 
 check = "logical-lines"
 path = "README.fr.md"
 question = "129 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "69d3e874a1d2"
+file = "594544db2c9c"
 answer = "The role is the French front page, the translation of `README.md`, so a reader in French meets the same state. It stays: the length comes from its sections, not from a second role."
 
 [[answer]]
 check = "logical-lines"
 path = "README.md"
 question = "125 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "99cab6b6b1d8"
+file = "ba76d97649fb"
 answer = "The role is the front page: it says what the project is for, under `Status`. It stays; the length is its sections, each a part of the one front-page role."
 
 [[answer]]
 check = "logical-lines"
 path = "evidence/human-ai-teaming/protocol.md"
-question = "114 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "e01cd3293f0a"
+question = "115 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "75899c301bd9"
 answer = "The role is the method record: the searches and scores behind each source, from `Forward pass, 2026-11-03` on. It stays, since its sections all belong to that one record."
 
 [[answer]]
 check = "figures-present"
 path = "evidence/human-ai-teaming/review.md"
 question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
-file = "bf29bfa18ef9"
+file = "364b10bb53ad"
 answer = "One relation is in words only: the split between augmentation and synergy under `Strand 1`, two effect sizes. Two bars would repeat three numbers already in the sentence, so it stays without a figure."
 
 [[answer]]
 check = "paraphrase"
 path = "README.fr.md"
-question = "says nearly what README.md (line 35) says, similarity 0.94: one fact in two places?"
-file = "69d3e874a1d2"
+question = "says nearly what README.md (line 35) says, similarity 0.95: one fact in two places?"
+file = "1678b3dd3f0e"
 answer = "Not a second fact: the French page is the translation of `README.md`, kept in the same state by rule. Two languages carry one fact by design, so it stays."
 
 [[answer]]
@@ -207,3 +207,24 @@ path = "evidence/human-ai-teaming/README.md"
 question = "reads about equally as how-to and reference: one mode per document?"
 file = "715df4985c22"
 answer = "One mode: lookup. The file lists the review's files under `Files` and its claims, each with its grade, under `Claims`; it is a reference, not a how-to."
+
+[[answer]]
+check = "document-mode"
+path = "AGENTS.md"
+question = "reads about equally as how-to and reference: one mode per document?"
+file = "a59708a51b24"
+answer = "Reference: the file follows its shape and is consulted part by part; its heading `Contributing to this repository` names the one thing it holds."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/human-ai-teaming/position.md"
+question = "reads about equally as explanation and how-to: one mode per document?"
+file = "4e92313c9291"
+answer = "Reference: the file follows its shape and is consulted part by part; its heading `Position` names the one thing it holds."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/human-ai-teaming/review.md"
+question = "reads about equally as reference and how-to: one mode per document?"
+file = "364b10bb53ad"
+answer = "Reference: the file follows its shape and is consulted part by part; its heading `Review: five strands` names the one thing it holds."

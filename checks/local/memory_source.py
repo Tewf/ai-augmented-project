@@ -13,6 +13,10 @@ rule also has `**Status:**`, which is proposal or accepted (design/one-project.m
 What a run with no error guarantees: each memory file named has the three fields, an allowed type, a status when
 it is a rule, and a source that is an existing path when it looks like one. What it does not: that a command still
 gives the recorded result, that an identifier exists, or how long ago a file was last checked.
+
+A file may also carry one `**Estimate:**` line, in either form: a number, its uncertainty in parentheses (`+- x` written
+`±x`, or `a to b`), a comma and the date, as in `12 minutes (8 to 20), 2026-11-03`. Without all three it is refused: an
+estimate with no stated doubt or no date cannot be told from a fact. The program does not know that the number is right.
 Time O(size of the files).
 """
 from __future__ import annotations
@@ -37,6 +41,15 @@ SUFFIXES = (".md", ".py", ".toml", ".yml", ".yaml", ".json", ".sh", ".qmd", ".tx
 def field(text: str, label: str) -> str | None:
     found = re.search(rf"^\*\*{label}:\*\*[ \t]*(.*)$", text, re.MULTILINE)
     return found.group(1).strip() if found else None
+
+
+ESTIMATE = re.compile(r"^\d[\d.,]*[^(]*\(\s*(?:±\s*\d[\d.,]*|\d[\d.,]*\s+to\s+\d[\d.,]*)[^)]*\)\s*,\s*\d{4}-\d{2}-\d{2}$")
+
+
+def estimate_findings(path: str, text: str) -> list[Finding]:
+    """Findings for the `**Estimate:**` lines of a file: each is a number, its uncertainty and a date."""
+    return [Finding(NAME, path, 0, "an **Estimate:** is a number, its uncertainty in parentheses (±x or a to b), a comma and a date")
+            for value in re.findall(r"^\*\*Estimate:\*\*[ \t]*(.*)$", text, re.MULTILINE) if not ESTIMATE.match(value.strip())]
 
 
 def memory_files(root: Path, config: dict) -> list[str]:
@@ -83,6 +96,7 @@ def check(root: Path, config: dict) -> list[Finding]:
     findings: list[Finding] = []
     for path in memory_files(root, config):
         text = (root / path).read_text(encoding="utf-8", errors="replace")
+        findings += estimate_findings(path, text)
         header = HEADER.match(text)
         if header:
             findings += check_header(path, header.group(1), header.group(2), yaml_types)
