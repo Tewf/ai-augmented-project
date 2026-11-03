@@ -1,19 +1,19 @@
 # Sources: the pool
 
-39 sources read on 2026-11-02: 30 formal and 9 grey. Searches are in [protocol](protocol.md); terms in [frame](frame.md). A grey source below 10 of 20 is an example of practice only, never support for a claim.
+44 sources: 35 formal and 9 grey. 39 were read on 2026-11-02; 5 formal were added on 2026-11-03 as forward citations of Vaccaro 2024, marked forward below. A grey source below 10 of 20 is an example of practice only, never support for a claim. Searches are in [protocol](protocol.md) and terms in [frame](frame.md); the grey re-rating and its reasons are in [protocol](protocol.md), section 12.
 
 ## Flow
 
 | Stage | Count |
 |---|---|
-| Formal strings run | 20 (14 on arXiv, 12 on OpenAlex, some on both) |
+| Formal strings run | 20 (14 on arXiv, 12 on OpenAlex, some on both); forward pass: 3 more (protocol, section 11) |
 | Grey producers visited | 9 pages, 2 web searches |
-| Screened by title | about 90 |
-| Included, formal | 30 |
+| Screened by title | about 90; forward pass 200 by title and 54 by keyword (overlap not removed) |
+| Included, formal | 35 (30 first pass, 5 forward) |
 | Included, grey | 9 |
-| Grey below 10 of 20, examples only | 1 |
+| Grey below 10 of 20, examples only | 4 (after re-rating) |
 | Read in part in the text | 4 formal, 9 grey |
-| Read from the abstract (secondary) | 25 formal |
+| Read from the abstract (secondary) | 30 formal (25 first pass, 5 forward) |
 | Located only, not read | 1 formal (Dellermann 2019, paywalled) |
 
 ## Formal
@@ -50,6 +50,11 @@
 | Olausson 2024 | controlled evaluation | F20 | measured, secondary | review Q5 |
 | Wu 2023 | position paper | F17 | convention | review Q1 |
 | Chen 2023b | method and study | named lead | measured, secondary | review Q1, baseline |
+| Ngo 2025 | meta-analysis, 146 experiments | forward, Vaccaro 2024 | measured, secondary | review Q1 |
+| Liu 2025e | reliability analysis, 52 studies | forward, Vaccaro 2024 | measured, secondary | review Q1 |
+| Nassiri 2026 | systematic review, 15 studies | forward, Vaccaro 2024 | measured, secondary | review Q1 |
+| Dell'Acqua 2026 | preregistered field experiment, 758 workers | forward, Vaccaro 2024 | measured, secondary | review Q1, Q4 |
+| Tretow 2025 | meta-analysis, 42 studies, preprint | forward, Vaccaro 2024 | measured, secondary; not peer reviewed | review Q1 |
 
 ## Grey
 
@@ -57,12 +62,12 @@ Score is out of 20, then the groups in the order authority, methodology, objecti
 
 | Key | Kind and tier | Score | Groups | Note |
 |---|---|---|---|---|
-| Agentic AI Foundation 2026 | convention site, tier 2 | 11 | 3, 2, 2, 1, 0.5, 1, 1, 0.5 | its own count of adopters is the owners' claim |
+| Agentic AI Foundation 2026 | convention site, tier 2 | 9 (was 11) | 3, 2, 1, 0, 0.5, 1, 1, 0.5 | below 10: practice only. Reread: no date on the page (D 0); owner's own format page (O 1). Its count of adopters is the owners' claim |
 | Anthropic 2024 | engineering blog, tier 3 | 14 | 4, 3, 2, 1, 1, 2, 1, 0 | the owner's account of its own practice |
-| Anthropic 2025 | engineering blog, tier 3 | 12.5 | 4, 3, 2, 1, 0.5, 1, 1, 0 | the owner's account |
-| Anthropic 2026b | documentation, tier 2 | 12 | 4, 2, 2, 1, 0.5, 1, 1, 0.5 | sizes are the vendor's setting |
-| OpenAI 2026b | documentation, tier 2 | 11.5 | 4, 2, 2, 1, 0.5, 0.5, 1, 0.5 | the default limit is the vendor's setting |
-| GitHub 2026j | documentation, tier 2 | 10.5 | 4, 1, 2, 1, 0.5, 0.5, 1, 0.5 | |
+| Anthropic 2025 | engineering blog, tier 3 | 11 (was 12.5) | 4, 3, 1.5, 1, 0.5, 1, 0, 0 | the owner's account. Reread: O 1.5, I 0 (customers unnamed, no count) |
+| Anthropic 2026b | documentation, tier 2 | 10 (was 12) | 4, 2, 1, 1, 0.5, 1, 0, 0.5 | sizes are the vendor's setting. Reread: O 1 (vendor's own tool), I 0 |
+| OpenAI 2026b | documentation, tier 2 | 8.5 (was 11.5) | 4, 2, 1, 0, 0.5, 0.5, 0, 0.5 | below 10: practice only. Reread: no date on the page (D 0), O 1, I 0. The 32 KiB default is the vendor's setting |
+| GitHub 2026j | documentation, tier 2 | 8.5 (was 10.5) | 4, 1, 1, 1, 0.5, 0.5, 0, 0.5 | below 10: practice only. Reread: O 1 (vendor's own tool), I 0 (no count shown) |
 | DORA 2025b | research programme page, tier 2 | 13 | 4, 2, 3, 1, 0.5, 1, 1, 0.5 | landing page read, not the report |
 | Stack Overflow 2025 | practitioner survey, tier 2 | 13 | 3, 3, 3, 1, 0.5, 1, 1, 0.5 | self-reported |
 | HumanLayer 2025 | practitioner blog, tier 3 | 7 | 2, 1, 1, 1, 0.5, 1, 0.5, 0 | below 10: example only |

@@ -18,6 +18,7 @@ Every work this repository cites, once: Key, citation, and a stable link.
 | Chatlatanagulchai 2026 | Chatlatanagulchai, Li, Kashiwa, Reid and others (2025). Agent READMEs: an empirical study of context files for agentic coding. Preprint. Abstract read | https://arxiv.org/abs/2511.12884 |
 | Chen 2023b | Chen, Zaharia, Zou (2023). FrugalGPT: how to use large language models while reducing cost and improving performance. Preprint. Abstract read | https://arxiv.org/abs/2305.05176 |
 | DORA 2025b | DORA (2025). State of AI-assisted software development 2025. Research programme landing page; the report body was not read | https://dora.dev/research/2025/dora-report/ |
+| Dell'Acqua 2026 | Dell'Acqua, McFowland, Mollick, Lifshitz-Assaf, Kellogg, Rajendran, Krayer, Candelon (2026). Navigating the jagged technological frontier: field experimental evidence of the effects of AI on knowledge worker productivity and quality. Organization Science. Abstract read (secondary) | https://doi.org/10.1287/orsc.2025.21838 |
 | Dellermann 2019 | Dellermann, Ebel, Söllner, Leimeister (2019). Hybrid intelligence. Business and Information Systems Engineering 61. Paywalled, located only; the term is read through Akata 2020 | https://doi.org/10.1007/s12599-019-00595-2 |
 | Garousi 2019 | Garousi, Felderer, Mäntylä (2019). Guidelines for including grey literature and conducting multivocal literature reviews in software engineering. Information and Software Technology 106, 101-121 | https://doi.org/10.1016/j.infsof.2018.09.006 |
 | GitHub 2026j | GitHub (read 2026-11-02). Adding repository custom instructions for GitHub Copilot. GitHub Docs | https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions |
@@ -28,8 +29,11 @@ Every work this repository cites, once: Key, citation, and a stable link.
 | Jiang 2025 | Jiang, Nam (2025). Beyond the prompt: an empirical study of Cursor rules. Preprint. Abstract read | https://arxiv.org/abs/2512.18925 |
 | Khatri 2026 | Khatri (2026). Do context files help coding agents? A two-agent ablation study on real repositories. Preprint. Abstract read | https://arxiv.org/abs/2607.27250 |
 | Liu 2024b | Liu, Wang, Chen and others (2024). Large language model-based agents for software engineering: a survey. Preprint. Abstract read | https://arxiv.org/abs/2409.02977 |
+| Liu 2025e | Liu, Zhang, Chen and Chen (2025). Human-AI teaming in healthcare: 1 + 1 > 2? npj Artificial Intelligence. Abstract read (secondary) | https://doi.org/10.1038/s44387-025-00052-4 |
 | Luo 2026 | Luo, Tian, Cao and others (2026). From storage to experience: a survey on the evolution of LLM agent memory mechanisms. Preprint. Abstract read | https://arxiv.org/abs/2605.06716 |
 | Macedo 2026 | de Macedo (2026). What makes a harness a harness: necessary and sufficient conditions for an agent harness. Preprint. Abstract read | https://arxiv.org/abs/2606.10106 |
+| Nassiri 2026 | Nassiri and El Mzabi (2026). Generative AI and organizational decision-making: a systematic review of performance effects. Procedia Computer Science. Abstract read (secondary) | https://doi.org/10.1016/j.procs.2026.04.182 |
+| Ngo 2025 | Ngo (2025). Human-AI collaboration in high-stakes decisions: a meta-analysis of healthcare and public sectors. Applied Economics Letters. Abstract read (secondary) | https://doi.org/10.1080/13504851.2025.2586160 |
 | Olausson 2024 | Olausson, Inala, Wang, Gao, Solar-Lezama (2024). Is self-repair a silver bullet for code generation? ICLR 2024. Abstract read | https://arxiv.org/abs/2306.09896 |
 | OpenAI 2026b | OpenAI (read 2026-11-02). Custom instructions with AGENTS.md. Codex documentation | https://developers.openai.com/codex/guides/agents-md |
 | Packer 2023 | Packer, Wooders, Lin and others (2023). MemGPT: towards LLMs as operating systems. Preprint. Abstract read | https://arxiv.org/abs/2310.08560 |
@@ -38,6 +42,7 @@ Every work this repository cites, once: Key, citation, and a stable link.
 | Peng 2023 | Peng, Kalliamvakou, Cihon, Demirer (2023). The impact of AI on developer productivity: evidence from GitHub Copilot. Preprint. Abstract read | https://arxiv.org/abs/2302.06590 |
 | Sghaier 2026 | Ben Sghaier, Li, Adams, Hassan (2026). Don't blame the large language model: how agent harness evolution shapes coding agent quality. Preprint. Abstract read | https://arxiv.org/abs/2607.03691 |
 | Stack Overflow 2025 | Stack Overflow (2025). 2025 developer survey, AI section. Self-reported survey; sections 3.2 and 3.3 read | https://survey.stackoverflow.co/2025/ai |
+| Tretow 2025 | Tretow, Ergon, Schwebel, Treffers, Welpe and Feuerriegel (2025). The effect of LLM assistance on diagnostic accuracy: a systematic review and meta-analysis. Preprint, medRxiv; not peer reviewed. Abstract read (secondary) | https://doi.org/10.64898/2025.12.11.25341476 |
 | Treude 2026 | Treude, Baltes (2026). Context rot in AI-assisted software development: repurposing documentation consistency for AI configuration artifacts. Preprint. Abstract read | https://arxiv.org/abs/2606.09090 |
 | Vaccaro 2024 | Vaccaro, Almaatouq, Malone (2024). When combinations of humans and AI are useful: a systematic review and meta-analysis. Nature Human Behaviour 8, 2293-2303. Abstract and results read | https://doi.org/10.1038/s41562-024-02024-1 |
 | Wu 2023 | Wu (2023). Large language models should ask clarifying questions to increase confidence in generated code. Position paper. Abstract read | https://arxiv.org/abs/2308.13507 |

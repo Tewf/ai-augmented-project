@@ -10,7 +10,7 @@ ce dépôt ajoute les deux parties qui ne sont pas la personne, et la mise en pl
 
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
-> **État (2026-11-03), version 0.1.0 :** le premier travail, une revue de littérature en première passe de 39 sources, est écrit et
+> **État (2026-11-03), version 0.1.0 :** le premier travail, une revue de littérature en première passe de 44 sources (39 au départ, cinq citations ultérieures ajoutées le 2026-11-03), est écrit et
 > finit sur une référence nommée. Le document de conception est écrit, et ses fiches 0003 à 0008 sont acceptées (la page des décisions dit comment). La carte, trois formes et six vérifications locales en découlent. Une première comparaison de la méthode avec le modèle seul est menée ; les bras avec une personne attendent. Le nom est gardé ; le mot du domaine
 > est human-AI teaming. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat nouveau.
 >
@@ -100,7 +100,7 @@ digraph where_it_sits {
 
 ## Le premier travail : une revue de littérature
 
-Une première passe de 39 sources, 30 formelles et 9 grises, en cinq étapes comme une revue de thèse :
+Une première passe de 44 sources (35 formelles, 9 grises) suit les cinq étapes d'une revue de thèse. Cinq sources formelles ont été ajoutées le 3 novembre 2026 comme citations ultérieures :
 [cadre](evidence/human-ai-teaming/frame.md), [revue](evidence/human-ai-teaming/review.md),
 [état de l'art](evidence/human-ai-teaming/state-of-the-art.md), [positionnement](evidence/human-ai-teaming/position.md)
 et [référence](evidence/human-ai-teaming/baseline.md). Le dossier [evidence](evidence/) contient tout (en anglais).
@@ -110,13 +110,15 @@ et [référence](evidence/human-ai-teaming/baseline.md). Le dossier [evidence](e
 - **Le nom du domaine est human-AI teaming.** Le but est l'intelligence hybride ; le test est la performance
   complémentaire. « AI-augmented » rappelle l'augmentation : le nom est proche et il est gardé.
 - **Une personne avec un modèle ne bat pas en moyenne le meilleur des deux** : g = -0,23 sur 106 expériences.
-  Les tâches qui décident perdent ; celles qui créent gagnent (Vaccaro 2024). Mesuré.
+  Les tâches qui décident perdent ; celles qui créent gagnent (Vaccaro 2024). Dans 146 expériences des secteurs de la santé
+  et du public, la synergie est négative (g = -0,38) et l'IA seule dépasse souvent l'équipe (Ngo 2025, secondaire). Mesuré.
 - **Un fichier de contexte n'améliore pas le succès et coûte plus de 20 % de plus en moyenne** ; il aide à énoncer une pratique
   hors norme (Gloaguen 2026). Un fichier périmé est suivi plutôt que le code dans 90,1 % des choix (Xu 2026,
   secondaire). Mesuré.
 - **Les résultats sur la vitesse divergent.** Des développeurs expérimentés étaient 19 % plus lents.
   Ils se croyaient plus rapides (Becker 2025). Deux autres essais trouvent environ 21 % et 55,8 % plus rapides
-  (secondaire). L'auto-évaluation n'est pas une mesure.
+  (secondaire). Vitesse et qualité peuvent aussi diverger : 25,1 % plus vite à l'intérieur de la frontière d'un modèle, 19 %
+  moins souvent juste au-delà (Dell'Acqua 2026, secondaire). L'auto-évaluation n'est pas une mesure.
 - **Aucune étude contrôlée n'a été trouvée** d'une mémoire de projet écrite par un modèle, de son audit, ni des
   allers-retours comme mesure. C'est un énoncé sur ces recherches.
 
@@ -201,7 +203,7 @@ méthode : 30 sessions, trois petites tâches, des tests cachés comme juge ([fi
 
 | Partie | Résumé |
 |---|---|
-| [evidence](evidence/) | la revue de première passe : 39 sources, cinq étapes, finissant sur la référence B1 |
+| [evidence](evidence/) | la revue de première passe : 44 sources, cinq étapes, finissant sur la référence B1 |
 | [standard.md](standard.md) | la carte : sept principes avec leurs niveaux, et les vérifications qui les lisent |
 | [principles](principles/) | un fichier par principe, dans les groupes session et mémoire |
 | [shapes](shapes/) | le brief, le fichier de départ et l'index de mémoire, chacun avec un exemple |
