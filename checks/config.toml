@@ -20,20 +20,20 @@ facets = ["session", "memory"]
 # The local checks, checks/local/. Their tests run in CI: python3 -m unittest discover -s checks.
 # Where a session starts: START.md at a project's root, and this repository's example of one.
 [start_file]
-files = ["START.md", "shapes/examples/start-file.md"]
+files = ["START.md", "shapes/examples/start-file.md", "experiments/method-comparison/fixtures/common/START.md"]
 max_lines = 200                 # PROVISIONAL: no study sets a length; one vendor's target is under 200
 precedence = "follow the code"  # the phrase the precedence sentence must hold, said once
-exempt = ["checks/out/"]        # paths made at run time, which a fresh checkout does not have
+exempt = ["checks/out/", "brief.md", "memory/INDEX.md", ".handover/note.md"]  # made at run time, which a fresh checkout does not have
 
 # One brief per task: brief.md in the task's folder, and this repository's example of one.
 [brief]
-files = ["brief.md", "*/brief.md"]
+files = ["brief.md", "*/brief.md", "experiments/method-comparison/fixtures/*/brief.md"]
 exempt = ["shapes/brief.md"]   # the shape of a brief is not a brief
 pass_words = 2                  # PROVISIONAL: the fewest words beside a command that can say what passing means
 
 # The memory index and the files it lists.
 [memory]
-indexes = ["memory/INDEX.md", "shapes/examples/memory/INDEX.md"]
+indexes = ["memory/INDEX.md", "shapes/examples/memory/INDEX.md", "experiments/method-comparison/fixtures/common/memory/INDEX.md"]
 max_lines = 200                 # PROVISIONAL: no study sets a length; one vendor caps its index
 types = ["fact", "rule", "reference"]
 
@@ -57,3 +57,11 @@ family = ["reader-ergonomics",
           "reader-ergonomics-topic",
           "reader-ergonomics-blueprint"]
 shared_links = []
+
+# The inputs of the method comparison are frozen as the sessions received them: three briefs of one shape share
+# their boilerplate on purpose, and the fixture folders mirror the project the agent is handed.
+[duplication]
+exempt = ["experiments/method-comparison/fixtures/*/brief.md"]
+
+[tree_shape]
+exempt = ["experiments/method-comparison/fixtures/*"]
