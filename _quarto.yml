@@ -14,6 +14,7 @@ website:
   title: "AI-augmented project"
   site-url: "https://tewf.github.io/ai-augmented-project/"
   repo-url: "https://github.com/Tewf/ai-augmented-project"
+  description: "How a person, a language model and a machine are set up and run one project together: what each decides, what a session is handed, how memory is kept and audited, each rule with its grade of evidence and a check to run in CI."
   repo-actions: [source, issue]
   page-navigation: true
   navbar:

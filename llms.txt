@@ -1,18 +1,30 @@
 # AI-augmented project
 
-> How a person, a language model and a machine are set up and run one project together: what the machine checks, what the model is given and may do, what stays the person's, and the loop between the three. A first-pass review of 39 sources ends on the baseline B1; the design document is written and proposed, awaiting approval.
+> How a person, a language model and a machine are set up and run one project together: what each decides, what a session is handed, how memory is kept and audited, each rule with its grade of evidence and a check to run in CI.
 
-Each page's markdown source is served at the same path with a .md extension. This index is written by hand; AGENTS.md says to keep it in step.
+Each page's markdown source is served at the same path with a .md extension.
 
-## The repository
+## Standard
 
-- [AI-augmented project](https://tewf.github.io/ai-augmented-project/README.md): the scope, the first job and the questions its review must answer
-- [Evidence](https://tewf.github.io/ai-augmented-project/evidence/README.md): the first-pass review, its five steps and its bibliography
-- [Human-AI teaming](https://tewf.github.io/ai-augmented-project/evidence/human-ai-teaming/README.md): 39 sources, the four questions answered, the baseline B1
-- [Design document](https://tewf.github.io/ai-augmented-project/design/one-project.md): five decisions on who decides, the start of a session and the brief, memory, the measure and the extension's interface
-- [Decisions](https://tewf.github.io/ai-augmented-project/decisions/README.md): one record per choice that shapes the repository
-
-## Contributing
-
+- [Standard](https://tewf.github.io/ai-augmented-project/standard.md): the one-page card to follow, with every principle and its grade
 - [Contributing](https://tewf.github.io/ai-augmented-project/AGENTS.md): rules for changing this repository
-- [Standard](https://tewf.github.io/reader-ergonomics/standard.md): the reader-ergonomics card this repository obeys
+
+## Session: what the model decides and is handed
+
+- [A task names its checks](https://tewf.github.io/ai-augmented-project/principles/session/a-task-names-its-checks.md): a task is handed to the model as a brief whose Checks part lists the commands that judge the result, each with what passing means.
+- [The code takes precedence](https://tewf.github.io/ai-augmented-project/principles/session/code-takes-precedence.md): the start file says once that, when an instruction or a memory disagrees with the code, the code is followed and the disagreement is said.
+- [The model decides nothing unchecked](https://tewf.github.io/ai-augmented-project/principles/session/model-decides-nothing-unchecked.md): a program decides what it can check, the person decides the rest, and the model drafts and proposes without deciding.
+- [Stale text is found by a program](https://tewf.github.io/ai-augmented-project/principles/session/stale-text-found-by-a-program.md): every path that an instruction names is looked up by a program on every commit, so a line that points at nothing is found, not trusted.
+- [The start file holds what the code cannot say](https://tewf.github.io/ai-augmented-project/principles/session/start-file-holds-what-the-code-cannot-say.md): the start file holds the commands, the non-standard conventions, the precedence sentence and one pointer per kind of task, within a bound of lines, and no overview of the repository.
+
+## Memory: what is kept across sessions
+
+- [A memory file has a source](https://tewf.github.io/ai-augmented-project/principles/memory/memory-file-has-a-source.md): each memory file records its date, its type and a source that a program can follow, and a rule is a proposal until the person accepts it.
+- [The memory index has one line per file](https://tewf.github.io/ai-augmented-project/principles/memory/memory-index-one-line-per-file.md): the memory index holds one line per memory file, in one form and within a bound, so that a line is one fact's address and a program can count them.
+
+## Optional
+
+- [Evidence](https://tewf.github.io/ai-augmented-project/evidence/README.md): one literature review per topic, with the evidence against
+- [Bibliography](https://tewf.github.io/ai-augmented-project/evidence/bibliography.md): every cited work, once
+- [Shapes](https://tewf.github.io/ai-augmented-project/shapes/README.md): skeletons for kinds of documents
+- [Decisions](https://tewf.github.io/ai-augmented-project/decisions/README.md): the choices this repository made, one record each
