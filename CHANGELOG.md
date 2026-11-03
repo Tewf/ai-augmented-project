@@ -3,6 +3,12 @@
 Every release of this repository, and the releases it pins, newest first, in the form of [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 A pin move is recorded here, not in decisions/.
 
+## [Unreleased]
+
+### Changed
+
+- Pinned reader-ergonomics v1.21.0 (`2e5b6f0`), from v1.20.0 (`4f99372`): duplication skips the lines a declared shape prescribes
+
 ## [0.2.1] - 2026-11-04
 
 ### Added

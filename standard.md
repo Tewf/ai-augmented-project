@@ -2,7 +2,7 @@
 
 What setting up one project with a person, a model and a machine shares, as far as the evidence goes. The rules cover
 who decides, what a session is handed, how memory is kept, and how a stale text is found. It extends
-[reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/standard.md), the standard for any reader:
+[reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/standard.md), the standard for any reader:
 read that one first. This page adds only what the setup changes.
 
 The evidence is a first-pass review of 39 sources, in [evidence/](evidence/README.md), ending on the baseline B1. The
@@ -16,7 +16,7 @@ design that turns it into files is [design/one-project.md](design/one-project.md
 3. **Check:** copy `checks/local/` into your project, set its tables in `checks/config.toml`, and run the standard's
    checks. The six local checks find each file by the names in that config.
 
-Grades mean what they mean in [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/standard.md#grades): measured, supported with caveat,
+Grades mean what they mean in [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/standard.md#grades): measured, supported with caveat,
 convention, not supported. Each principle states its grade and never claims more.
 
 ## Principles
