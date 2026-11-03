@@ -16,6 +16,8 @@ A pin move is recorded here, not in decisions/.
 ### Added
 
 - Unit tests for both accepted forms.
+- The first comparison, in `experiments/method-comparison/`: the model alone against the model with the method, 30
+  sessions on three tasks with hidden tests, judged by a program ([record 0011](decisions/0011-the-method-is-compared-with-the-model-alone-by-a-program.md)).
 
 ## [0.1.0] - 2026-11-03
 

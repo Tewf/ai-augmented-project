@@ -12,7 +12,7 @@ repository adds the two parties that are not the person, and the setting of each
 This page in French: [README.fr.md](README.fr.md).
 
 > **Status (2026-11-03), release 0.1.0:** the first job, a first-pass literature review of 39 sources, is written and ends on a named
-> baseline. The design document is written, and its records 0003 to 0008 are accepted (the decisions page says how). The card, three shapes and six local checks follow from it. The design's test is not run here yet. The name is kept; the field's word is human-AI teaming. It is not an
+> baseline. The design document is written, and its records 0003 to 0008 are accepted (the decisions page says how). The card, three shapes and six local checks follow from it. A first comparison of the method with the model alone is run; the person arms wait. The name is kept; the field's word is human-AI teaming. It is not an
 > official standard, not a peer-reviewed study and not a new result.
 >
 > **How it is made:** with Claude, an AI assistant by Anthropic, under the maintainer's direction, the way
@@ -183,6 +183,16 @@ CI runs the same checks on every push, and a run fails on any error
 master also renders the site, [tewf.github.io/ai-augmented-project](https://tewf.github.io/ai-augmented-project/)
 ([pages.yml](https://github.com/Tewf/ai-augmented-project/blob/master/.github/workflows/pages.yml)).
 
+## The first comparison
+
+[experiments/method-comparison](experiments/method-comparison/results.md) runs the model alone against the model with
+the method: 30 sessions, three small tasks, hidden tests as judge ([record 0011](decisions/0011-the-method-is-compared-with-the-model-alone-by-a-program.md)).
+
+- **Hidden pass:** 0 of 15 alone, 15 of 15 with the method.
+- **Tokens:** 173 thousand a session alone, 263 thousand with the method; the cost is the same, 0.0087 and 0.0084 dollars.
+- **The start file** was read first in 15 of 15 sessions, because the hand-over note names it.
+- **It cannot say** whether the shape of the files or the facts in them made the difference, and it does not run the person arms.
+
 ## Contents
 
 | Part | Summary |
@@ -192,6 +202,7 @@ master also renders the site, [tewf.github.io/ai-augmented-project](https://tewf
 | [principles](principles/) | one file per principle, in the groups session and memory |
 | [shapes](shapes/) | the brief, the start file and the memory index, each with a worked example |
 | [design](design/one-project.md) | the design document: five decisions, their alternatives, the measure and the extension's interface |
+| [experiments](experiments/) | runs, as opposed to reading: the method against the model alone, with protocol, code and results |
 | [decisions](decisions/) | one record per choice that shapes this repository, each opening with the decision in one sentence |
 
 ## Licence

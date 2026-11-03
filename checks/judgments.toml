@@ -63,20 +63,6 @@ answer = "Yes: the file gives the state of the art per question, with the best e
 
 [[answer]]
 check = "logical-lines"
-path = "README.fr.md"
-question = "92 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "750eeae7c8ef"
-answer = "It stays: its one role is the French front page, in step with README.md, with the same sections from `Périmètre` to `Licence` and `Le document de conception`."
-
-[[answer]]
-check = "logical-lines"
-path = "README.md"
-question = "88 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "bcb9cbdffbe9"
-answer = "It stays: its one role is the front page, whose new section `The design document` points to the design and the six records."
-
-[[answer]]
-check = "logical-lines"
 path = "design/one-project.md"
 question = "228 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
 file = "3548905494b8"
@@ -88,20 +74,6 @@ path = "AGENTS.md"
 question = "reads about equally as how-to and explanation: one mode per document?"
 file = "b1ff98d7423e"
 answer = "One mode: how to change this repository. The `Rules for claims` and `House conventions` sections are instructions, not explanation of why."
-
-[[answer]]
-check = "logical-lines"
-path = "README.fr.md"
-question = "102 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "49e4c40d9d15"
-answer = "It stays: the role is the French front page, one state of the English one. Each part it holds is a short route to a file that carries the detail, from `Périmètre` to `Contenu`."
-
-[[answer]]
-check = "logical-lines"
-path = "README.md"
-question = "98 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "f040f3a2e70c"
-answer = "It stays: the role is the front page, the contract a later session starts from. Each section routes to a file that holds the detail, from `Scope` to `Contents`, and the extension layout asks for one front page."
 
 [[answer]]
 check = "document-mode"
@@ -125,34 +97,6 @@ file = "acdb1f7136d2"
 answer = "One links to the other already: `AGENTS.md` links `decisions/`, and both were edited when a record was added; they have different readers, so they stay apart."
 
 [[answer]]
-check = "logical-lines"
-path = "README.fr.md"
-question = "118 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "22fb38cf949c"
-answer = "The role is the French front page, kept in step with `README.md`; it stays whole, its parts being `L'adopter` and `Vérifier` among the English page's."
-
-[[answer]]
-check = "logical-lines"
-path = "README.md"
-question = "114 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "0768a02ccd41"
-answer = "The role is the front page: what the repository is, how to take it and what the review found. It stays whole; `Take it`, `Scope` and `Contents` are its parts."
-
-[[answer]]
-check = "paraphrase"
-path = "README.fr.md"
-question = "says nearly what README.md (line 35) says, similarity 0.94: one fact in two places?"
-file = "22fb38cf949c"
-answer = "Not duplication: the French page is the same page in French, kept in step on purpose (`Cette page en anglais`)."
-
-[[answer]]
-check = "document-mode"
-path = "CHANGELOG.md"
-question = "reads about equally as reference and how-to: one mode per document?"
-file = "52cee7348fc8"
-answer = "One mode: reference. `Unreleased` and `Added` list what changed, in the Keep a Changelog form; the how-to words are in the entries' verbs, not a procedure."
-
-[[answer]]
 check = "co-change"
 path = "CHANGELOG.md"
 question = "changed together with decisions/README.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
@@ -165,3 +109,52 @@ path = "checks/local/memory_index.py"
 question = "changed together with checks/test_session.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "0605969ffc28"
 answer = "They stay apart: `checks/test_session.py` tests every check of `checks/local/`, and its docstring names the folder it reads, so a test changes with each check by construction."
+
+[[answer]]
+check = "tree-shape"
+path = "experiments"
+question = "2 entries: fold into the parent folder, unless this folder is one record of a collection (a job, a chapter, a topic)."
+file = ""
+answer = "A collection: `experiments` holds one folder per experiment, as the sibling repository does, and a second folder will follow."
+
+[[answer]]
+check = "logical-lines"
+path = "README.fr.md"
+question = "125 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "6a25c4ac6ea1"
+answer = "The role is the front page in French: what the repository is, how to take it and what it found. It stays whole; `L'adopter` and `Contenu` are its parts."
+
+[[answer]]
+check = "logical-lines"
+path = "README.md"
+question = "121 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "6b41ecbd77ce"
+answer = "The role is the front page: what the repository is, how to take it, what the review and the first comparison found. It stays whole; `Take it` and `Contents` are its parts."
+
+[[answer]]
+check = "paraphrase"
+path = "README.fr.md"
+question = "says nearly what README.md (line 35) says, similarity 0.94: one fact in two places?"
+file = "6a25c4ac6ea1"
+answer = "Not duplication: the French page is the same page in French, kept in step on purpose (`Cette page en anglais`)."
+
+[[answer]]
+check = "document-mode"
+path = "CHANGELOG.md"
+question = "reads about equally as reference and how-to: one mode per document?"
+file = "1a8869eeef59"
+answer = "One mode: reference. `Unreleased` and `Added` list what changed, in the Keep a Changelog form; the how-to words are in the entries' verbs, not a procedure."
+
+[[answer]]
+check = "name-content"
+path = "experiments/method-comparison/fixtures/common/START.md"
+question = "the name 'start' and the opening are far apart in meaning (0.15): does the name predict the content?"
+file = "22ee39a78c86"
+answer = "The name is the shape's: this is the file a session is handed first, and its parts are `Commands` and `Pointers`."
+
+[[answer]]
+check = "name-content"
+path = "experiments/method-comparison/protocol.md"
+question = "the name 'protocol' and the opening are far apart in meaning (0.18): does the name predict the content?"
+file = "fce397414d5e"
+answer = "The protocol says what is run before the run, and its opening part is the `Question` the run answers."

@@ -11,7 +11,7 @@ ce dépôt ajoute les deux parties qui ne sont pas la personne, et la mise en pl
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
 > **État (2026-11-03), version 0.1.0 :** le premier travail, une revue de littérature en première passe de 39 sources, est écrit et
-> finit sur une référence nommée. Le document de conception est écrit, et ses fiches 0003 à 0008 sont acceptées (la page des décisions dit comment). La carte, trois formes et six vérifications locales en découlent. Le test de la conception n'est pas encore mené ici. Le nom est gardé ; le mot du domaine
+> finit sur une référence nommée. Le document de conception est écrit, et ses fiches 0003 à 0008 sont acceptées (la page des décisions dit comment). La carte, trois formes et six vérifications locales en découlent. Une première comparaison de la méthode avec le modèle seul est menée ; les bras avec une personne attendent. Le nom est gardé ; le mot du domaine
 > est human-AI teaming. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat nouveau.
 >
 > **Comment il est fait :** avec Claude, un assistant IA d'Anthropic, sous la direction du mainteneur, comme
@@ -187,6 +187,16 @@ La CI exécute les mêmes vérifications à chaque push, et une exécution écho
 master construit aussi le site, [tewf.github.io/ai-augmented-project](https://tewf.github.io/ai-augmented-project/)
 ([pages.yml](https://github.com/Tewf/ai-augmented-project/blob/master/.github/workflows/pages.yml)).
 
+## La première comparaison
+
+[experiments/method-comparison](experiments/method-comparison/results.md) compare le modèle seul au modèle avec la
+méthode : 30 sessions, trois petites tâches, des tests cachés comme juge ([fiche 0011](decisions/0011-the-method-is-compared-with-the-model-alone-by-a-program.md)).
+
+- **Réussite aux tests cachés :** 0 sur 15 seul, 15 sur 15 avec la méthode.
+- **Jetons :** 173 mille par session seul, 263 mille avec la méthode ; le coût est le même, 0,0087 et 0,0084 dollar.
+- **Le fichier de départ** a été lu en premier dans 15 sessions sur 15, parce que la note de passation le nomme.
+- **Elle ne peut pas dire** si la forme des fichiers ou les faits qu'ils portent ont fait la différence, et elle ne mène pas les bras avec une personne.
+
 ## Contenu
 
 | Partie | Résumé |
@@ -196,6 +206,7 @@ master construit aussi le site, [tewf.github.io/ai-augmented-project](https://te
 | [principles](principles/) | un fichier par principe, dans les groupes session et mémoire |
 | [shapes](shapes/) | le brief, le fichier de départ et l'index de mémoire, chacun avec un exemple |
 | [design](design/one-project.md) | le document de conception : cinq décisions, leurs solutions écartées, la mesure et l'interface de l'extension |
+| [experiments](experiments/) | des essais, par opposition à la lecture : la méthode contre le modèle seul, avec protocole, code et résultats |
 | [decisions](decisions/) | une fiche par choix qui façonne ce dépôt, chacune ouvrant sur la décision en une phrase |
 
 ## Licence
