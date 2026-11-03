@@ -7,6 +7,11 @@ A pin move is recorded here, not in decisions/.
 
 ### Changed
 
+- The principle "a task names its checks", the brief shape and the design: `Checks` stays as the judge's definition; the claim
+  that listing the checks raises the pass rate is lowered to not supported (brief test, round two, 180 calls, hidden tests).
+
+### Changed
+
 - `memory-index` accepts prose before the first entry, headings, blank lines and **Shape:** lines between entries,
   a dash as well as a colon between title and hook, and a hook judged by its line, not its sentence count.
 - `memory-source` accepts a YAML header (`metadata.type` one of user, feedback, project, reference) with a date or a
