@@ -2,6 +2,8 @@
 
 Step 5 of the review: the baseline the repository's rules are compared against. It is the maintainer's practice, written down for this review. It names no tool, no path and no private repository. Evidence is in [review](review.md).
 
+**Shape:** [baseline](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/baseline.md)
+
 ## B1: five practices
 
 1. **Standing instructions.** A short file of instructions is loaded at the start of each session. It holds rules, the order of work and what to read for a task. Longer detail is read on demand and not copied into the file.

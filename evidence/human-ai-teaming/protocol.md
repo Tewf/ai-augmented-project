@@ -2,6 +2,8 @@
 
 A first pass of a multivocal literature review to Garousi 2019, run on 2026-11-02 by one reviewer. Terms are in [frame](frame.md).
 
+**Shape:** [protocol](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/protocol.md)
+
 ## 1. Why grey literature
 
 Garousi's seven questions, answered for this topic.

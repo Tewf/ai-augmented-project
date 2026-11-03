@@ -191,7 +191,7 @@ answer = "One relation is in words only: the split between augmentation and syne
 check = "paraphrase"
 path = "README.fr.md"
 question = "says nearly what README.md (line 35) says, similarity 0.95: one fact in two places?"
-file = "1678b3dd3f0e"
+file = "594544db2c9c"
 answer = "Not a second fact: the French page is the translation of `README.md`, kept in the same state by rule. Two languages carry one fact by design, so it stays."
 
 [[answer]]
@@ -228,3 +228,38 @@ path = "evidence/human-ai-teaming/review.md"
 question = "reads about equally as reference and how-to: one mode per document?"
 file = "364b10bb53ad"
 answer = "Reference: the file follows its shape and is consulted part by part; its heading `Review: five strands` names the one thing it holds."
+
+[[answer]]
+check = "co-change"
+path = "CHANGELOG.md"
+question = "changed together with checks/test_session.py in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "77b4ac4fe5a6"
+answer = "They stay apart: `CHANGELOG.md` serves another role than the file it changes with, and they change together by construction, not by overlap."
+
+[[answer]]
+check = "co-change"
+path = "CHANGELOG.md"
+question = "changed together with shapes/memory-index.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "77b4ac4fe5a6"
+answer = "They stay apart: `CHANGELOG.md` serves another role than the file it changes with, and they change together by construction, not by overlap."
+
+[[answer]]
+check = "co-change"
+path = "checks/local/memory_source.py"
+question = "changed together with checks/test_session.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "37ab24400450"
+answer = "They stay apart: `checks/local/memory_source.py` serves another role than the file it changes with, and they change together by construction, not by overlap."
+
+[[answer]]
+check = "co-change"
+path = "checks/test_session.py"
+question = "changed together with shapes/memory-index.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "c6372c0a6b43"
+answer = "They stay apart: `checks/test_session.py` serves another role than the file it changes with, and they change together by construction, not by overlap."
+
+[[answer]]
+check = "paraphrase"
+path = "README.fr.md"
+question = "says nearly what README.md (line 35) says, similarity 0.95: one fact in two places?"
+file = "594544db2c9c"
+answer = "Each review states the rule for its own pool; `Projet augmenté par l'IA` keeps its own copy because a protocol is read alone and the wording is the family contract."

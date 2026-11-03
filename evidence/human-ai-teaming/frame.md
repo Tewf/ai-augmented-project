@@ -2,6 +2,8 @@
 
 Step 1 of the review, read on 2026-11-02. It states the problem, gives the field's names beside the practitioners' names, and says whether the repository's name matches.
 
+**Shape:** [frame](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/frame.md)
+
 ## The problem in one sentence
 
 How one person, one language model and one machine are set up so that the project gets done, with the person's time spent only on what is theirs to decide.

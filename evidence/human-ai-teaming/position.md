@@ -2,6 +2,8 @@
 
 Step 4 of the review. What is known, what was not found, and what this repository would ask. Each "not found" is a statement about these searches, not about the world. Terms are in [frame](frame.md).
 
+**Shape:** [position](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/position.md)
+
 ## Known
 
 - A person with a model does not beat the better of the two on average, and does best on tasks that create (Vaccaro 2024).

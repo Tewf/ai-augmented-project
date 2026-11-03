@@ -2,6 +2,8 @@
 
 The evidence against what the front page assumes, and the disagreements. Sources are in [review](review.md). None is deleted to make the setup look stronger.
 
+**Shape:** [against](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/against.md)
+
 ## Against "the model helps"
 
 - Experienced developers were 19% slower with AI tools in a trial of 16 people (Becker 2025). They believed they were 20% faster.
