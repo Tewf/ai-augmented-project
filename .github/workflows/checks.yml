@@ -52,12 +52,12 @@ jobs:
           for name in $(python3 -c "import tomllib; print(*tomllib.load(open('repository/checks/config.toml', 'rb'))['bibliography_keys']['family'])"); do
             git clone --quiet --depth 1 "https://github.com/Tewf/$name" "$name"
           done
-      - name: Check the repository, tiers program and meaning
-        run: python3 standard/checks/run.py repository --tiers program,meaning --judge flag
-      - name: Test the local checks
+      - name: Run the unit tests under checks/
         env:
           READER_ERGONOMICS_CHECKS: ${{ github.workspace }}/standard/checks
         run: python3 -m unittest discover -s repository/checks
+      - name: Check the repository, tiers program and meaning
+        run: python3 standard/checks/run.py repository --tiers program,meaning --judge flag
       - name: List the questions left for judgment
         if: always()
         run: cat repository/checks/out/needs-judgment.md 2>/dev/null || echo "No questions for judgment."

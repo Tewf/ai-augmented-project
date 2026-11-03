@@ -123,3 +123,24 @@ path = "AGENTS.md"
 question = "changed together with decisions/README.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "acdb1f7136d2"
 answer = "One links to the other already: `AGENTS.md` links `decisions/`, and both were edited when a record was added; they have different readers, so they stay apart."
+
+[[answer]]
+check = "logical-lines"
+path = "README.fr.md"
+question = "118 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "22fb38cf949c"
+answer = "The role is the French front page, kept in step with `README.md`; it stays whole, its parts being `L'adopter` and `Vérifier` among the English page's."
+
+[[answer]]
+check = "logical-lines"
+path = "README.md"
+question = "114 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "0768a02ccd41"
+answer = "The role is the front page: what the repository is, how to take it and what the review found. It stays whole; `Take it`, `Scope` and `Contents` are its parts."
+
+[[answer]]
+check = "paraphrase"
+path = "README.fr.md"
+question = "says nearly what README.md (line 35) says, similarity 0.94: one fact in two places?"
+file = "22fb38cf949c"
+answer = "Not duplication: the French page is the same page in French, kept in step on purpose (`Cette page en anglais`)."

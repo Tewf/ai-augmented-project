@@ -11,12 +11,40 @@ repository adds the two parties that are not the person, and the setting of each
 
 This page in French: [README.fr.md](README.fr.md).
 
-> **Status (2026-11-03):** the first job, a first-pass literature review of 39 sources, is written and ends on a named
-> baseline. The design document is written, and its records 0003 to 0008 are accepted (the decisions page says how). The card, three shapes and six local checks follow from it. The name is kept; the field's word is human-AI teaming. It is not an
+> **Status (2026-11-03), release 0.1.0:** the first job, a first-pass literature review of 39 sources, is written and ends on a named
+> baseline. The design document is written, and its records 0003 to 0008 are accepted (the decisions page says how). The card, three shapes and six local checks follow from it. The design's test is not run here yet. The name is kept; the field's word is human-AI teaming. It is not an
 > official standard, not a peer-reviewed study and not a new result.
 >
 > **How it is made:** with Claude, an AI assistant by Anthropic, under the maintainer's direction, the way
 > reader-ergonomics was made. Corrections are welcome as issues.
+
+## Take it
+
+The shapes are meant to be copied and kept as your own. Copy them from a tagged release
+([tags](https://github.com/Tewf/ai-augmented-project/tags)), so a later change here never changes your copy.
+
+1. Copy the three shapes you use from [shapes/](shapes/): the [brief](shapes/brief.md), the
+   [start file](shapes/start-file.md) and the [memory index](shapes/memory-index.md), and the checks that read them
+   from [checks/local/](checks/local/), into the same paths of your repository.
+2. Write your `START.md` and your memory index from the filled examples in [shapes/examples/](shapes/examples/), and a
+   `brief.md` in each task's folder.
+3. Add `checks/config.toml` with `extends = "reader-ergonomics"` and the `[start_file]` and `[brief]` tables of this
+   repository's own; set their paths to yours.
+4. Pin the standard by commit and run the checks, one command:
+
+   ```sh
+   git clone https://github.com/Tewf/reader-ergonomics ../reader-ergonomics
+   git -C ../reader-ergonomics checkout b9732b9814c71768f722691f3c5049ec2b8ed378   # v1.19.2
+   python3 ../reader-ergonomics/checks/run.py .
+   ```
+
+A disagreement has three places to go:
+
+- your reader style, as an override with its reason, when it is about your reader;
+- an extension, when it is about a genre;
+- an issue on [this repository](https://github.com/Tewf/ai-augmented-project/issues), when its evidence or its shape is wrong.
+
+The standard's section, [Take your own version](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/README.md#take-your-own-version), gives the rest.
 
 ## Where it sits
 

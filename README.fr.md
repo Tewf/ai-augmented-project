@@ -10,12 +10,41 @@ ce dépôt ajoute les deux parties qui ne sont pas la personne, et la mise en pl
 
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
-> **État (2026-11-03) :** le premier travail, une revue de littérature en première passe de 39 sources, est écrit et
-> finit sur une référence nommée. Le document de conception est écrit, et ses fiches 0003 à 0008 sont acceptées (la page des décisions dit comment). La carte, trois formes et six vérifications locales en découlent. Le nom est gardé ; le mot du domaine
+> **État (2026-11-03), version 0.1.0 :** le premier travail, une revue de littérature en première passe de 39 sources, est écrit et
+> finit sur une référence nommée. Le document de conception est écrit, et ses fiches 0003 à 0008 sont acceptées (la page des décisions dit comment). La carte, trois formes et six vérifications locales en découlent. Le test de la conception n'est pas encore mené ici. Le nom est gardé ; le mot du domaine
 > est human-AI teaming. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat nouveau.
 >
 > **Comment il est fait :** avec Claude, un assistant IA d'Anthropic, sous la direction du mainteneur, comme
 > reader-ergonomics. Les corrections sont bienvenues sous forme d'issues.
+
+## L'adopter
+
+Les formes sont faites pour être copiées et gardées comme les vôtres. Copiez-les depuis une version étiquetée
+([tags](https://github.com/Tewf/ai-augmented-project/tags)), pour qu'un changement ultérieur ici ne change jamais
+votre copie.
+
+1. Copiez les trois formes dont vous avez besoin depuis [shapes/](shapes/) : le [brief](shapes/brief.md), le
+   [fichier de départ](shapes/start-file.md) et l'[index de mémoire](shapes/memory-index.md), et les vérifications qui
+   les lisent depuis [checks/local/](checks/local/), aux mêmes chemins de votre dépôt.
+2. Écrivez votre `START.md` et votre index de mémoire d'après les exemples remplis de
+   [shapes/examples/](shapes/examples/), et un `brief.md` dans le dossier de chaque tâche.
+3. Ajoutez `checks/config.toml` avec `extends = "reader-ergonomics"` et les tables `[start_file]` et `[brief]` de ce
+   dépôt ; réglez leurs chemins sur les vôtres.
+4. Épinglez la norme par commit et lancez les vérifications, une seule commande :
+
+   ```sh
+   git clone https://github.com/Tewf/reader-ergonomics ../reader-ergonomics
+   git -C ../reader-ergonomics checkout b9732b9814c71768f722691f3c5049ec2b8ed378   # version 1.19.2
+   python3 ../reader-ergonomics/checks/run.py chemin/vers/votre/dépôt
+   ```
+
+Un désaccord a trois destinations :
+
+- votre style de lecteur, comme dérogation motivée, s'il porte sur votre lecteur ;
+- une extension, s'il porte sur un genre ;
+- une issue sur [ce dépôt](https://github.com/Tewf/ai-augmented-project/issues), quand ses preuves ou sa forme sont fausses.
+
+La section de la norme, [Take your own version](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/README.md#take-your-own-version), donne le reste.
 
 ## Où il se place
 
