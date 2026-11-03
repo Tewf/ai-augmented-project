@@ -1,6 +1,6 @@
 # Review: five strands
 
-Step 2 of the review, read on 2026-11-02. Surveys first in each strand.
+Step 2 of the review, read on 2026-11-02 and extended on 2026-11-03 by forward citations of Vaccaro 2024 (marked forward). Surveys first in each strand.
 
 - Terms are in [frame](frame.md); each key is in the [bibliography](../bibliography.md).
 - Grades are the standard's four.
@@ -16,6 +16,10 @@ Step 2 of the review, read on 2026-11-02. Surveys first in each strand.
 - On average a person with a model scored below the better of the two alone: Hedges g = -0.23, 95% interval -0.39 to -0.07 (Vaccaro 2024, abstract and results, read). Measured.
 - The loss came in tasks that decide; tasks that create content gained (Vaccaro 2024). When the person beat the model alone, the team gained; when the model beat the person, the team lost. Measured.
 - The team did beat the person alone on average, which Vaccaro 2024 calls augmentation. Measured.
+- Forward, the same split holds in a narrower pool. Across 146 experiments in healthcare and public sectors, augmentation raised performance (g = 0.622). Synergy was negative (g = -0.380), with AI alone often ahead of the team. Publication bias favours the augmentation results (Ngo 2025, abstract, secondary). Measured.
+- Across 52 clinical studies the team rarely reached complementarity. Reviewing the model's output at the same time gave more than reviewing it after a first judgment, and juniors gained more than seniors (Liu 2025e, abstract, secondary). Measured.
+- Across 15 studies of generative AI in organisations, the effect depends on the decision phase. It is positive in intelligence tasks (d = +0.41) and negative in choice tasks (d = -0.28). The authors name outputs that sound equally sure when right or wrong as the cause (Nassiri 2026, abstract, secondary). Measured; a small review.
+- Across 42 studies of LLM assistance, physicians' diagnostic accuracy rose a little (g = 0.22, 95% interval 0.18 to 0.27), with the size varying by model and field (Tretow 2025, abstract, secondary). Measured; a preprint, not peer reviewed. Its abstract gives a search window that runs past its own DOI date, so the window is not relied on.
 - Complementary performance is possible: in 1,626 users' experiments it appeared on every task when the model was about as accurate as the person (Bansal 2021, introduction, read). Explanations raised acceptance whatever the model's correctness and did not raise team accuracy. Measured.
 - In an earlier study that Bansal 2021 tabulates, people alone scored 51.1%, the model alone 87.0% and the team 74.6% (section 2, read). Measured.
 - Parasuraman 2000 splits a task into four stages: acquiring information, analysing it, selecting a decision, acting. Each stage gets its own level of automation. Convention, untested.
@@ -54,6 +58,7 @@ Step 2 of the review, read on 2026-11-02. Surveys first in each strand.
 - A controlled trial with GitHub's tool found tasks 55.8% faster, on one server to write (Peng 2023, secondary). Measured.
 - 96 engineers at one company were about 21% faster, with a large interval (Paradis 2024, secondary). Measured.
 - A research programme calls AI an amplifier of an organisation's strengths and weaknesses (DORA 2025b, landing page only). Practice.
+- Speed and quality can move apart. In a preregistered trial of 758 consultants, AI raised speed (25.1% faster) and quality on tasks inside the model's frontier. On one task outside it, users were 19% less likely to be correct (Dell'Acqua 2026, abstract, secondary). Measured. A time count alone would have missed the second result.
 - Round trips, questions asked twice and errors caught before a person saw them are not outcomes in any source found.
 
 ## Strand 5: checks as the oracle (Q5)

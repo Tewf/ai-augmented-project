@@ -11,7 +11,7 @@ repository adds the two parties that are not the person, and the setting of each
 
 This page in French: [README.fr.md](README.fr.md).
 
-> **Status (2026-11-03), release 0.1.0:** the first job, a first-pass literature review of 39 sources, is written and ends on a named
+> **Status (2026-11-03), release 0.1.0:** the first job, a first-pass literature review of 44 sources (39 read first, five forward citations added on 2026-11-03), is written and ends on a named
 > baseline. The design document is written, and its records 0003 to 0008 are accepted (the decisions page says how). The card, three shapes and six local checks follow from it. A first comparison of the method with the model alone is run; the person arms wait. The name is kept; the field's word is human-AI teaming. It is not an
 > official standard, not a peer-reviewed study and not a new result.
 >
@@ -99,7 +99,7 @@ digraph where_it_sits {
 
 ## The first job: a literature review
 
-A first pass of 39 sources, 30 formal and 9 grey, in the five steps of a thesis review:
+A first pass of 44 sources (35 formal, 9 grey) follows the five steps of a thesis review. Five formal sources were added on 2026-11-03 as forward citations:
 [frame](evidence/human-ai-teaming/frame.md), [review](evidence/human-ai-teaming/review.md),
 [state of the art](evidence/human-ai-teaming/state-of-the-art.md), [position](evidence/human-ai-teaming/position.md)
 and [baseline](evidence/human-ai-teaming/baseline.md). The [evidence](evidence/) folder holds all of it.
@@ -109,11 +109,13 @@ and [baseline](evidence/human-ai-teaming/baseline.md). The [evidence](evidence/)
 - **The field's name is human-AI teaming.** The aim is hybrid intelligence; the test is complementary performance.
   "AI-augmented" echoes augmentation, so the name is close and is kept.
 - **A person with a model does not beat the better of the two on average**: g = -0.23 over 106 experiments.
-  Tasks that decide lost; tasks that create gained (Vaccaro 2024). Measured.
+  Tasks that decide lost; tasks that create gained (Vaccaro 2024). In 146 experiments in healthcare and public sectors,
+  synergy was negative (g = -0.38) and AI alone often beat the team (Ngo 2025, secondary). Measured.
 - **A context file does not raise success and costs over 20% more on average**; it helps to state non-standard practice
   (Gloaguen 2026). A stale file is obeyed over the code in 90.1% of choices (Xu 2026, secondary). Measured.
 - **Speed results disagree.** Experienced developers were 19% slower while believing they were faster
-  (Becker 2025); two other trials found about 21% and 55.8% faster (secondary). Self-report is not a measure.
+  (Becker 2025); two other trials found about 21% and 55.8% faster (secondary). Speed and quality can also part: 25.1%
+  faster inside a model's frontier, 19% less likely to be correct outside it (Dell'Acqua 2026, secondary). Self-report is not a measure.
 - **No controlled study was found** of a model-written project memory, of its audit, or of round trips as a measure.
   That is a statement about these searches.
 
@@ -197,7 +199,7 @@ the method: 30 sessions, three small tasks, hidden tests as judge ([record 0011]
 
 | Part | Summary |
 |---|---|
-| [evidence](evidence/) | the first-pass review: 39 sources, five steps, ending on the baseline B1 |
+| [evidence](evidence/) | the first-pass review: 44 sources, five steps, ending on the baseline B1 |
 | [standard.md](standard.md) | the card: seven principles with their grades, and the checks that read them |
 | [principles](principles/) | one file per principle, in the groups session and memory |
 | [shapes](shapes/) | the brief, the start file and the memory index, each with a worked example |
