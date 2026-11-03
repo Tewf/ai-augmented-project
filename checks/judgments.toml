@@ -64,8 +64,8 @@ answer = "Yes: the file gives the state of the art per question, with the best e
 [[answer]]
 check = "logical-lines"
 path = "design/one-project.md"
-question = "228 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "3548905494b8"
+question = "227 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "d3c31fd61fdc"
 answer = "It stays: its one role is the design document of one setup, in the shape's fixed sections from `Motivation` to `Open questions`; each of the five decisions is a subsection of `Design` and splitting them would separate a choice from its alternatives."
 
 [[answer]]
@@ -86,7 +86,7 @@ answer = "One mode: understanding why. The tables under `Decision` give the reas
 check = "name-content"
 path = "standard.md"
 question = "the name 'standard' and the opening are far apart in meaning (0.20): does the name predict the content?"
-file = "badde3ee2bfd"
+file = "a87484fba81b"
 answer = "Yes: the extension contract names this file `standard.md` for the card of every repository of the family, and its opening line, `The AI-augmented project standard`, says what the card is."
 
 [[answer]]

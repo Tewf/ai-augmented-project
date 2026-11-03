@@ -44,7 +44,7 @@ The part to find names the module and the tests. The checks are two commands, ea
 | Task | the work asked; a model cannot infer it | convention |
 | Decided | settled choices, so the model does not reopen them or ask twice | convention, untested |
 | To find | the form of the result, so a program can read it | convention |
-| Checks | outside feedback; a cheap model passed 0 of 10 with the usual fields and 5 of 10 with the checks added, in one run of one task | measured for outside feedback over self-repair (Huang 2024; Olausson 2024); convention for the brief |
+| Checks | defines the judge the runner needs; with hidden tests, 30 of 60 passed with the convention brief and 29 of 60 with the checks added, so listing them is not shown to raise the pass rate ([results](https://github.com/Tewf/ai-augmented-agents/blob/master/experiments/brief-test/results-2.md)) | not supported for a gain from naming the checks; measured for outside feedback over self-repair (Huang 2024; Olausson 2024); the brief itself descriptive |
 
 The principle behind the last part is [a task names its checks](../principles/session/a-task-names-its-checks.md).
 

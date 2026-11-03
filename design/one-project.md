@@ -150,11 +150,11 @@ PROVISIONAL, set in a configuration file, because no study sets a length (Anthro
   - `Decided` is what is settled and the model must not reopen: choices, formats, limits, the files it may touch.
   - `To find` is what the model must return, in the form it must have.
   - `Checks` is the commands that judge the result, each in backticks, with what passing means.
-- `Checks` is the part that matters most.
-  In the one small run that varied the brief, a cheap model passed 0 of 10 with no brief.
-  It passed 0 of 10 with the usual fields, and 5 of 10 when the checks were added
-  ([brief test](https://github.com/Tewf/ai-augmented-agents/blob/master/experiments/brief-test/results.md)).
-  It is one task and one model: a first data point, and that arm was shown the cases it is judged by.
+- `Checks` is the part the runner needs: it defines the judge.
+  Round two of the brief test used hidden tests: no brief passed 0 of 60, the convention brief 30 of 60,
+  and the checks added 29 of 60
+  ([results](https://github.com/Tewf/ai-augmented-agents/blob/master/experiments/brief-test/results-2.md)).
+  So the four headings help a cheap model, and naming the checks adds nothing measurable (not supported).
 - The checks in the brief are the task's check of decision 4: one list, so that the model is judged by what it was told.
 - The person writes or accepts the brief. The model may draft it; a draft is not a brief until a check or the person has
   passed it. A brief with an empty `Checks` part is refused by a program, since the task would have no check.
