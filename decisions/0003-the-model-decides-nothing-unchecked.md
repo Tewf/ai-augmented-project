@@ -2,7 +2,7 @@
 
 **Decision:** A program decides what a program can check, the person decides the rest, and the model drafts and proposes without deciding anything that no check or person has seen.
 
-**Status:** accepted, 2026-11-03, on the maintainer's word to finish, not read line by line. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/shapes/decision-record.md).
+**Status:** accepted, 2026-11-03. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/shapes/decision-record.md).
 
 ## Context
 

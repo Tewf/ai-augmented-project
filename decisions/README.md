@@ -19,3 +19,6 @@ decision in one sentence under its title, then its status, context, decision and
 ## See also
 
 [The front page](../README.md); [the design document](../design/one-project.md), which records 0003 to 0008 follow.
+
+Records 0003 to 0008 were accepted on 2026-11-03 on the maintainer's word to finish the work, not after a reading line
+by line; a later reading may reopen any of them with a superseding record.
