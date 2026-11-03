@@ -7,8 +7,8 @@ A pin move is recorded here, not in decisions/.
 
 ### Changed
 
-- `memory-index` accepts headings, blank lines and **Shape:** lines between entries, and a dash as well as a colon
-  between title and hook.
+- `memory-index` accepts prose before the first entry, headings, blank lines and **Shape:** lines between entries,
+  a dash as well as a colon between title and hook, and a hook judged by its line, not its sentence count.
 - `memory-source` accepts a YAML header (`metadata.type` one of user, feedback, project, reference) with a date or a
   link in the body, beside the shape's three labelled lines.
 - The memory-index shape and the source principle say both forms; [record 0010](decisions/0010-the-memory-shapes-meet-the-practice.md).

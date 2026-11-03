@@ -13,14 +13,14 @@
 
 ## Decision
 
-- `memory-index` accepts heading lines, blank lines and **Shape:** lines between entries, and a colon or a dash between title and hook.
+- `memory-index` accepts prose before the first entry, heading lines, blank lines and **Shape:** lines between entries, a hook of several sentences on one line, and a colon or a dash between title and hook.
 - `memory-source` accepts a YAML header whose `metadata.type` is user, feedback, project or reference, and whose body holds a date YYYY-MM-DD or a link as its source.
 - The shape's **Source:** line stays the other accepted form. Both forms are in the shape and tested.
 - Rejected: asking 164 files to be rewritten; keeping the refusal and exempting the memory.
 
 ## Consequences
 
-- Run on those 164 files, the widened checks leave 3 files without a date or link, and the index lines whose hook is more than one sentence. Those are findings, not refusals of the form.
+- Run on those 164 files, the widened checks leave 3 files without a date or a link, and 4 findings on the index: two lines not in the entry form and two files not listed. Those are findings, not refusals of the form.
 - **Bad:** a date or a link is a weaker source than a path or a command. The check cannot follow it; it only sees that one is there.
 - The type vocabulary now has two sets, one per form.
 

@@ -77,6 +77,8 @@ The principles are [a memory file has a source](../principles/memory/memory-file
 - One fact per file. The model writes in this folder and in this form only.
 - A rule is a proposal until the person accepts it.
 - The index may hold a title, headings that group the lines, blank lines and **Shape:** lines. They are not counted.
+- Before the first entry it may hold prose that says how to use the index. After the first entry, only entries.
+- A hook is judged by its physical line: one line, in any number of short sentences.
 - A line separates title from hook with a colon, or with a dash between spaces.
 - A file has the three labelled lines, or a YAML header with `metadata.type` and a body that carries a date or a link.
   The header is not asked for the labelled lines, and the type is then one of user, feedback, project, reference.

@@ -266,7 +266,7 @@ class MemoryIndexTests(Base):
 
     def test_a_line_in_the_wrong_form_is_found(self):
         self.write("memory/INDEX.md", INDEX + "A note.\n")
-        self.assertTrue(any("one sentence'" in m for m in self.run_check()))
+        self.assertTrue(any("one line'" in m for m in self.run_check()))
 
     def test_a_broken_link_is_found(self):
         self.write("memory/INDEX.md", INDEX + "- [Three](three.md): a third fact.\n")
@@ -280,9 +280,16 @@ class MemoryIndexTests(Base):
         self.write("memory/INDEX.md", INDEX + "- [One again](one.md): the same fact.\n")
         self.assertTrue(any("already listed" in m for m in self.run_check()))
 
-    def test_a_hook_of_two_sentences_is_found(self):
+    def test_a_hook_of_two_sentences_on_one_line_passes(self):
         self.write("memory/INDEX.md", INDEX.replace("the first fact, in a sentence.", "The first fact. And a second."))
-        self.assertTrue(any("the hook is one sentence" in m for m in self.run_check()))
+        self.assertEqual(self.run_check(), [])
+
+    def test_prose_before_the_first_entry_passes_and_after_it_is_found(self):
+        intro = "# Memory\n\nOne line per fact. Open a file when its line matters.\n\n"
+        self.write("memory/INDEX.md", INDEX.replace("# Memory\n\n", intro))
+        self.assertEqual(self.run_check(), [])
+        self.write("memory/INDEX.md", INDEX.replace("# Memory\n\n", intro) + "More prose.\n")
+        self.assertTrue(any("a line is" in m for m in self.run_check()))
 
     def test_one_line_over_the_bound_fails_and_at_the_bound_passes(self):
         self.write("memory/INDEX.md", INDEX)

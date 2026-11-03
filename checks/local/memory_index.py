@@ -1,10 +1,10 @@
 """Memory index: one line per memory file, in one form, each link resolving, within a bound.
 
 `[memory] indexes` names the index files (default memory/INDEX.md). Each entry is a list item
-`- [title](file.md): the hook, in one sentence`; a dash (hyphen, en or em) with spaces may stand for the colon.
-Between entries the index may hold blank lines, heading lines that group them, and `**Shape:**` lines; none is
+`- [title](file.md): the hook, on one line`; a dash (hyphen, en or em) with spaces may stand for the colon.
+Before the first entry the index may hold prose (any line not starting "- "), an introduction that says how to use it. Between entries it may hold blank lines, heading lines that group them, and `**Shape:**` lines; none is
 counted. The first form is the shape's; the second is what a maintainer's real index did before the shape existed. Each link resolves to a file beside the index; a file is listed once; when the index is named
-INDEX.md, no other markdown file of its folder is left out. The hook is one sentence. The index has at most
+INDEX.md, no other markdown file of its folder is left out. The hook is one physical line, of any number of sentences. The index has at most
 `max_lines` lines; the bound is a guess no study sets, tagged PROVISIONAL in the configuration.
 
 What a run with no error guarantees: every listed line has the form, every link resolves, no file is listed twice
@@ -24,7 +24,6 @@ EXACT = True
 SEPARATOR = r"(?::| [\u2013\u2014-]) "  # a colon, or a dash with spaces: the two forms accepted
 LINE = re.compile(r"^- \[([^\]]+)\]\(([^)\s]+\.md)\)" + SEPARATOR + r"(\S.*)$")
 OPENING = re.compile(r"^(#{1,6} \S.*|\*\*Shape:\*\*.*)$")
-SENTENCE_BREAK = re.compile(r"[.!?] +[A-Z]")
 
 
 def check(root: Path, config: dict) -> list[Finding]:
@@ -42,12 +41,12 @@ def check(root: Path, config: dict) -> list[Finding]:
             if not line.strip() or OPENING.match(line):
                 continue
             match = LINE.match(line)
+            if not match and not listed and not line.startswith("- "):
+                continue  # an introduction: prose before the first entry
             if not match:
-                findings.append(Finding(NAME, path, number, "a line is '- [title](file.md): the hook, in one sentence' (a dash may replace the colon)"))
+                findings.append(Finding(NAME, path, number, "a line is '- [title](file.md): the hook, on one line' (a dash may replace the colon)"))
                 continue
             target = posixpath.normpath(posixpath.join(folder, match.group(2)))
-            if SENTENCE_BREAK.search(match.group(3)):
-                findings.append(Finding(NAME, path, number, "the hook is one sentence"))
             if not (root / target).is_file():
                 findings.append(Finding(NAME, path, number, f"'{match.group(2)}' does not exist"))
             if target in listed:
