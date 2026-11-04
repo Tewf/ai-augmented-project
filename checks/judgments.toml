@@ -305,3 +305,17 @@ path = "CHANGELOG.md"
 question = "changed together with shapes/memory-index.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "6d86b9e901d0"
 answer = "They stay apart: the changelog names a shape change such as the `Estimate line in the memory shapes` and links it; the shape is read by writers, the changelog by readers choosing a pin."
+
+[[answer]]
+check = "co-change"
+path = "CHANGELOG.md"
+question = "changed together with checks/test_session.py in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "4ba00115c0a6"
+answer = "They stay apart: `CHANGELOG.md` records each check the tests cover, so a line is added whenever a test file grows, by construction."
+
+[[answer]]
+check = "co-change"
+path = "CHANGELOG.md"
+question = "changed together with shapes/memory-index.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "4ba00115c0a6"
+answer = "They stay apart: `CHANGELOG.md` names every shape it changes, and a shape moves with a release line by construction."
