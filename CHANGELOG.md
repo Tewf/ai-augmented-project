@@ -5,6 +5,10 @@ A pin move is recorded here, not in decisions/.
 
 ## [Unreleased]
 
+Nothing yet.
+
+## [0.2.2] - 2026-11-04
+
 ### Added
 
 - The person arms of the method comparison, in `experiments/method-comparison/person-arms/`: a pre-registered protocol that plans the number of
