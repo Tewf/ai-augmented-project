@@ -5,6 +5,12 @@ A pin move is recorded here, not in decisions/.
 
 ## [Unreleased]
 
+### Added
+
+- The person arms of the method comparison, in `experiments/method-comparison/person-arms/`: a pre-registered protocol that plans the number of
+  participants.
+- `run_person.py`, which times a person on the three tasks and scores them with the comparison's own judge.
+
 ### Changed
 
 - Pinned reader-ergonomics v1.21.0 (`2e5b6f0`), from v1.20.0 (`4f99372`): duplication skips the lines a declared shape prescribes

@@ -270,3 +270,24 @@ path = "evidence/bibliography.md"
 question = "changed together with evidence/human-ai-teaming/sources.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "c5c27eb3f010"
 answer = "They stay apart: `evidence/bibliography.md` serves another role than the file it changes with, and they change together by construction, not by overlap."
+
+[[answer]]
+check = "logical-lines"
+path = "experiments/method-comparison/person-arms/protocol.md"
+question = "91 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "18c4e8eee642"
+answer = "One role: it pre-registers the two person arms of one experiment. Its parts, `Hypotheses`, `Scoring` and `Participants needed`, change for the same reason, a change of the plan, so it stays whole."
+
+[[answer]]
+check = "co-change"
+path = "CHANGELOG.md"
+question = "changed together with checks/test_session.py in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "9ce1b4fb6abe"
+answer = "Neither: `Unreleased` records every change of the repository, so it moves with any file that changes; the shared commits are releases, not a shared role."
+
+[[answer]]
+check = "co-change"
+path = "CHANGELOG.md"
+question = "changed together with shapes/memory-index.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "9ce1b4fb6abe"
+answer = "Neither: `Unreleased` records every change of the repository, so it moves with any file that changes; the shared commits are releases, not a shared role."
