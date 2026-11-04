@@ -19,6 +19,7 @@ decision in one sentence under its title, then its status, context, decision and
 | [0010 The memory shapes meet the practice](0010-the-memory-shapes-meet-the-practice.md) | The memory checks accept the maintainer's older form beside the shape's own |
 | [0011 The method is compared with the model alone by a program](0011-the-method-is-compared-with-the-model-alone-by-a-program.md) | The two arms without a person are run on hidden tests; the person arms wait for the maintainer |
 | [0012 The quantities of a task are recorded in its brief](0012-the-quantities-of-a-task-are-recorded-in-its-brief.md) | A closing Cost block in the brief, an optional Estimate line in memory, each read by a program |
+| [0013 One job record, exported from the briefs](0013-one-job-record-exported-from-the-briefs.md) | The trace's job table, extended, is the one file the scheduler, the replay and the cases read; an exporter writes it from the briefs |
 
 ## See also
 
