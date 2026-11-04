@@ -291,3 +291,17 @@ path = "CHANGELOG.md"
 question = "changed together with shapes/memory-index.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "9ce1b4fb6abe"
 answer = "Neither: `Unreleased` records every change of the repository, so it moves with any file that changes; the shared commits are releases, not a shared role."
+
+[[answer]]
+check = "co-change"
+path = "CHANGELOG.md"
+question = "changed together with checks/test_session.py in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "6d86b9e901d0"
+answer = "They stay apart: `Every release of this repository` is recorded here, and a release that adds a check also changes the test file by construction; each entry links the record or file it names."
+
+[[answer]]
+check = "co-change"
+path = "CHANGELOG.md"
+question = "changed together with shapes/memory-index.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "6d86b9e901d0"
+answer = "They stay apart: the changelog names a shape change such as the `Estimate line in the memory shapes` and links it; the shape is read by writers, the changelog by readers choosing a pin."
