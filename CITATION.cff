@@ -5,7 +5,7 @@ message: >-
   assistant by Anthropic. It is not an official standard, not peer-reviewed,
   and not a new result.
 title: "ai-augmented-project (work in progress)"
-version: 0.2.1
+version: 0.2.3
 date-released: "2026-11-04"
 abstract: >-
   How a person, a language model and a machine are set up and run one project together: what the machine checks, what the model is given and may do, what stays the person's, and the loop between the three. Its first-pass review of human-AI teaming names a baseline; a design document, a card of seven principles, three shapes and six checks follow from it. The design's test is not run yet.

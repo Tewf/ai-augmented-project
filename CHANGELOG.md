@@ -7,6 +7,12 @@ A pin move is recorded here, not in decisions/.
 
 Nothing yet.
 
+## [0.2.3] - 2026-11-04
+
+### Fixed
+
+- `CITATION.cff` still said 0.2.1 on the 0.2.2 tag; this release carries the matching version, and the pointers copy this one.
+
 ## [0.2.2] - 2026-11-04
 
 ### Added
