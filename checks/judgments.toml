@@ -324,7 +324,7 @@ answer = "They stay apart: `CHANGELOG.md` names every shape it changes, and a sh
 check = "co-change"
 path = "CHANGELOG.md"
 question = "changed together with checks/test_session.py in 7 commits (78% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "a5e7364cdece"
+file = "2ccbe694f13d"
 answer = "They stay apart: the changelog is the repository's one list of changes (`Every release of this repository`), and each change to a check adds its line there; the test file sits with the checks it tests."
 [[answer]]
 check = "co-change"
@@ -336,7 +336,7 @@ answer = "They stay apart: the changelog lists `Every release of this repository
 check = "co-change"
 path = "CHANGELOG.md"
 question = "changed together with shapes/memory-index.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "a5e7364cdece"
+file = "2ccbe694f13d"
 answer = "They stay apart: the changelog lists `Every release of this repository`, and a change to a shape is one line there that links the shape; the shape keeps its own text."
 [[answer]]
 check = "co-change"
@@ -401,26 +401,26 @@ answer = "They stay apart: the design document (`A brief names the state its tas
 [[answer]]
 check = "co-change"
 path = "checks/test_session.py"
-question = "changed together with decisions/0014-a-brief-names-its-start-commit-and-its-shapes.md in 4 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+question = "changed together with decisions/0014-a-brief-names-its-start-commit-and-its-shapes.md in 4 commits (80% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "b4f3a1d29478"
 answer = "They stay apart: the record decides the two lines and these tests (`class DecidedLinesTests`) test the check that reads them; each reviewer's pass changed both while the proposal was open, and the record names the check rather than its tests."
 [[answer]]
 check = "co-change"
 path = "decisions/0014-a-brief-names-its-start-commit-and-its-shapes.md"
-question = "changed together with design/brief-start-state.md in 4 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "506146910599"
+question = "changed together with design/brief-start-state.md in 5 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "4a9102073848"
 answer = "They stay apart: the record (`A brief names the commit it starts from`) keeps the decision and links the design document that compares the options; a record and its design are two documents by the software-design shapes, and both changed together while the proposal was reviewed."
 [[answer]]
 check = "co-change"
 path = "decisions/0014-a-brief-names-its-start-commit-and-its-shapes.md"
-question = "changed together with shapes/brief.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "506146910599"
+question = "changed together with shapes/brief.md in 4 commits (80% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "4a9102073848"
 answer = "They stay apart: the record (`A brief names the commit it starts from`) decides the change and the shape states its result; the record links the shape, and both changed together while the proposal was reviewed."
 [[answer]]
 check = "co-change"
 path = "CHANGELOG.md"
-question = "changed together with decisions/0014-a-brief-names-its-start-commit-and-its-shapes.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "a5e7364cdece"
+question = "changed together with decisions/0014-a-brief-names-its-start-commit-and-its-shapes.md in 4 commits (80% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "2ccbe694f13d"
 answer = "They stay apart: the changelog lists `Every release of this repository` and links record 0014 from its line; each reviewer's pass changed the record and that line together while the proposal was open."
 [[answer]]
 check = "co-change"
