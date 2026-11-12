@@ -28,11 +28,12 @@ result follows. Their form is read by `brief-checks`, and the runner is to prepa
   - git asked by `brief-checks` whether the commit exists, where the repository is often not reachable;
   - a fifth part for preconditions, and the commit checked as a first Check;
   - leaving the reading to the gate, and the shapes' text put in the prompt.
+  - a branch resolved to a commit by the runner at dispatch, and a default start per repository in config.
 
 ## Consequences
 
-- With the runner's part, a worker cannot start from a commit other than the one named, and reads its shapes before
-  writing.
+- With the runner's part, the worker is started at the named commit and told to read its shapes before writing; what
+  it does in the worktree afterwards is not constrained.
 - **Bad:** without the runner's part, the lines are only stated, and a worker may still work in the folder as it is.
 - **Bad:** the need rests on what one night showed: one worker built on the wrong branch, and several were refused by the shape gate, on one night (2026-11-12). No run compares briefs with and without the lines.
 - **Bad:** the check reads the form, not that the commit exists.

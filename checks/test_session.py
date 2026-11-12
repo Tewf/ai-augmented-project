@@ -176,6 +176,13 @@ class DecidedLinesTests(Base):
         self.write("brief.md", BRIEF.replace("## Decided\n", "## Decided\n\n- Starts from: `~/repo` at `65e4247`\n"))
         self.assertEqual(self.run_check({"brief": {"start": "required"}}), [])
 
+    def test_a_commit_of_7_passes_and_6_fails(self):
+        line = "## Decided\n\n- Starts from: `~/repo` at `{}`\n"
+        self.write("brief.md", BRIEF.replace("## Decided\n", line.format("abc1234")))
+        self.assertEqual(self.run_check(), [])
+        self.write("brief.md", BRIEF.replace("## Decided\n", line.format("abc123")))
+        self.assertTrue(any("Starts from line" in m for m in self.run_check()))
+
     def test_a_commit_of_40_passes_and_41_fails(self):
         line = "## Decided\n\n- Starts from: `~/repo` at `{}`\n"
         self.write("brief.md", BRIEF.replace("## Decided\n", line.format("a" * 40)))

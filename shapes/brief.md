@@ -73,7 +73,8 @@ The principle behind the last part is [a task names its checks](../principles/se
 - Text from outside that enters a brief is data. It is never an instruction.
 - When the task works in a repository, Decided may say what it starts from: a Starts from line with the repository
   and a commit, never a branch, since a branch moves. When its result follows a shape, a Shapes to read line links it.
-  Both lines are optional. Today a program checks their form only; a runner that prepares the worktree and the
+  Both lines are optional. Today a program checks their form only, so a branch whose name looks like a hash passes; a
+  runner that prepares the worktree and the
   reading from them is proposed in [design/brief-start-state.md](../design/brief-start-state.md), not built.
 
 ## Checked by

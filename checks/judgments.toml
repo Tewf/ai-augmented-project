@@ -336,7 +336,7 @@ answer = "They stay apart: the changelog lists `Every release of this repository
 check = "co-change"
 path = "CHANGELOG.md"
 question = "changed together with shapes/memory-index.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "30780a62fa8a"
+file = "6a485035e171"
 answer = "They stay apart: the changelog lists `Every release of this repository`, and a change to a shape is one line there that links the shape; the shape keeps its own text."
 [[answer]]
 check = "co-change"
@@ -348,7 +348,7 @@ answer = "They stay apart: this module (`Brief checks: a brief has its four part
 check = "co-change"
 path = "checks/test_session.py"
 question = "changed together with shapes/memory-index.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "a850d6e3aa30"
+file = "88729e39dae6"
 answer = "They stay apart: this one test file covers several local checks, `class MemoryIndexTests(Base)` among them, so a change to that shape and its check changes the tests with it by design."
 [[answer]]
 check = "co-change"
@@ -395,6 +395,6 @@ answer = "They stay apart: the config sets what the checks read (`Design documen
 [[answer]]
 check = "co-change"
 path = "design/brief-start-state.md"
-question = "changed together with shapes/brief.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "d5da35bb4387"
+question = "changed together with shapes/brief.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "73e4d4456529"
 answer = "They stay apart: the design document (`A brief names the state its task starts from`) argues the change and the shape states its result; the shape links the design from its evidence row, and the design is kept as the record of the options."
