@@ -2,7 +2,7 @@
 
 **Decision:** A session is handed a start file, a memory index and the brief of its task, and nothing else. The file and the index have at most 200 lines each, a provisional bound set in configuration.
 
-**Status:** accepted, 2026-11-03. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/shapes/decision-record.md).
+**Status:** accepted, 2026-11-03. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/65e42472e2d4cbfd994c2a86e95a47e5dc7301ca/shapes/decision-record.md).
 
 **Amendment, 3 November:** the start file is `START.md` with four headings and the index is `memory/INDEX.md` with one line per file; the brief of the task is the third thing handed over ([0008](0008-a-task-is-handed-over-as-a-brief-that-names-its-checks.md)).
 

@@ -99,8 +99,8 @@ answer = "One links to the other already: `AGENTS.md` links `decisions/`, and bo
 [[answer]]
 check = "co-change"
 path = "CHANGELOG.md"
-question = "changed together with decisions/README.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "52cee7348fc8"
+question = "changed together with shapes/memory-index.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "a51eea2317fd"
 answer = "They stay apart and link: `CHANGELOG.md` already links the record it names, and each change adds a record to the `decisions/README.md` table by construction."
 
 [[answer]]
@@ -226,21 +226,21 @@ answer = "Each review states the rule for its own pool; `Projet augmenté par l'
 check = "logical-lines"
 path = "README.fr.md"
 question = "129 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "a837b01433f9"
+file = "b1fa64a05c3f"
 answer = "The role is the French front page, the translation of `README.md`, so a reader in French meets the same state. It stays: the length comes from its sections, not from a second role."
 
 [[answer]]
 check = "logical-lines"
 path = "README.md"
 question = "125 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "8428208e7671"
+file = "be59836bb988"
 answer = "The role is the front page: it says what the project is for, under `Status`. It stays; the length is its sections, each a part of the one front-page role."
 
 [[answer]]
 check = "co-change"
 path = "CHANGELOG.md"
 question = "changed together with checks/test_session.py in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
-file = "d1c2ae341229"
+file = "a51eea2317fd"
 answer = "They stay apart: `CHANGELOG.md` serves another role than the file it changes with, and they change together by construction, not by overlap."
 
 [[answer]]
