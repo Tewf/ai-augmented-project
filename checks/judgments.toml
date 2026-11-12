@@ -323,13 +323,13 @@ answer = "They stay apart: `CHANGELOG.md` names every shape it changes, and a sh
 [[answer]]
 check = "co-change"
 path = "CHANGELOG.md"
-question = "changed together with checks/test_session.py in 4 commits (80% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+question = "changed together with checks/test_session.py in 5 commits (83% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "30780a62fa8a"
 answer = "They stay apart: the changelog is the repository's one list of changes (`Every release of this repository`), and each change to a check adds its line there; the test file sits with the checks it tests."
 [[answer]]
 check = "co-change"
 path = "CHANGELOG.md"
-question = "changed together with shapes/brief.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+question = "changed together with shapes/brief.md in 4 commits (80% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "30780a62fa8a"
 answer = "They stay apart: the changelog lists `Every release of this repository`, and a change to a shape is one line there that links the shape; the shape keeps its own text."
 [[answer]]
@@ -341,7 +341,7 @@ answer = "They stay apart: the changelog lists `Every release of this repository
 [[answer]]
 check = "co-change"
 path = "checks/local/brief_checks.py"
-question = "changed together with checks/test_session.py in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+question = "changed together with checks/test_session.py in 4 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "d9eb5107dd62"
 answer = "They stay apart: this module (`Brief checks: a brief has its four parts`) sits where the standard's runner loads a repository's own checks, and the tests sit one level up so unittest discovery finds them."
 [[answer]]
@@ -368,3 +368,21 @@ path = "evidence/bibliography.md"
 question = "changed together with evidence/human-ai-teaming/sources.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "11438b8d85e0"
 answer = "They stay apart: the references shape keeps one bibliography for the repository in `evidence/`, and a review that cites a new work adds its row there; each review file links the bibliography, and the citations check keeps keys and entries in step."
+[[answer]]
+check = "co-change"
+path = "CHANGELOG.md"
+question = "changed together with checks/local/brief_checks.py in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "30780a62fa8a"
+answer = "They stay apart: the changelog lists `Every release of this repository`, and a change to a check is one line there; the check keeps its own code."
+[[answer]]
+check = "co-change"
+path = "checks/local/brief_checks.py"
+question = "changed together with decisions/README.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "d9eb5107dd62"
+answer = "They stay apart: a change to this check is decided in a record, which the decisions README lists; the check names its record (`record 0014, design/brief-start-state.md`) rather than holding the reasons."
+[[answer]]
+check = "co-change"
+path = "checks/local/brief_checks.py"
+question = "changed together with shapes/brief.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "d9eb5107dd62"
+answer = "They stay apart: the shape states the rules and this module (`Brief checks: a brief has its four parts`) enforces them, so they change together by design; the shape's Checked by part names the check, and the module sits where the runner loads local checks."

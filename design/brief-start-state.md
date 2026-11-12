@@ -20,7 +20,7 @@
 - Use case: a lead hands a review to a worker with a path. The folder was checked out on a closed prototype; the
   worker built on it, and three files had to be corrected (one case, 2026-11-12).
 - Use case: workers name a Shape line for a shape they have not read; the shape gate refuses the write, and each
-  refusal costs a read and a rewrite (several cases, the same night).
+  refusal costs a read and a rewrite (several cases, 2026-11-12).
 - The brief shape holds no place for either fact. Its four parts judge the result, never the start
   ([record 0008](../decisions/0008-a-task-is-handed-over-as-a-brief-that-names-its-checks.md)).
 
