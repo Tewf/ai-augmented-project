@@ -29,6 +29,7 @@ Every work this repository cites, once: Key, citation, and a stable link.
 | Huang 2024 | Huang, Chen, Mishra, Zheng, Yu, Song, Zhou (2024). Large language models cannot self-correct reasoning yet. ICLR 2024. Abstract read | https://arxiv.org/abs/2310.01798 |
 | HumanLayer 2025 | HumanLayer (2025-11). Writing a good CLAUDE.md. Practitioner blog; scored below the threshold, an example only | https://www.humanlayer.dev/blog/writing-a-good-claude-md |
 | Jiang 2025 | Jiang, Nam (2025). Beyond the prompt: an empirical study of Cursor rules. Preprint. Abstract read | https://arxiv.org/abs/2512.18925 |
+| Jimenez 2024 | Jimenez, Yang, Wettig, Yao, Pei, Press, Narasimhan (2024). SWE-bench: can language models resolve real-world GitHub issues? ICLR 2024. Full text read, version 3 | arXiv:2310.06770 |
 | Khatri 2026 | Khatri (2026). Do context files help coding agents? A two-agent ablation study on real repositories. Preprint. Abstract read | https://arxiv.org/abs/2607.27250 |
 | Liu 2024b | Liu, Wang, Chen and others (2024). Large language model-based agents for software engineering: a survey. Preprint. Abstract read | https://arxiv.org/abs/2409.02977 |
 | Liu 2025e | Liu, Zhang, Chen and Chen (2025). Human-AI teaming in healthcare: 1 + 1 > 2? npj Artificial Intelligence. Abstract read (secondary) | https://doi.org/10.1038/s44387-025-00052-4 |
@@ -42,12 +43,15 @@ Every work this repository cites, once: Key, citation, and a stable link.
 | Paradis 2024 | Paradis, Grey, Madison, Nam and others (2024). How much does AI impact development speed? An enterprise-based randomized controlled trial. Preprint. Abstract read | https://arxiv.org/abs/2410.12944 |
 | Parasuraman 2000 | Parasuraman, Sheridan, Wickens (2000). A model for types and levels of human interaction with automation. IEEE Transactions on Systems, Man, and Cybernetics A 30(3). Abstract read | https://doi.org/10.1109/3468.844354 |
 | Peng 2023 | Peng, Kalliamvakou, Cihon, Demirer (2023). The impact of AI on developer productivity: evidence from GitHub Copilot. Preprint. Abstract read | https://arxiv.org/abs/2302.06590 |
+| Qin 2026 | Qin, Xie (2026). Agent Retrieval Bench: evaluating repository context retrieval for coding agents. Preprint. Abstract read | arXiv:2607.24882 |
 | Sghaier 2026 | Ben Sghaier, Li, Adams, Hassan (2026). Don't blame the large language model: how agent harness evolution shapes coding agent quality. Preprint. Abstract read | https://arxiv.org/abs/2607.03691 |
 | Stack Overflow 2025 | Stack Overflow (2025). 2025 developer survey, AI section. Self-reported survey; sections 3.2 and 3.3 read | https://survey.stackoverflow.co/2025/ai |
 | Tretow 2025 | Tretow, Ergon, Schwebel, Treffers, Welpe and Feuerriegel (2025). The effect of LLM assistance on diagnostic accuracy: a systematic review and meta-analysis. Preprint, medRxiv; not peer reviewed. Abstract read (secondary) | https://doi.org/10.64898/2025.12.11.25341476 |
 | Treude 2026 | Treude, Baltes (2026). Context rot in AI-assisted software development: repurposing documentation consistency for AI configuration artifacts. Preprint. Abstract read | https://arxiv.org/abs/2606.09090 |
 | Vaccaro 2024 | Vaccaro, Almaatouq, Malone (2024). When combinations of humans and AI are useful: a systematic review and meta-analysis. Nature Human Behaviour 8, 2293-2303. Abstract and results read | https://doi.org/10.1038/s41562-024-02024-1 |
 | Wu 2023 | Wu (2023). Large language models should ask clarifying questions to increase confidence in generated code. Position paper. Abstract read | https://arxiv.org/abs/2308.13507 |
+| Xie 2026 | Xie, Liu, Shi, Peng, Yin, Ying, Luo, Jin, Chen, Zhang, Long (2026). PonyEval: evaluating LLM-based program repair for capability-safe and actor-oriented Pony software. Preprint. Abstract read | arXiv:2609.27832 |
 | Xu 2026 | Xu, Wu (2026). Stale instruction files override the code in coding agents: a one-sentence fix. Preprint. Abstract read | https://arxiv.org/abs/2610.30571 |
 | Yang 2024b | Yang, Jimenez, Wettig, Lieret and others (2024). SWE-agent: agent-computer interfaces enable automated software engineering. Preprint. Abstract read | https://arxiv.org/abs/2405.15793 |
+| Zhang 2026b | Zhang, Sun (2026). Knowledge-based pull requests: a trusted workflow for agent-mediated knowledge collaboration. Preprint. Abstract read | arXiv:2606.26721 |
 |---|---|---|

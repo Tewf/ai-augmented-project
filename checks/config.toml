@@ -66,3 +66,11 @@ exempt = ["experiments/method-comparison/fixtures/*/brief.md"]
 
 [tree_shape]
 exempt = ["experiments/method-comparison/fixtures/*"]
+
+# Design documents cite the works their options rest on, so the citations check reads design/ too
+# (reader-ergonomics reads evidence/, principles/, reader-styles/, shapes/ and decisions/ by default).
+[citations]
+files = ["evidence/", "principles/", "reader-styles/", "shapes/", "decisions/", "design/"]
+# The standard's list, plus the status words a design document's Status line opens with ("Proposed, 2026-11-12").
+not_surnames = ["WCAG", "Colon", "Classification", "Prolegomena", "Python", "Since", "In", "From", "Until", "By", "After", "Before", "Around",
+                "CONSORT", "PRISMA", "Lancet", "NEJM", "BMJ", "JAMA", "On", "Proposed", "Accepted", "Rejected", "Superseded"]
