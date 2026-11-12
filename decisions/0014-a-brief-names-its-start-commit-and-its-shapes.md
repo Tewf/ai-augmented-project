@@ -29,6 +29,7 @@ result follows. Their form is read by `brief-checks`, and the runner is to prepa
   - a fifth part for preconditions, and the commit checked as a first Check;
   - leaving the reading to the gate, and the shapes' text put in the prompt.
   - a branch resolved to a commit by the runner at dispatch, and a default start per repository in config.
+  - a machine-readable field in place of the line, and the line required by default for every brief.
 
 ## Consequences
 

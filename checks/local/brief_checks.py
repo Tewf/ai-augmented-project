@@ -18,7 +18,8 @@ The check does not know that a number is true.
 Decided may hold two labelled lines (record 0014, design/brief-start-state.md). A Starts from line names the
 repository and the commit the task starts from, since a branch moves and a path alone once sent a worker to a closed
 prototype. A Shapes to read line links the shapes the result follows, to read before the first write. When present,
-each is checked for its form: a path and a commit of 7 to 40 hexadecimal characters in backticks, joined by "at"; at
+each is checked for its form: the whole value is a path and a commit of 7 to 40 hexadecimal characters, each in
+backticks, joined by "at"; at
 least one link to a `.md` file. `[brief] start = "required"` makes the Starts from line mandatory. The check does not
 know that the commit exists, since the repository is often not reachable where the check runs; a runner that
 prepares the worktree would, and is proposed in design/brief-start-state.md, not built.
@@ -42,7 +43,7 @@ DEFAULT_FILES = ["brief.md", "*/brief.md"]
 COST_LABELS = ["Tokens", "Dollars", "Minutes", "Produced"]
 COST_LINE = re.compile(r"^\s*[-*]\s*\**([A-Za-z]+):\**\s*(.*?)\s*$")
 START = re.compile(r"^\s*[-*]\s*\**Starts from:\**\s*(.*)$")
-START_FORM = re.compile(r"`[^`]+`\s+at\s+`[0-9a-f]{7,40}`")
+START_FORM = re.compile(r"`[^`]+`\s+at\s+`[0-9a-fA-F]{7,40}`\s*")
 SHAPES = re.compile(r"^\s*[-*]\s*\**Shapes to read:\**\s*(.*)$")
 SHAPE_LINK = re.compile(r"\]\([^)\s]+\.md(?:#[^)]*)?\)")
 COST_VALUE = re.compile(r"^(pending|not measured|\d[\d.,]*\s*\S+.*)$", re.IGNORECASE)
@@ -92,12 +93,12 @@ def check(root: Path, config: dict) -> list[Finding]:
                 for line_number, line in content(lines):
                     if (match := START.match(line)):
                         start = True
-                        if not START_FORM.search(match.group(1)):
+                        if not START_FORM.fullmatch(match.group(1).strip()):
                             findings.append(Finding(NAME, path, line_number,
                                                     "a Starts from line is `<repository>` at `<commit>`, a commit of 7 to 40 hex characters"))
                     if (match := SHAPES.match(line)) and not SHAPE_LINK.search(match.group(1)):
                         findings.append(Finding(NAME, path, line_number,
-                                                "a Shapes to read line links at least one shape's .md file"))
+                                                "a Shapes to read line links at least one .md file"))
                 if not start and settings.get("start") == "required":
                     findings.append(Finding(NAME, path, number, "Decided has no Starts from line: name the repository and its commit"))
             if title == "Checks":

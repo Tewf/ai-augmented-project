@@ -8,7 +8,7 @@ A pin move is recorded here, not in decisions/.
 ### Added
 
 - Two optional lines in a brief's Decided, Starts from (a repository and a commit) and Shapes to read, whose form
-  `brief-checks` reads, with 7 tests; built on this branch, which waits on
+  `brief-checks` reads, with 9 tests; built on this branch, which waits on
   [record 0014](decisions/0014-a-brief-names-its-start-commit-and-its-shapes.md). The runner's part is proposed only,
   in the design document [brief-start-state](design/brief-start-state.md).
 

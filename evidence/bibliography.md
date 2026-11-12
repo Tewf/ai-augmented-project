@@ -53,5 +53,4 @@ Every work this repository cites, once: Key, citation, and a stable link.
 | Xie 2026 | Xie, Liu, Shi, Peng, Yin, Ying, Luo, Jin, Chen, Zhang, Long (2026). PonyEval: evaluating LLM-based program repair for capability-safe and actor-oriented Pony software. Preprint. Abstract read | arXiv:2609.27832 |
 | Xu 2026 | Xu, Wu (2026). Stale instruction files override the code in coding agents: a one-sentence fix. Preprint. Abstract read | https://arxiv.org/abs/2610.30571 |
 | Yang 2024b | Yang, Jimenez, Wettig, Lieret and others (2024). SWE-agent: agent-computer interfaces enable automated software engineering. Preprint. Abstract read | https://arxiv.org/abs/2405.15793 |
-| Zhang 2026b | Zhang, Sun (2026). Knowledge-based pull requests: a trusted workflow for agent-mediated knowledge collaboration. Preprint. Abstract read | arXiv:2606.26721 |
 |---|---|---|

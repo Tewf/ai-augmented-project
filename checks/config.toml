@@ -68,7 +68,7 @@ exempt = ["experiments/method-comparison/fixtures/*/brief.md"]
 exempt = ["experiments/method-comparison/fixtures/*"]
 
 # Design documents cite the works their options rest on, so the citations check reads design/ too
-# (reader-ergonomics reads evidence/, principles/, reader-styles/, shapes/ and decisions/ by default).
+# (the standard's own config lists evidence/, principles/, reader-styles/, shapes/ and decisions/).
 [citations]
 files = ["evidence/", "principles/", "reader-styles/", "shapes/", "decisions/", "design/"]
 # The standard's list, plus the status words a design document's Status line opens with ("Proposed, 2026-11-12").

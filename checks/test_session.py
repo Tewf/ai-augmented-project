@@ -172,6 +172,15 @@ class DecidedLinesTests(Base):
         self.write("brief.md", BRIEF)
         self.assertTrue(any("no Starts from line" in m for m in self.run_check({"brief": {"start": "required"}})))
 
+    def test_a_branch_named_first_fails_even_with_a_hash_after(self):
+        line = "## Decided\n\n- Starts from: `~/repo` at `piste/a`, was `main` at `65e4247`\n"
+        self.write("brief.md", BRIEF.replace("## Decided\n", line))
+        self.assertTrue(any("Starts from line" in m for m in self.run_check()))
+
+    def test_an_upper_case_commit_passes(self):
+        self.write("brief.md", BRIEF.replace("## Decided\n", "## Decided\n\n- Starts from: `~/repo` at `ABC1234`\n"))
+        self.assertEqual(self.run_check(), [])
+
     def test_a_required_start_passes_when_present(self):
         self.write("brief.md", BRIEF.replace("## Decided\n", "## Decided\n\n- Starts from: `~/repo` at `65e4247`\n"))
         self.assertEqual(self.run_check({"brief": {"start": "required"}}), [])
