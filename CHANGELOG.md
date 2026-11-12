@@ -8,9 +8,10 @@ A pin move is recorded here, not in decisions/.
 ### Added
 
 - Two optional lines in a brief's Decided, Starts from (a repository and a commit) and Shapes to read, whose form
-  `brief-checks` reads, with 9 tests; built on this branch, which waits on
-  [record 0014](decisions/0014-a-brief-names-its-start-commit-and-its-shapes.md). The runner's part is proposed only,
-  in the design document [brief-start-state](design/brief-start-state.md).
+  `brief-checks` reads, with 9 tests, under
+  [record 0014](decisions/0014-a-brief-names-its-start-commit-and-its-shapes.md), a temporary decision
+  ([issue 2](https://github.com/Tewf/ai-augmented-project/issues/2)). The runner's part is described in the design document
+  [brief-start-state](design/brief-start-state.md).
 
 - The job record: a shape ([job-record](shapes/job-record.md)) that extends the trace's `[[job]]` table with `depends_on`,
   `minutes`, `date`, `repo` and `outcome`, an exporter `checks/local/job_record.py` that writes it from a folder of briefs,

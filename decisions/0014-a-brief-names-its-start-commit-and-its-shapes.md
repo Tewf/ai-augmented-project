@@ -1,9 +1,10 @@
 # 0014: A brief names the commit it starts from and the shapes to read
 
 **Decision:** Decided may carry two optional lines: the repository and commit the task starts from, and the shapes its
-result follows. Their form is read by `brief-checks`, and the runner is to prepare the worktree and the reading.
+result follows. Their form is read by `brief-checks`, and the runner prepares the worktree and the reading.
 
-**Status:** proposed, 2026-11-12. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/65e42472e2d4cbfd994c2a86e95a47e5dc7301ca/shapes/decision-record.md).
+**Status:** accepted as a temporary decision, 2026-11-12: used as final until confirmed or replaced, as
+[issue 2](https://github.com/Tewf/ai-augmented-project/issues/2) says. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/65e42472e2d4cbfd994c2a86e95a47e5dc7301ca/shapes/decision-record.md).
 
 ## Context
 
@@ -20,8 +21,8 @@ result follows. Their form is read by `brief-checks`, and the runner is to prepa
   commit (Jimenez 2024).
 - `brief-checks` reads their form; `[brief] start = "required"` makes Starts from mandatory for a repository that
   wants it.
-- The runner's part, a worktree made at the commit and the reading told before the first write, is a change of the
-  tooling, proposed in the design document and not made here.
+- The runner's part is made in the runner, outside this repository (12 Nov.): a worktree at the commit, on a new
+  branch, and the reading told before the first write. The design document says how.
 - Rejected, each with its reason in the design document:
   - a branch in place of the commit, the first text of this record (12 Nov.);
   - the Starts from line with no runner change, which states the start and does not make it;
@@ -33,11 +34,12 @@ result follows. Their form is read by `brief-checks`, and the runner is to prepa
 
 ## Consequences
 
-- With the runner's part, the worker is started at the named commit and told to read its shapes before writing; what
+- The worker is started at the named commit and told to read its shapes before writing; what
   it does in the worktree afterwards is not constrained.
-- **Bad:** without the runner's part, the lines are only stated, and a worker may still work in the folder as it is.
+- **Bad:** a runner that does not read the lines only states them, and its worker may still work in the folder as it is.
 - **Bad:** the need rests on what one night showed: one worker built on the wrong branch, and several were refused by the shape gate, on one night (2026-11-12). No run compares briefs with and without the lines.
-- **Bad:** the check reads the form, not that the commit exists.
+- **Bad:** the check reads the form, not that the commit exists; the runner finds a missing commit only at launch.
+- **Bad:** temporary: the reasons and what would close the question are in [issue 2](https://github.com/Tewf/ai-augmented-project/issues/2).
 
 ## See also
 

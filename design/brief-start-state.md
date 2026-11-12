@@ -3,7 +3,8 @@
 - **Decision asked.** Should a brief name its start as a repository and a commit, and its required reading as links,
   for the runner to prepare both before the worker starts? The maintainer decides. The brief-shape part can be
   accepted alone; the runner part waits for the tooling's owner.
-- **Status.** Proposed, 2026-11-12.
+- **Status.** Accepted as a temporary decision, 2026-11-12, with record 0014; both parts are built
+  ([issue 2](https://github.com/Tewf/ai-augmented-project/issues/2)).
 - **Shape:** [design document](https://github.com/Tewf/reader-ergonomics-software-design/blob/e0bc14cdae3494513c3470b4faea7c2278829311/shapes/design-document.md)
 
 **Summary.**
@@ -31,7 +32,6 @@
 - Goal: both are done by a program, at the start, not checked by a reader after the fact.
 - Non-goal: proving the worker understood a shape; the shape's own checks judge the result.
 - Non-goal: a new part of the brief; the four parts and every check that reads them stay as they are.
-- Non-goal: changing the runner tonight; it is in use by other sessions.
 
 ## Design
 
@@ -48,9 +48,9 @@ Two optional lines in Decided:
   one; pinning the link by commit, as most Shape lines here are, is the lead's choice.
 - `brief-checks` reads their form when present: a path and a commit, joined by "at"; at least one link to a `.md` file.
   `[brief] start = "required"` makes Starts from mandatory for a repository that wants it.
-- The runner (here `agent-api`; in the workshop service, its dispatcher) acts on them, in a later change:
-  - for Starts from, it makes a worktree at that commit and starts the worker there, and refuses to start when the
-    commit is not found;
+- The runner (here `agent-api`; in the workshop service, its dispatcher) acts on them; `agent-api` does since 12 Nov.:
+  - for Starts from, it makes a worktree at that commit and starts the worker there. The worktree is on a new
+    `agent/` branch, so the worker's commits are kept; a resumed run keeps it; a commit not found stops the start;
   - for Shapes to read, it tells the worker to read those files before its first write, as the
     [editor extension](../README.md) already does for the start file.
 
@@ -95,8 +95,8 @@ The table holds the options in the order they were raised; H to K came from revi
 - Used by: SWE-bench's harness for the start; the editor extension's spike for reading first. No run has tested
   whether the lines prevent the failure; that is the open question below.
 - Tested by: the unit tests of `brief-checks` for the two lines' form (class DecidedLinesTests).
-- Rolled out by: the brief-shape part on its branch, then record 0014 accepted; the runner part as a change of its
-  own, by the tooling's owner, after the night's lanes end.
+- Rolled out by: the brief-shape part merged with record 0014 accepted as temporary; the runner part in `agent-api`,
+  outside this repository, with its own tests, on 12 Nov.
 
 ## Open questions
 
