@@ -5,17 +5,15 @@ A pin move is recorded here, not in decisions/.
 
 ## [Unreleased]
 
-### Changed
-
-- Pinned reader-ergonomics v1.24.2 (`65e4247`), from v1.21.0 (`2e5b6f0`): fixes that remove false findings in the sentence, term and figure checks, and `[defined_terms] cues`.
-
-## [Unreleased]
-
 ### Added
 
 - The job record: a shape ([job-record](shapes/job-record.md)) that extends the trace's `[[job]]` table with `depends_on`,
   `minutes`, `date`, `repo` and `outcome`, an exporter `checks/local/job_record.py` that writes it from a folder of briefs,
   15 tests, and [record 0013](decisions/0013-one-job-record-exported-from-the-briefs.md).
+
+### Changed
+
+- Pinned reader-ergonomics v1.24.2 (`65e4247`), from v1.21.0 (`2e5b6f0`): fixes that remove false findings in the sentence, term and figure checks, and `[defined_terms] cues`.
 
 ## [0.2.3] - 2026-11-04
 
