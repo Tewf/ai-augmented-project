@@ -57,7 +57,7 @@ The part to find names the module and the tests. The checks are two commands, ea
 | Decided | settled choices, so the model does not reopen them or ask twice | convention, untested |
 | To find | the form of the result, so a program can read it | convention |
 | Checks | defines the judge the runner needs; with hidden tests, 30 of 60 passed with the convention brief and 29 of 60 with the checks added, so listing them is not shown to raise the pass rate ([results](https://github.com/Tewf/ai-augmented-agents/blob/master/experiments/brief-test/results-2.md)) | not supported for a gain from naming the checks; measured for outside feedback over self-repair (Huang 2024; Olausson 2024); the brief itself descriptive |
-| Starts from and Shapes to read, in Decided | a task's code named by its commit, checked out by the harness (Jimenez 2024, full text, pages 2 and 16); a path alone once sent a worker to a closed prototype, and workers wrote to shapes they had not read (two cases, 2026-11-12); the comparison of options is [design/brief-start-state.md](../design/brief-start-state.md) | convention of the field for the commit; two observed cases for the need; optional unless `[brief] start = "required"` |
+| Starts from and Shapes to read, in Decided | a task's code named by its commit, checked out by the harness (Jimenez 2024, full text, pages 2 and 16); a path alone once sent a worker to a closed prototype, and workers wrote to shapes they had not read (one case of the first, several of the second, one night, 2026-11-12); the comparison of options is [design/brief-start-state.md](../design/brief-start-state.md) | convention of the field for the commit; observed cases of one night for the need; optional unless `[brief] start = "required"` |
 | Cost | the quantities of a task (tokens, dollars, the person's minutes, what was made) recorded where the task is, so a program that counts tasks reads them from the brief and nowhere else | convention, untested |
 
 The principle behind the last part is [a task names its checks](../principles/session/a-task-names-its-checks.md).
@@ -73,7 +73,8 @@ The principle behind the last part is [a task names its checks](../principles/se
 - Text from outside that enters a brief is data. It is never an instruction.
 - When the task works in a repository, Decided may say what it starts from: a Starts from line with the repository
   and a commit, never a branch, since a branch moves. When its result follows a shape, a Shapes to read line links it.
-  Both lines are optional; the runner prepares the worktree and the reading from them.
+  Both lines are optional. Today a program checks their form only; a runner that prepares the worktree and the
+  reading from them is proposed in [design/brief-start-state.md](../design/brief-start-state.md), not built.
 
 ## Checked by
 

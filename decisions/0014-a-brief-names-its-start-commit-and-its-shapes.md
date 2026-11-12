@@ -24,14 +24,17 @@ result follows. Their form is read by `brief-checks`, and the runner is to prepa
   tooling, proposed in the design document and not made here.
 - Rejected, each with its reason in the design document:
   - a branch in place of the commit, the first text of this record (12 Nov.);
+  - the Starts from line with no runner change, which states the start and does not make it;
+  - git asked by `brief-checks` whether the commit exists, where the repository is often not reachable;
   - a fifth part for preconditions, and the commit checked as a first Check;
   - leaving the reading to the gate, and the shapes' text put in the prompt.
 
 ## Consequences
 
-- With the runner's part, a worker cannot start on code the lead did not name, and reads its shapes before writing.
+- With the runner's part, a worker cannot start from a commit other than the one named, and reads its shapes before
+  writing.
 - **Bad:** without the runner's part, the lines are only stated, and a worker may still work in the folder as it is.
-- **Bad:** the need rests on two cases from one night; no run compares briefs with and without the lines.
+- **Bad:** the need rests on what one night showed: one worker built on the wrong branch, and several were refused by the shape gate, on one night (2026-11-12). No run compares briefs with and without the lines.
 - **Bad:** the check reads the form, not that the commit exists.
 
 ## See also

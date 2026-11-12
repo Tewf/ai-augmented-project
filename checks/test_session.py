@@ -172,6 +172,17 @@ class DecidedLinesTests(Base):
         self.write("brief.md", BRIEF)
         self.assertTrue(any("no Starts from line" in m for m in self.run_check({"brief": {"start": "required"}})))
 
+    def test_a_required_start_passes_when_present(self):
+        self.write("brief.md", BRIEF.replace("## Decided\n", "## Decided\n\n- Starts from: `~/repo` at `65e4247`\n"))
+        self.assertEqual(self.run_check({"brief": {"start": "required"}}), [])
+
+    def test_a_commit_of_40_passes_and_41_fails(self):
+        line = "## Decided\n\n- Starts from: `~/repo` at `{}`\n"
+        self.write("brief.md", BRIEF.replace("## Decided\n", line.format("a" * 40)))
+        self.assertEqual(self.run_check(), [])
+        self.write("brief.md", BRIEF.replace("## Decided\n", line.format("a" * 41)))
+        self.assertTrue(any("Starts from line" in m for m in self.run_check()))
+
     def test_shapes_to_read_needs_a_link(self):
         self.write("brief.md", BRIEF.replace("## Decided\n", "## Decided\n\n- Shapes to read: the brief\n"))
         self.assertTrue(any("Shapes to read" in m for m in self.run_check()))

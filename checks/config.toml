@@ -72,5 +72,6 @@ exempt = ["experiments/method-comparison/fixtures/*"]
 [citations]
 files = ["evidence/", "principles/", "reader-styles/", "shapes/", "decisions/", "design/"]
 # The standard's list, plus the status words a design document's Status line opens with ("Proposed, 2026-11-12").
+# They apply to every folder above: a real author with one of these surnames would have to be keyed otherwise.
 not_surnames = ["WCAG", "Colon", "Classification", "Prolegomena", "Python", "Since", "In", "From", "Until", "By", "After", "Before", "Around",
                 "CONSORT", "PRISMA", "Lancet", "NEJM", "BMJ", "JAMA", "On", "Proposed", "Accepted", "Rejected", "Superseded"]

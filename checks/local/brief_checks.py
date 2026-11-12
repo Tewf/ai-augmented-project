@@ -20,7 +20,8 @@ repository and the commit the task starts from, since a branch moves and a path 
 prototype. A Shapes to read line links the shapes the result follows, to read before the first write. When present,
 each is checked for its form: a path and a commit of 7 to 40 hexadecimal characters in backticks, joined by "at"; at
 least one link to a `.md` file. `[brief] start = "required"` makes the Starts from line mandatory. The check does not
-know that the commit exists; the runner that prepares the worktree does.
+know that the commit exists, since the repository is often not reachable where the check runs; a runner that
+prepares the worktree would, and is proposed in design/brief-start-state.md, not built.
 Time O(size of the briefs).
 """
 from __future__ import annotations
