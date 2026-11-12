@@ -341,7 +341,7 @@ answer = "They stay apart: the changelog lists `Every release of this repository
 [[answer]]
 check = "co-change"
 path = "checks/local/brief_checks.py"
-question = "changed together with checks/test_session.py in 4 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+question = "changed together with checks/test_session.py in 5 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "caf7a24287bf"
 answer = "They stay apart: this module (`Brief checks: a brief has its four parts`) sits where the standard's runner loads a repository's own checks, and the tests sit one level up so unittest discovery finds them."
 [[answer]]
@@ -383,6 +383,18 @@ answer = "They stay apart: a change to this check is decided in a record, which 
 [[answer]]
 check = "co-change"
 path = "checks/local/brief_checks.py"
-question = "changed together with shapes/brief.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+question = "changed together with shapes/brief.md in 4 commits (80% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "caf7a24287bf"
 answer = "They stay apart: the shape states the rules and this module (`Brief checks: a brief has its four parts`) enforces them, so they change together by design; the shape's Checked by part names the check, and the module sits where the runner loads local checks."
+[[answer]]
+check = "co-change"
+path = "checks/config.toml"
+question = "changed together with checks/local/brief_checks.py in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "5aac20f78c40"
+answer = "They stay apart: the config sets what the checks read (`Design documents cite the works`), and this repository's checks live under checks/local, the folder the runner loads; they are already in one folder, checks/, one level apart by the runner's layout."
+[[answer]]
+check = "co-change"
+path = "design/brief-start-state.md"
+question = "changed together with shapes/brief.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "d5da35bb4387"
+answer = "They stay apart: the design document (`A brief names the state its task starts from`) argues the change and the shape states its result; the shape links the design from its evidence row, and the design is kept as the record of the options."

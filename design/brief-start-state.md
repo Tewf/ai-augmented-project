@@ -63,8 +63,8 @@ Two optional lines in Decided:
 | C. A fifth part, Preconditions, with commands the runner runs | general: any start condition, not only the commit | moves the four parts every check reads; the one precondition seen is the commit, so a general part is not yet earned |
 | D. The worker checks the commit itself, as a first Check | no new line | a Check judges the result; run first, it is a precondition in a postcondition's place, and nothing runs it before the work |
 | E. Leave the reading to the shape gate, which already names the file to read | no change | each refusal costs a round trip; telling the worker first costs one sentence in the runner |
-| G. `brief-checks` asks git whether the commit exists | a program checks the commit, as the family's oracle rule wants | the check runs in CI and on other machines, where the brief's repository is often not reachable; the runner, which has the path, is the program that can tell |
 | F. The runner puts the shapes' text in the prompt | no read needed | the gate counts a shape as read only from a tool result, so text in the prompt would still be refused |
+| G. `brief-checks` asks git whether the commit exists | a program checks the commit, as the family's oracle rule wants | the check runs in CI and on other machines, where the brief's repository is often not reachable; the runner, which has the path, is the program that can tell |
 
 ## Where the design comes from
 
