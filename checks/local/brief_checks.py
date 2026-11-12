@@ -14,6 +14,12 @@ Dollars, Minutes (the person's) and Produced, in that order. A value is a number
 the task ends, or `not measured`; it is never guessed. Produced is any text. `[brief] cost = "required"` makes the
 part mandatory; the default leaves it optional, since a brief is written before the task and an open one has no cost yet.
 The check does not know that a number is true.
+
+Decided may hold two labelled lines (record 0014). `- Checkout: `<path>` on `<branch>``: the folder the task works in
+and the branch it must be on, since a path alone has sent a worker to the right repository on the wrong branch.
+`- Shapes to read: [<name>](<link to a shape>)`: the shapes the result follows, to read before writing. When present,
+each is checked for its form: a path and a branch in backticks, joined by "on"; at least one link to a `.md` file.
+`[brief] checkout = "required"` makes the Checkout line mandatory. The check does not know that the branch exists.
 Time O(size of the briefs).
 """
 from __future__ import annotations
@@ -33,6 +39,10 @@ REQUIRED = ["Task", "Decided", "To find", "Checks"]
 DEFAULT_FILES = ["brief.md", "*/brief.md"]
 COST_LABELS = ["Tokens", "Dollars", "Minutes", "Produced"]
 COST_LINE = re.compile(r"^\s*[-*]\s*\**([A-Za-z]+):\**\s*(.*?)\s*$")
+CHECKOUT = re.compile(r"^\s*[-*]\s*\**Checkout:\**\s*(.*)$")
+CHECKOUT_FORM = re.compile(r"`[^`]+`\s+on\s+`[^`]+`")
+SHAPES = re.compile(r"^\s*[-*]\s*\**Shapes to read:\**\s*(.*)$")
+SHAPE_LINK = re.compile(r"\]\([^)\s]+\.md(?:#[^)]*)?\)")
 COST_VALUE = re.compile(r"^(pending|not measured|\d[\d.,]*\s*\S+.*)$", re.IGNORECASE)
 
 
@@ -75,6 +85,19 @@ def check(root: Path, config: dict) -> list[Finding]:
             if title in required and not content(lines):
                 findings.append(Finding(NAME, path, number, f"the part '{title}' is empty"
                                         + ("; a task with no check is refused" if title == "Checks" else "")))
+            if title == "Decided":
+                checkout = False
+                for line_number, line in content(lines):
+                    if (match := CHECKOUT.match(line)):
+                        checkout = True
+                        if not CHECKOUT_FORM.search(match.group(1)):
+                            findings.append(Finding(NAME, path, line_number,
+                                                    "a Checkout line is `<path>` on `<branch>`, both in backticks"))
+                    if (match := SHAPES.match(line)) and not SHAPE_LINK.search(match.group(1)):
+                        findings.append(Finding(NAME, path, line_number,
+                                                "a Shapes to read line links at least one shape's .md file"))
+                if not checkout and settings.get("checkout") == "required":
+                    findings.append(Finding(NAME, path, number, "Decided has no Checkout line: name the path and its branch"))
             if title == "Checks":
                 for line_number, line in content(lines):
                     commands = CODE.findall(line)

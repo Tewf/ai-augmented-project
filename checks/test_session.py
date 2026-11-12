@@ -157,6 +157,28 @@ COST = """
 """
 
 
+class DecidedLinesTests(Base):
+    module = brief_checks
+
+    def test_a_checkout_with_path_and_branch_passes(self):
+        self.write("brief.md", BRIEF.replace("## Decided\n", "## Decided\n\n- Checkout: `~/repo` on `piste/a`\n"))
+        self.assertEqual(self.run_check(), [])
+
+    def test_a_checkout_without_branch_fails(self):
+        self.write("brief.md", BRIEF.replace("## Decided\n", "## Decided\n\n- Checkout: `~/repo`\n"))
+        self.assertTrue(any("Checkout line" in m for m in self.run_check()))
+
+    def test_a_required_checkout_must_be_there(self):
+        self.write("brief.md", BRIEF)
+        self.assertTrue(any("no Checkout line" in m for m in self.run_check({"brief": {"checkout": "required"}})))
+
+    def test_shapes_to_read_needs_a_link(self):
+        self.write("brief.md", BRIEF.replace("## Decided\n", "## Decided\n\n- Shapes to read: the brief\n"))
+        self.assertTrue(any("Shapes to read" in m for m in self.run_check()))
+        self.write("brief.md", BRIEF.replace("## Decided\n", "## Decided\n\n- Shapes to read: [brief](shapes/brief.md)\n"))
+        self.assertEqual(self.run_check(), [])
+
+
 class CostTests(Base):
     module = brief_checks
 

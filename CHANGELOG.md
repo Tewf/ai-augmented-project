@@ -7,6 +7,9 @@ A pin move is recorded here, not in decisions/.
 
 ### Added
 
+- Two optional lines in a brief's Decided, `Checkout:` with its branch and `Shapes to read:`, read by `brief-checks`;
+  4 tests and [record 0014](decisions/0014-a-brief-names-its-branch-and-its-shapes.md), proposed.
+
 - The job record: a shape ([job-record](shapes/job-record.md)) that extends the trace's `[[job]]` table with `depends_on`,
   `minutes`, `date`, `repo` and `outcome`, an exporter `checks/local/job_record.py` that writes it from a folder of briefs,
   15 tests, and [record 0013](decisions/0013-one-job-record-exported-from-the-briefs.md).
